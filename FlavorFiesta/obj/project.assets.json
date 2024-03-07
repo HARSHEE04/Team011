@@ -18447,11 +18447,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/Yammy/Projects/FlavorFiesta/FlavorFiesta/FlavorFiesta.csproj",
+      "projectUniqueName": "/Users/Yammy/Documents/GitHub/Team011/FlavorFiesta/FlavorFiesta.csproj",
       "projectName": "FlavorFiesta",
-      "projectPath": "/Users/Yammy/Projects/FlavorFiesta/FlavorFiesta/FlavorFiesta.csproj",
+      "projectPath": "/Users/Yammy/Documents/GitHub/Team011/FlavorFiesta/FlavorFiesta.csproj",
       "packagesPath": "/Users/Yammy/.nuget/packages/",
-      "outputPath": "/Users/Yammy/Projects/FlavorFiesta/FlavorFiesta/obj/",
+      "outputPath": "/Users/Yammy/Documents/GitHub/Team011/FlavorFiesta/obj/",
       "projectStyle": "PackageReference",
       "crossTargeting": true,
       "configFilePaths": [
