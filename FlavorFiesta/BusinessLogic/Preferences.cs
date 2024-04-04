@@ -14,16 +14,6 @@ namespace FlavorFiesta.BusinessLogic
         private string servingsRange;
         private string prepTimeRange;
         private List<string> dietaryRestrictions = new List<string>();
-
-        // Properties
-        public string DietType { get; set; }
-        public string CuisineType { get; set; }
-        public string MealType { get; set; }
-        public string CaloriesRange { get; set; }
-        public string ProteinRange { get; set; }
-        public string SugarRange { get; set; }
-        public string ServingsRange { get; set; }
-        public string PrepTimeRange { get; set; }
         public List<string> DietaryRestrictions { get; private set; } // Read-only property
 
         // Constructor
