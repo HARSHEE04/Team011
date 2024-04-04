@@ -26,6 +26,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = FlavorFiesta.AppShell.xaml
 build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
 build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
 
+[/Users/Yammy/Documents/GitHub/Team011/FlavorFiesta/Pages/NutritionalPreferencesPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = FlavorFiesta.Pages.NutritionalPreferencesPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages/NutritionalPreferencesPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages/NutritionalPreferencesPage.xaml
+
 [/Users/Yammy/Documents/GitHub/Team011/FlavorFiesta/Pages/WelcomePage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = FlavorFiesta.Pages.WelcomePage.xaml
