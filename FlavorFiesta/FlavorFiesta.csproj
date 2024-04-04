@@ -61,7 +61,6 @@
 	  <None Remove="DataPersistence\" />
 	</ItemGroup>
 	<ItemGroup>
-	  <Folder Include="BusinessLogic\" />
 	  <Folder Include="Pages\" />
 	  <Folder Include="DataPersistence\" />
 	</ItemGroup>
