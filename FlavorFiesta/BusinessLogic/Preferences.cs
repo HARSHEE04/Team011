@@ -3,6 +3,7 @@ namespace FlavorFiesta.BusinessLogic
 {
     public class Preferences
     {
+
         // Fields (Attributes)
         private string dietType;
         private string cuisineType;
@@ -12,8 +13,7 @@ namespace FlavorFiesta.BusinessLogic
         private string sugarRange;
         private string servingsRange;
         private string prepTimeRange;
-        private List<string> dietaryRestrictions;
-
+        private List<string> dietaryRestrictions = new List<string>();
 
         // Properties
         public string DietType { get; set; }
