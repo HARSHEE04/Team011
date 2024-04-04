@@ -22,11 +22,11 @@ build_metadata.AdditionalFiles.ManifestResourceName = FlavorFiesta.AppShell.xaml
 build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
 build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
 
-[/Users/Yammy/Documents/GitHub/Team011/FlavorFiesta/MainPage.xaml]
+[/Users/Yammy/Documents/GitHub/Team011/FlavorFiesta/Pages/WelcomePage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = FlavorFiesta.MainPage.xaml
-build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
-build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
+build_metadata.AdditionalFiles.ManifestResourceName = FlavorFiesta.Pages.WelcomePage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages/WelcomePage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages/WelcomePage.xaml
 
 [/Users/Yammy/Documents/GitHub/Team011/FlavorFiesta/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml

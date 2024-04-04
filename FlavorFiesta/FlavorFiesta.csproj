@@ -57,8 +57,12 @@
 
 	<ItemGroup>
 	  <None Remove="BusinessLogic\" />
+	  <None Remove="Pages\" />
+	  <None Remove="DataPersistence\" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="BusinessLogic\" />
+	  <Folder Include="Pages\" />
+	  <Folder Include="DataPersistence\" />
 	</ItemGroup>
 </Project>
