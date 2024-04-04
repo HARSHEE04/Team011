@@ -24365,11 +24365,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kvsgu\\OneDrive\\Documents\\Semester 2\\Interactive Application Development\\Team011\\FlavorFiesta\\FlavorFiesta.csproj",
+      "projectUniqueName": "C:\\Users\\kvsgu\\OneDrive\\Desktop\\Team011TeamAssignment\\FlavorFiesta\\FlavorFiesta.csproj",
       "projectName": "FlavorFiesta",
-      "projectPath": "C:\\Users\\kvsgu\\OneDrive\\Documents\\Semester 2\\Interactive Application Development\\Team011\\FlavorFiesta\\FlavorFiesta.csproj",
+      "projectPath": "C:\\Users\\kvsgu\\OneDrive\\Desktop\\Team011TeamAssignment\\FlavorFiesta\\FlavorFiesta.csproj",
       "packagesPath": "C:\\Users\\kvsgu\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kvsgu\\OneDrive\\Documents\\Semester 2\\Interactive Application Development\\Team011\\FlavorFiesta\\obj\\",
+      "outputPath": "C:\\Users\\kvsgu\\OneDrive\\Desktop\\Team011TeamAssignment\\FlavorFiesta\\obj\\",
       "projectStyle": "PackageReference",
       "crossTargeting": true,
       "fallbackFolders": [
