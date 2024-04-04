@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Harsh\\OneDrive\\Desktop\\Intercative Web Languages Programming Files\\Team011TeamAssignment\\FlavorFiesta\\FlavorFiesta.csproj": {}
+    "C:\\Users\\kvsgu\\OneDrive\\Documents\\Semester 2\\Interactive Application Development\\Team011\\FlavorFiesta\\FlavorFiesta.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Harsh\\OneDrive\\Desktop\\Intercative Web Languages Programming Files\\Team011TeamAssignment\\FlavorFiesta\\FlavorFiesta.csproj": {
+    "C:\\Users\\kvsgu\\OneDrive\\Documents\\Semester 2\\Interactive Application Development\\Team011\\FlavorFiesta\\FlavorFiesta.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Harsh\\OneDrive\\Desktop\\Intercative Web Languages Programming Files\\Team011TeamAssignment\\FlavorFiesta\\FlavorFiesta.csproj",
+        "projectUniqueName": "C:\\Users\\kvsgu\\OneDrive\\Documents\\Semester 2\\Interactive Application Development\\Team011\\FlavorFiesta\\FlavorFiesta.csproj",
         "projectName": "FlavorFiesta",
-        "projectPath": "C:\\Users\\Harsh\\OneDrive\\Desktop\\Intercative Web Languages Programming Files\\Team011TeamAssignment\\FlavorFiesta\\FlavorFiesta.csproj",
-        "packagesPath": "C:\\Users\\Harsh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Harsh\\OneDrive\\Desktop\\Intercative Web Languages Programming Files\\Team011TeamAssignment\\FlavorFiesta\\obj\\",
+        "projectPath": "C:\\Users\\kvsgu\\OneDrive\\Documents\\Semester 2\\Interactive Application Development\\Team011\\FlavorFiesta\\FlavorFiesta.csproj",
+        "packagesPath": "C:\\Users\\kvsgu\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\kvsgu\\OneDrive\\Documents\\Semester 2\\Interactive Application Development\\Team011\\FlavorFiesta\\obj\\",
         "projectStyle": "PackageReference",
         "crossTargeting": true,
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Harsh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\kvsgu\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -187,7 +187,7 @@
             },
             {
               "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[7.0.17, 7.0.17]"
+              "version": "[7.0.15, 7.0.15]"
             },
             {
               "name": "Microsoft.Maui.Controls.Ref.android",
@@ -215,27 +215,11 @@
             },
             {
               "name": "Microsoft.NETCore.App.Ref",
-              "version": "[7.0.17, 7.0.17]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Runtime.Mono.android-arm",
-              "version": "[7.0.17, 7.0.17]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Runtime.Mono.android-arm64",
-              "version": "[7.0.17, 7.0.17]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Runtime.Mono.android-x64",
-              "version": "[7.0.17, 7.0.17]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Runtime.Mono.android-x86",
-              "version": "[7.0.17, 7.0.17]"
+              "version": "[7.0.15, 7.0.15]"
             },
             {
               "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[7.0.17, 7.0.17]"
+              "version": "[7.0.15, 7.0.15]"
             }
           ],
           "frameworkReferences": {
@@ -255,7 +239,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
         },
         "net7.0-ios16.1": {
           "targetAlias": "net7.0-ios",
@@ -311,7 +295,7 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[7.0.17, 7.0.17]"
+              "version": "[7.0.15, 7.0.15]"
             },
             {
               "name": "Microsoft.iOS.Ref",
@@ -347,15 +331,11 @@
             },
             {
               "name": "Microsoft.NETCore.App.Ref",
-              "version": "[7.0.17, 7.0.17]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Runtime.Mono.iossimulator-x64",
-              "version": "[7.0.17, 7.0.17]"
+              "version": "[7.0.15, 7.0.15]"
             },
             {
               "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[7.0.17, 7.0.17]"
+              "version": "[7.0.15, 7.0.15]"
             }
           ],
           "frameworkReferences": {
@@ -375,7 +355,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
         },
         "net7.0-maccatalyst16.1": {
           "targetAlias": "net7.0-maccatalyst",
@@ -432,7 +412,7 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[7.0.17, 7.0.17]"
+              "version": "[7.0.15, 7.0.15]"
             },
             {
               "name": "Microsoft.MacCatalyst.Ref",
@@ -468,15 +448,11 @@
             },
             {
               "name": "Microsoft.NETCore.App.Ref",
-              "version": "[7.0.17, 7.0.17]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Runtime.Mono.maccatalyst-x64",
-              "version": "[7.0.17, 7.0.17]"
+              "version": "[7.0.15, 7.0.15]"
             },
             {
               "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[7.0.17, 7.0.17]"
+              "version": "[7.0.15, 7.0.15]"
             }
           ],
           "frameworkReferences": {
@@ -496,7 +472,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
         },
         "net7.0-windows10.0.19041": {
           "targetAlias": "net7.0-windows10.0.19041.0",
@@ -550,11 +526,11 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[7.0.17, 7.0.17]"
+              "version": "[7.0.15, 7.0.15]"
             },
             {
               "name": "Microsoft.AspNetCore.App.Runtime.win-x64",
-              "version": "[7.0.17, 7.0.17]"
+              "version": "[7.0.15, 7.0.15]"
             },
             {
               "name": "Microsoft.Maui.Controls.Ref.win",
@@ -582,15 +558,15 @@
             },
             {
               "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[7.0.17, 7.0.17]"
+              "version": "[7.0.15, 7.0.15]"
             },
             {
               "name": "Microsoft.NETCore.App.Ref",
-              "version": "[7.0.17, 7.0.17]"
+              "version": "[7.0.15, 7.0.15]"
             },
             {
               "name": "Microsoft.NETCore.App.Runtime.win-x64",
-              "version": "[7.0.17, 7.0.17]"
+              "version": "[7.0.15, 7.0.15]"
             },
             {
               "name": "Microsoft.Windows.SDK.NET.Ref",
@@ -598,11 +574,11 @@
             },
             {
               "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[7.0.17, 7.0.17]"
+              "version": "[7.0.15, 7.0.15]"
             },
             {
               "name": "Microsoft.WindowsDesktop.App.Runtime.win-x64",
-              "version": "[7.0.17, 7.0.17]"
+              "version": "[7.0.15, 7.0.15]"
             }
           ],
           "frameworkReferences": {
@@ -622,7 +598,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {
