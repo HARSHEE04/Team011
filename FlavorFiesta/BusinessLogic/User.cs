@@ -61,5 +61,14 @@ namespace FlavorFiesta.BusinessLogic
                 DateOfBirth = value;
             }
         }
+
+        public User(string name, string email, string password, DateTime dateOfBirth)
+        {
+
+            Name = name;
+            Email = email;
+            Password = password;
+            DateOfBirth = dateOfBirth;
+        }
     }
 }
