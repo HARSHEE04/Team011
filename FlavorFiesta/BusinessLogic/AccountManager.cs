@@ -35,5 +35,15 @@ namespace FlavorFiesta.BusinessLogic
             }
         }
 
+        public bool SearchUser(User user)
+        {
+            foreach (string email in _users.Keys)
+            {
+                if (email == user.Email)
+                    return true;
+            }
+            return false;
+        }
+
     }
 }
