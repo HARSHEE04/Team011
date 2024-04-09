@@ -6,4 +6,9 @@ public partial class SignInPage : ContentPage
 	{
 		InitializeComponent();
 	}
+
+    private void Image_SizeChanged(object sender, EventArgs e)
+    {
+
+    }
 }

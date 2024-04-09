@@ -60,6 +60,7 @@
 	  <None Remove="Pages\" />
 	  <None Remove="DataPersistence\" />
 	  <None Remove="Resources\Images\halal_icon.png" />
+	  <None Remove="Resources\Images\logo21.png" />
 	  <None Remove="Resources\Images\non_vegetarian_icon.png" />
 	  <None Remove="Resources\Images\vegan_icon.png" />
 	  <None Remove="Resources\Images\vegetarian_icon.png" />

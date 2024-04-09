@@ -7,22 +7,54 @@
         <Label 
             Text="Sign In"
             VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-        <Grid>
-            <VerticalStackLayout>                
+            HorizontalOptions="Center"
+            FontSize="Title"
+            FontAttributes="Bold"/>
+
+        <Image
+            Source="logo21.png"
+            Aspect="AspectFit"
+            MaximumHeightRequest="400"
+            MaximumWidthRequest="400"/>
+
+        <Grid
+            ColumnDefinitions="*, 2*"
+            RowDefinitions="*,*,*">
+               
                 <Label
-                    Text="Email"/>
+                    Text="Email"
+                    Grid.Column="0"
+                    Grid.Row="0"
+                    TextColor="brown"
+                    FontAttributes="Bold"
+                    VerticalOptions="Center"/>
                 <Entry
-                    x:Name="EmailEntry"/>
+                    x:Name="EmailEntry"
+                    Grid.Column="1"
+                    Grid.Row="0"/>
                 <Label
-                    Text="Password"/>
+                    Text="Password"
+                    Grid.Column="0"
+                    Grid.Row="1"
+                    TextColor="brown"
+                    FontAttributes="Bold"
+                    VerticalOptions="Center"/>
                 <Entry
                     x:Name="PasswordEntry"
-                    IsPassword="True"/>
-            </VerticalStackLayout>
+                    IsPassword="True"
+                    Grid.Column="1"
+                    Grid.Row="1"/>
+
         </Grid>
         <Button
-            Text="Sign In"/>
+            Text="Sign In"
+            VerticalOptions="End"
+            HorizontalOptions="Center"
+            Margin="50"
+            HeightRequest="90"
+            WidthRequest="150"
+            FontSize="Medium"
+            />
 
     </VerticalStackLayout>
 </ContentPage>
