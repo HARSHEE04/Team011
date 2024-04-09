@@ -40,8 +40,7 @@
             RowSpacing="10"
             ColumnSpacing="20"
             RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto, Auto, Auto"
-            ColumnDefinitions="*, *, *, *">
-        
+            ColumnDefinitions="*, *, *, *, *">        
         <!-- Calories Section -->
         <Label Grid.Row="0"
                Grid.Column="0"
@@ -176,7 +175,7 @@
         <!-- Submit Button -->
         <Button Grid.Row="6"
                 Grid.Column="0"
-                Grid.ColumnSpan="4"
+                Grid.ColumnSpan="5"
                 Text="SUBMIT"
                 Command="{Binding SubmitCommand}"/>
     </Grid>
