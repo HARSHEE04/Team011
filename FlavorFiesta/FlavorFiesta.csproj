@@ -67,6 +67,9 @@
 	  <None Remove="Resources\Images\dessert_icon.svg" />
 	  <None Remove="Resources\Images\dinner_icon.svg" />
 	  <None Remove="Resources\Images\lunch_icon.svg" />
+	  <None Remove="Resources\Images\american_food.svg" />
+	  <None Remove="Resources\Images\chinese_food.svg" />
+	  <None Remove="Resources\Images\italian_food.svg" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="DataPersistence\" />
@@ -88,5 +91,8 @@
 	  <BundleResource Include="Resources\Images\dessert_icon.svg" />
 	  <BundleResource Include="Resources\Images\dinner_icon.svg" />
 	  <BundleResource Include="Resources\Images\lunch_icon.svg" />
+	  <BundleResource Include="Resources\Images\american_food.svg" />
+	  <BundleResource Include="Resources\Images\chinese_food.svg" />
+	  <BundleResource Include="Resources\Images\italian_food.svg" />
 	</ItemGroup>
 </Project>

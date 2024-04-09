@@ -32,6 +32,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = FlavorFiesta.Pages.ChooseR
 build_metadata.AdditionalFiles.TargetPath = Pages/ChooseRecipe.xaml
 build_metadata.AdditionalFiles.RelativePath = Pages/ChooseRecipe.xaml
 
+[/Users/Yammy/Documents/GitHub/Team011/FlavorFiesta/Pages/CusinePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = FlavorFiesta.Pages.CusinePage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages/CusinePage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages/CusinePage.xaml
+
 [/Users/Yammy/Documents/GitHub/Team011/FlavorFiesta/Pages/DisplayRecipe.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = FlavorFiesta.Pages.DisplayRecipe.xaml
