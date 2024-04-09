@@ -28,6 +28,18 @@ build_metadata.AdditionalFiles.ManifestResourceName = FlavorFiesta.AppShell.xaml
 build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
 build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
 
+[C:/Users/Harsh/OneDrive/Desktop/Intercative Web Languages Programming Files/TermProject-Team11/FlavorFiesta/Pages/ChooseRecipe.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = FlavorFiesta.Pages.ChooseRecipe.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\ChooseRecipe.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\ChooseRecipe.xaml
+
+[C:/Users/Harsh/OneDrive/Desktop/Intercative Web Languages Programming Files/TermProject-Team11/FlavorFiesta/Pages/DisplayRecipe.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = FlavorFiesta.Pages.DisplayRecipe.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\DisplayRecipe.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\DisplayRecipe.xaml
+
 [C:/Users/Harsh/OneDrive/Desktop/Intercative Web Languages Programming Files/TermProject-Team11/FlavorFiesta/Pages/NutritionalPreferencesPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = FlavorFiesta.Pages.NutritionalPreferencesPage.xaml

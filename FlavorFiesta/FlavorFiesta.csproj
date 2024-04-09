@@ -61,7 +61,14 @@
 	  <None Remove="DataPersistence\" />
 	</ItemGroup>
 	<ItemGroup>
-	  <Folder Include="Pages\" />
 	  <Folder Include="DataPersistence\" />
+	</ItemGroup>
+	<ItemGroup>
+	  <MauiXaml Update="Pages\ChooseRecipe.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\DisplayRecipe.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	</ItemGroup>
 </Project>
