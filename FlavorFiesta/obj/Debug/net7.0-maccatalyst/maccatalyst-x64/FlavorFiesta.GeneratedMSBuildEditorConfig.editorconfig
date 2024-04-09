@@ -1,8 +1,4 @@
 is_global = true
-build_property.EnableAotAnalyzer = 
-build_property.EnableSingleFileAnalyzer = 
-build_property.EnableTrimAnalyzer = false
-build_property.IncludeAllContentForSelfExtract = 
 build_property.TargetFramework = net7.0-maccatalyst
 build_property.TargetPlatformMinVersion = 
 build_property.UsingMicrosoftNETSdkWeb = 
@@ -12,35 +8,32 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = FlavorFiesta
-build_property.ProjectDir = C:\Users\Harsh\OneDrive\Desktop\Intercative Web Languages Programming Files\Team 11- TermAssignment\FlavorFiesta\
-build_property.EnableComHosting = 
-build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.ProjectDir = /Users/Yammy/Documents/GitHub/Team011/FlavorFiesta/
 
-[C:/Users/Harsh/OneDrive/Desktop/Intercative Web Languages Programming Files/Team 11- TermAssignment/FlavorFiesta/App.xaml]
+[/Users/Yammy/Documents/GitHub/Team011/FlavorFiesta/App.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = FlavorFiesta.App.xaml
 build_metadata.AdditionalFiles.TargetPath = App.xaml
 build_metadata.AdditionalFiles.RelativePath = App.xaml
 
-[C:/Users/Harsh/OneDrive/Desktop/Intercative Web Languages Programming Files/Team 11- TermAssignment/FlavorFiesta/AppShell.xaml]
+[/Users/Yammy/Documents/GitHub/Team011/FlavorFiesta/AppShell.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = FlavorFiesta.AppShell.xaml
 build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
 build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
 
-[C:/Users/Harsh/OneDrive/Desktop/Intercative Web Languages Programming Files/Team 11- TermAssignment/FlavorFiesta/Pages/ChooseRecipe.xaml]
+[/Users/Yammy/Documents/GitHub/Team011/FlavorFiesta/Pages/ChooseRecipe.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = FlavorFiesta.Pages.ChooseRecipe.xaml
-build_metadata.AdditionalFiles.TargetPath = Pages\ChooseRecipe.xaml
-build_metadata.AdditionalFiles.RelativePath = Pages\ChooseRecipe.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages/ChooseRecipe.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages/ChooseRecipe.xaml
 
-[C:/Users/Harsh/OneDrive/Desktop/Intercative Web Languages Programming Files/Team 11- TermAssignment/FlavorFiesta/Pages/DisplayRecipe.xaml]
+[/Users/Yammy/Documents/GitHub/Team011/FlavorFiesta/Pages/DisplayRecipe.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = FlavorFiesta.Pages.DisplayRecipe.xaml
-build_metadata.AdditionalFiles.TargetPath = Pages\DisplayRecipe.xaml
-build_metadata.AdditionalFiles.RelativePath = Pages\DisplayRecipe.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages/DisplayRecipe.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages/DisplayRecipe.xaml
 
-<<<<<<< HEAD
 [/Users/Yammy/Documents/GitHub/Team011/FlavorFiesta/Pages/FoodChoiceOptions.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = FlavorFiesta.Pages.FoodChoiceOptions.xaml
@@ -48,28 +41,25 @@ build_metadata.AdditionalFiles.TargetPath = Pages/FoodChoiceOptions.xaml
 build_metadata.AdditionalFiles.RelativePath = Pages/FoodChoiceOptions.xaml
 
 [/Users/Yammy/Documents/GitHub/Team011/FlavorFiesta/Pages/NutritionalPreferencesPage.xaml]
-=======
-[C:/Users/Harsh/OneDrive/Desktop/Intercative Web Languages Programming Files/Team 11- TermAssignment/FlavorFiesta/Pages/NutritionalPreferencesPage.xaml]
->>>>>>> d477902884b42b1d296c8aeb4f713b9489b7fbbf
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = FlavorFiesta.Pages.NutritionalPreferencesPage.xaml
-build_metadata.AdditionalFiles.TargetPath = Pages\NutritionalPreferencesPage.xaml
-build_metadata.AdditionalFiles.RelativePath = Pages\NutritionalPreferencesPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages/NutritionalPreferencesPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages/NutritionalPreferencesPage.xaml
 
-[C:/Users/Harsh/OneDrive/Desktop/Intercative Web Languages Programming Files/Team 11- TermAssignment/FlavorFiesta/Pages/WelcomePage.xaml]
+[/Users/Yammy/Documents/GitHub/Team011/FlavorFiesta/Pages/WelcomePage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = FlavorFiesta.Pages.WelcomePage.xaml
-build_metadata.AdditionalFiles.TargetPath = Pages\WelcomePage.xaml
-build_metadata.AdditionalFiles.RelativePath = Pages\WelcomePage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages/WelcomePage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages/WelcomePage.xaml
 
-[C:/Users/Harsh/OneDrive/Desktop/Intercative Web Languages Programming Files/Team 11- TermAssignment/FlavorFiesta/Resources/Styles/Colors.xaml]
+[/Users/Yammy/Documents/GitHub/Team011/FlavorFiesta/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = FlavorFiesta.Resources.Styles.Colors.xaml
-build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
-build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources/Styles/Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources/Styles/Colors.xaml
 
-[C:/Users/Harsh/OneDrive/Desktop/Intercative Web Languages Programming Files/Team 11- TermAssignment/FlavorFiesta/Resources/Styles/Styles.xaml]
+[/Users/Yammy/Documents/GitHub/Team011/FlavorFiesta/Resources/Styles/Styles.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = FlavorFiesta.Resources.Styles.Styles.xaml
-build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
-build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources/Styles/Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources/Styles/Styles.xaml
