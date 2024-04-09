@@ -5,9 +5,22 @@
              >
     <VerticalStackLayout>
         <Label 
-            Text="Sign Up"
+            Text="Sign Up With Flavour Fiesta"
+            BackgroundColor="Beige"
+            TextColor="Brown"
             VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+            HorizontalOptions="Center" 
+            Margin="15"
+            FontAttributes="Bold"
+            FontSize="Title"/>
+
+        <Image
+            Source="logo21.png"
+            Grid.Column="0"
+            HorizontalOptions="Start"
+            MaximumHeightRequest="150"
+            MaximumWidthRequest="150"
+            Margin="8"/>
         <Grid
             ColumnDefinitions="*, 2*"
             RowDefinitions="*,*,*,*,*,*">
@@ -61,6 +74,14 @@
                 Grid.Row="5"/>
 
         </Grid>
-            
+
+        <Button
+            Text="Sign Up"
+            VerticalOptions="Center" 
+            BackgroundColor="Brown"
+            HorizontalOptions="Center"
+            Margin="50"/>
+        
+
     </VerticalStackLayout>
 </ContentPage>
