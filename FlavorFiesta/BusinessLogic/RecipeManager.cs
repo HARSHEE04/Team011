@@ -10,7 +10,7 @@ namespace FlavorFiesta.BusinessLogic
     //Then, it will aid in displaying the chosen recipe by working with the code behind
     internal class RecipeManager
     {
-        //nutrition class has the info about the meal type, diet type, cusine type, calories, protein, suagr, sering, prep time and dietary restirctions
+        //nutrition class has the info about the meal type, diet type, cusine type, calories, protein, sugar, sering, prep time and dietary restirctions
         //The recipe class needs to have a composition relationship with the nutrition class to get the values of these 
         //then recipe manager class needs to check if the recipes property== preferencees.property, if it does, then return those recipes.
 
