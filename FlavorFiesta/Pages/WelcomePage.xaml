@@ -27,7 +27,7 @@
                 HeightRequest="50"
                 Margin="20"
                 BackgroundColor="#FFFFC0CB"
-                Command="{Binding SignUpCommand}" />
+                Clicked="OnSignUpClicked" />
     </StackLayout>
 
 </ContentPage>
