@@ -3,10 +3,88 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FlavorFiesta.Pages.DisplayRecipe"
              Title="DisplayRecipe">
-    <VerticalStackLayout>
+
+
+    <Shell.TitleView>
+        <Grid>
+            <Label Text="Recipe Information"
+             HorizontalOptions="Center"  VerticalOptions="Center"
+            FontSize="Title" TextColor="White"></Label>
+        </Grid>
+    </Shell.TitleView>
+
+
+    <Grid
+        ColumnDefinitions="*,3*,2*"
+        RowDefinitions="*,*,*,3*">
         <Label 
-            Text="Welcome to .NET MAUI!"
+            Grid.Row="0"  Grid.Column="0"
+            Text="Recipe Name"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
-    </VerticalStackLayout>
+
+        <Label
+            Grid.Row="0"  Grid.Column="1"
+            Text="{Binding ChosenRecipe,StringFormat='Recipe info for : {0}'}"
+            VerticalOptions="Center">
+        </Label>
+
+        <Label 
+           Grid.Row="1"  Grid.Column="0"
+           Text="Recipe URL"
+           VerticalOptions="Center" 
+           HorizontalOptions="Center" />
+
+        <Label
+           Grid.Row="1"  Grid.Column="1"
+           Text="{Binding ChosenRecipeURL,StringFormat='Recipe info for : {0}'}"
+           VerticalOptions="Center">
+        </Label>
+
+        <Label
+            Grid.Row="2"  Grid.Column="0" Grid.ColumnSpan="2"
+            Text="Additional  Infomation:"
+            VerticalOptions="Center">
+        </Label>
+
+        <ListView
+            Grid.Row="3"  Grid.Column="0"  Grid.ColumnSpan="2"
+            BackgroundColor="AntiqueWhite"
+            ItemsSource="{Binding Recipes}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Padding="10">
+                            <Label Text="{Binding DietType, StringFormat='Diet Type: {0}'}" TextColor="Black" />
+                            <Label Text="{Binding CuisineType, StringFormat='Cuisine Type: {0}'}" TextColor="Black" />
+                            <Label Text="{Binding MealType, StringFormat='Meal Type: {0}'}" TextColor="Black" />
+                            <Label Text="{Binding CaloriesRange, StringFormat='Calories Range: {0}'}" TextColor="Black" />
+                            <Label Text="{Binding ProteinRange, StringFormat='Protein Range: {0}'}" TextColor="Black" />
+                            <Label Text="{Binding SugarRange, StringFormat='Sugar Range: {0}'}" TextColor="Black" />
+                            <Label Text="{Binding ServingsRange, StringFormat='Servings Range: {0}'}" TextColor="Black" />
+                            <Label Text="{Binding PrepTimeRange, StringFormat='Prep Time Range: {0}'}" TextColor="Black" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <Image
+            Grid.Row="1" Grid.Column="2" Grid.RowSpan="2"
+            x:Name="ChosenRecipeImage"
+            VerticalOptions="Center"
+            HorizontalOptions="Center">
+        </Image>
+
+        <Button
+            Grid.Row="3"  Grid.Column="2"
+            Clicked="OnExit"
+            Text="EXIT"
+            FontSize="Large"
+            TextColor="AntiqueWhite"
+            VerticalOptions="End"
+            BackgroundColor="DarkOliveGreen">
+        </Button>
+
+    </Grid>
 </ContentPage>
