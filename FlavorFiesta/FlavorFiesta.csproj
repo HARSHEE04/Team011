@@ -59,6 +59,10 @@
 	  <None Remove="BusinessLogic\" />
 	  <None Remove="Pages\" />
 	  <None Remove="DataPersistence\" />
+	  <None Remove="Resources\Images\halal_icon.png" />
+	  <None Remove="Resources\Images\non_vegetarian_icon.png" />
+	  <None Remove="Resources\Images\vegan_icon.png" />
+	  <None Remove="Resources\Images\vegetarian_icon.png" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="DataPersistence\" />
@@ -70,5 +74,11 @@
 	  <MauiXaml Update="Pages\DisplayRecipe.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	</ItemGroup>
+	<ItemGroup>
+	  <BundleResource Include="Resources\Images\halal_icon.png" />
+	  <BundleResource Include="Resources\Images\non_vegetarian_icon.png" />
+	  <BundleResource Include="Resources\Images\vegan_icon.png" />
+	  <BundleResource Include="Resources\Images\vegetarian_icon.png" />
 	</ItemGroup>
 </Project>

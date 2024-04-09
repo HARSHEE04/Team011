@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FlavorFiesta.Pages.FoodChoiceOptions"
+             Title="Food Choice Options"
+             BackgroundColor="Gold">
+
+    <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Padding="20">
+        <Label Text="Food Choice Options" FontSize="Large" HorizontalTextAlignment="Center" />
+        <Label Text="The recipes today should be..." FontSize="Medium" Margin="0,20,0,10" />
+
+        <StackLayout Orientation="Horizontal" Margin="0,10">
+            <RadioButton GroupName="FoodChoices" Content="Vegetarian" CheckedChanged="OnFoodChoiceChanged" HorizontalOptions="Start" />
+            <Image Source="vegetarian_icon.png" HeightRequest="24" WidthRequest="24" HorizontalOptions="End" VerticalOptions="Center" />
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal" Margin="0,10">
+            <RadioButton GroupName="FoodChoices" Content="Vegan" CheckedChanged="OnFoodChoiceChanged" HorizontalOptions="Start" />
+            <Image Source="vegan_icon.png" HeightRequest="24" WidthRequest="24" HorizontalOptions="End" VerticalOptions="Center" />
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal" Margin="0,10">
+            <RadioButton GroupName="FoodChoices" Content="Halal" CheckedChanged="OnFoodChoiceChanged" HorizontalOptions="Start" />
+            <Image Source="halal_icon.png" HeightRequest="24" WidthRequest="24" HorizontalOptions="End" VerticalOptions="Center" />
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal" Margin="0,10">
+            <RadioButton GroupName="FoodChoices" Content="Non-Vegetarian" CheckedChanged="OnFoodChoiceChanged" HorizontalOptions="Start" />
+            <Image Source="non_vegetarian_icon.png" HeightRequest="24" WidthRequest="24" HorizontalOptions="End" VerticalOptions="Center" />
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
