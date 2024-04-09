@@ -63,6 +63,10 @@
 	  <None Remove="Resources\Images\non_vegetarian_icon.png" />
 	  <None Remove="Resources\Images\vegan_icon.png" />
 	  <None Remove="Resources\Images\vegetarian_icon.png" />
+	  <None Remove="Resources\Images\breakfast_icon.svg" />
+	  <None Remove="Resources\Images\dessert_icon.svg" />
+	  <None Remove="Resources\Images\dinner_icon.svg" />
+	  <None Remove="Resources\Images\lunch_icon.svg" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="DataPersistence\" />
@@ -80,5 +84,9 @@
 	  <BundleResource Include="Resources\Images\non_vegetarian_icon.png" />
 	  <BundleResource Include="Resources\Images\vegan_icon.png" />
 	  <BundleResource Include="Resources\Images\vegetarian_icon.png" />
+	  <BundleResource Include="Resources\Images\breakfast_icon.svg" />
+	  <BundleResource Include="Resources\Images\dessert_icon.svg" />
+	  <BundleResource Include="Resources\Images\dinner_icon.svg" />
+	  <BundleResource Include="Resources\Images\lunch_icon.svg" />
 	</ItemGroup>
 </Project>

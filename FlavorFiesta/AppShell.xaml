@@ -8,7 +8,7 @@
 
     <ShellContent
         Title="Home"
-        ContentTemplate="{DataTemplate local:Pages.FoodChoiceOptions}"
+        ContentTemplate="{DataTemplate local:Pages.RecipeType}"
         Route="MainPage" />
 
 </Shell>
