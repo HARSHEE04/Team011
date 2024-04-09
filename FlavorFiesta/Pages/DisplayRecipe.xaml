@@ -69,5 +69,22 @@
             </ListView.ItemTemplate>
         </ListView>
 
+        <Image
+            Grid.Row="1" Grid.Column="2" Grid.RowSpan="2"
+            x:Name="ChosenRecipeImage"
+            VerticalOptions="Center"
+            HorizontalOptions="Center">
+        </Image>
+
+        <Button
+            Grid.Row="3"  Grid.Column="2"
+            Clicked="OnExit"
+            Text="EXIT"
+            FontSize="Large"
+            TextColor="AntiqueWhite"
+            VerticalOptions="End"
+            BackgroundColor="DarkOliveGreen">
+        </Button>
+
     </Grid>
 </ContentPage>
