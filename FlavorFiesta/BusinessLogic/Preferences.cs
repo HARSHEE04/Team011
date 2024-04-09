@@ -3,87 +3,176 @@ namespace FlavorFiesta.BusinessLogic
 {
     public class Preferences
     {
+        #region Fields
+        private string _dietType;
+        private string _cuisineType;
+        private string _mealType;
+        private int _caloriesRange;
+        private int _proteinRange;
+        private int _sugarRange;
+        private int _servingsRange;
+        private TimeSpan _prepTimeRange;
+        private List<string> _dietaryRestrictions;
+        #endregion
 
-        // Fields (Attributes)
-        private string dietType;
-        private string cuisineType;
-        private string mealType;
-        private string caloriesRange;
-        private string proteinRange;
-        private string sugarRange;
-        private string servingsRange;
-        private string prepTimeRange;
-        private List<string> dietaryRestrictions = new List<string>();
-        public List<string> DietaryRestrictions { get; private set; } // Read-only property
-
-        // Constructor
-        public Preferences()
+        #region Constructor
+        public Preferences(string dietType, string cusineType, string mealType, int caloriesRange, int protenRange,
+            int sugarRange, int serveingsRange, TimeSpan prepTimeRange, List<string> dietaryRestrictions)
         {
-            // Initialize the list to prevent a null reference
-            DietaryRestrictions = new List<string>();
+            DietType = dietType;
+            CuisineType = cusineType;
+            MealType = mealType;
+            CaloriesRange = caloriesRange;
+            ProteinRange = protenRange;
+            SugarRange = sugarRange;
+            ServingsRange = serveingsRange;
+            PrepTimeRange = prepTimeRange;
+            DietaryRestrictions = dietaryRestrictions;
+        }
+        #endregion
+
+        #region Properties
+        public string DietType
+        {
+            get { return _dietType; }
+            set
+            {
+                if (string.IsNullOrWhiteSpace(value))
+                {
+                    throw new ArgumentException("Diet type cannot be null or whitespace.", nameof(DietType));
+                }
+                _dietType = value;
+            }
         }
 
-        // Methods to set the preferences
-        public void SetDietType(string type)
+        public string CuisineType
         {
-            dietType = type;
+            get { return _cuisineType; }
+            set
+            {
+                if (string.IsNullOrWhiteSpace(value))
+                {
+                    throw new ArgumentException("Cuisine type cannot be null or whitespace.", nameof(CuisineType));
+                }
+                _cuisineType = value;
+            }
         }
 
-        public void SetCuisineType(string type)
+        public string MealType
         {
-            cuisineType = type;
+            get { return _mealType; }
+            set
+            {
+                if (string.IsNullOrWhiteSpace(value))
+                {
+                    throw new ArgumentException("Meal type cannot be null or whitespace.", nameof(MealType));
+                }
+                _mealType = value;
+            }
         }
 
-        public void SetMealType(string type)
+        public int CaloriesRange
         {
-            mealType = type;
+            get { return _caloriesRange; }
+            set
+            {
+                if (value < 0)
+                {
+                    throw new ArgumentException("Calories range cannot be negative.", nameof(CaloriesRange));
+                }
+                _caloriesRange = value;
+            }
         }
 
-        public void SetCaloriesRange(string range)
+        public int ProteinRange
         {
-            caloriesRange = range;
+            get { return _proteinRange; }
+            set
+            {
+                if (value < 0)
+                {
+                    throw new ArgumentException("Protein range cannot be negative.", nameof(ProteinRange));
+                }
+                _proteinRange = value;
+            }
         }
 
-        public void SetProteinRange(string range)
+        public int SugarRange
         {
-            proteinRange = range;
+            get { return _sugarRange; }
+            set
+            {
+                if (value < 0)
+                {
+                    throw new ArgumentException("Sugar range cannot be negative.", nameof(SugarRange));
+                }
+                _sugarRange = value;
+            }
         }
 
-        public void SetSugarRange(string range)
+
+        public int ServingsRange
         {
-            sugarRange = range;
+            get { return _servingsRange; }
+            set
+            {
+                if (value < 0)
+                {
+                    throw new ArgumentException("Servings range cannot be negative.", nameof(ServingsRange));
+                }
+                _servingsRange = value;
+            }
         }
 
-        public void SetServingsRange(string range)
+        public TimeSpan PrepTimeRange
         {
-            servingsRange = range;
+            get { return _prepTimeRange; }
+            set
+            {
+                if (value.TotalMinutes < 0)
+                {
+                    throw new ArgumentException("Preparation time cannot be negative.", nameof(PrepTimeRange));
+                }
+                _prepTimeRange = value;
+            }
         }
 
-        public void SetPrepTimeRange(string range)
+        public List<string> DietaryRestrictions
         {
-            prepTimeRange = range;
+            get { return _dietaryRestrictions; }
+            init
+            {
+                if (value == null)
+                {
+                    throw new ArgumentNullException(nameof(DietaryRestrictions), "Dietary restrictions list cannot be null.");
+                }
+                _dietaryRestrictions = value;
+            }
         }
+        #endregion
 
-        public string GetDietType() => dietType;
-        public string GetCuisineType() => cuisineType;
-        public string GetMealType() => mealType;
-        public string GetCaloriesRange() => caloriesRange;
-        public string GetProteinRange() => proteinRange;
-        public string GetSugarRange() => sugarRange;
-        public string GetServingsRange() => servingsRange;
-        public string GetPrepTimeRange() => prepTimeRange;
-        public List<string> GetDietaryRestrictions() => dietaryRestrictions;
-    
-        // Method to add a dietary restriction to the list
+        #region Methods
+        // Method to add a dietary restriction
         public void AddDietaryRestriction(string restriction)
         {
-            if (restriction == null)
+            if (string.IsNullOrWhiteSpace(restriction))
             {
-                throw new ArgumentNullException(nameof(restriction), "Restriction cannot be null");
+                throw new ArgumentException("Restriction cannot be null or whitespace.", nameof(restriction));
             }
-
-            DietaryRestrictions.Add(restriction);
+            _dietaryRestrictions.Add(restriction);
         }
+
+        // Helper method for validation
+        private static string ValidateInput(string value, string propertyName)
+        {
+            if (string.IsNullOrWhiteSpace(value))
+            {
+                throw new ArgumentException($"{propertyName} cannot be null or whitespace.", propertyName);
+            }
+            return value;
+        }
+        #endregion
     }
+
 }
 
