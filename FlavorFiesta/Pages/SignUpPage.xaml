@@ -8,28 +8,58 @@
             Text="Sign Up"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
-        <Grid>
+        <Grid
+            ColumnDefinitions="*, 2*"
+            RowDefinitions="*,*,*,*,*,*">
             <Label
-                Text="Full Name"/>
+                Text="First Name"
+                Grid.Column="0"
+                Grid.Row="0"/>
             <Entry
-                x:Name="NameEntry"/>
-
+                x:Name="FirstNameEntry"
+                Grid.Column="1"
+                Grid.Row="0"/>
             <Label
-                Text="Email Address"/>
+                Text="Last Name"
+                Grid.Column="0"
+                Grid.Row="1"/>
             <Entry
-                x:Name="EmailEntry"/>
+                x:Name="LastNameEntry"
+                Grid.Column="1"
+                Grid.Row="1"/>
             <Label
-                Text="Password"/>
+                Text="Email Address"
+                Grid.Column="0"
+                Grid.Row="2"/>
             <Entry
-                x:Name="PasswordEntry"/>
+                x:Name="EmailEntry"
+                Grid.Column="1"
+                Grid.Row="2"/>
             <Label
-                Text="Confirm Password"/>
-            <Entry
-                x:Name="ConfirmPasswordEntry"/>
-            <Label
-                Text="Date of Birth"/>
+                Text="Date of Birth"
+                Grid.Column="0"
+                Grid.Row="3"/>
             <DatePicker
-                x:Name="DatePicker"/>
+                x:Name="DatePicker"
+                Grid.Column="1"
+                Grid.Row="3"/>
+            <Label
+                Text="Password"
+                Grid.Column="0"
+                Grid.Row="4"/>
+            <Entry
+                x:Name="PasswordEntry"
+                Grid.Column="1"
+                Grid.Row="4"/>
+            <Label
+                Text="Confirm Password"
+                Grid.Column="0"
+                Grid.Row="5"/>
+            <Entry
+                x:Name="ConfirmPasswordEntry"
+                Grid.Column="1"
+                Grid.Row="5"/>
+
         </Grid>
             
     </VerticalStackLayout>
