@@ -81,6 +81,12 @@
 	  <MauiXaml Update="Pages\DisplayRecipe.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Pages\SignInPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\SignUpPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	</ItemGroup>
 	<ItemGroup>
 	  <BundleResource Include="Resources\Images\halal_icon.png" />
