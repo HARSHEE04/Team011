@@ -103,12 +103,21 @@
         </Grid>
 
         <Button
+            x:Name="SignUpButton"
+            Clicked="OnSignUpButton"
             Text="Sign Up"
             VerticalOptions="Center" 
             BackgroundColor="Brown"
             HorizontalOptions="Center"
             Margin="50"/>
-        
+        <Button
+            x:Name="ViewUsers"
+            Clicked="OnViewUsers"
+            Text="View Users"
+            HorizontalOptions="Center"
+            />
+
+
 
     </VerticalStackLayout>
 </ContentPage>

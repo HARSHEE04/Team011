@@ -21,7 +21,8 @@
                 HeightRequest="50"
                 Margin="20"
                 BackgroundColor="#FFFFC0CB"
-                Command="{Binding SignInCommand}" />
+                Command="{Binding SignInCommand}"
+                Clicked="OnSignInClicked"/>
         <Button Text="Sign-Up"
                 WidthRequest="200"
                 HeightRequest="50"

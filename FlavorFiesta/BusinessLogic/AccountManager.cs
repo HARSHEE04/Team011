@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace FlavorFiesta.BusinessLogic
 {
-    public class AccountManager
+    public class AccountsManager
     {
         Dictionary<string, User> _users = new Dictionary<string, User>();
 
         public Dictionary<string, User> Users => _users;
 
-        public Dictionary<string, User> AddUser(User user)
+        public void AddUser(User user)
         {
             foreach (string key in _users.Keys)
             {
@@ -23,7 +23,7 @@ namespace FlavorFiesta.BusinessLogic
 
             Dictionary<string, User> dict = new Dictionary<string, User>();
             dict.Add(user.Email, user);
-            return dict;
+           
         }
 
         public void RemoveUser(User user)
@@ -44,6 +44,8 @@ namespace FlavorFiesta.BusinessLogic
             }
             return false;
         }
+
+        
 
     }
 }
