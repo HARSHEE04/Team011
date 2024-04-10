@@ -12,12 +12,10 @@ namespace FlavorFiesta.BusinessLogic
     internal class RecipeManager
     {
         string _filePath;
-        private Preferences _userPreferences;
-        private Recipe _recipe;
 
 
         ///read recipes from csv file and make it into a list
-        public List<Recipe> ReadRecipes()
+        public List<Recipe> ReadRecipesFromCSV()
         {
             List<Recipe> list = new List<Recipe>();
 
@@ -64,25 +62,44 @@ namespace FlavorFiesta.BusinessLogic
 
             return list;
         }
+
+        public List<Recipe> SearchRecipe(Preferences userPreferences)
+        {
+            List<Recipe> recipes = ReadRecipesFromCSV(); //now we have the list of recipes from the CSV stored into this local list
+
+            //now we use the LINQ Query Syntax to filter through the recipes
+
+            //see if you can do recipe.RecipePreferences==userPreferences?? not valid tho because you need to compare contents which is why we need properties
+            var matchingRecipeRequests = (from recipe in recipes
+                                          where recipe.RecipePreferences.DietType == userPreferences.DietType &&
+                                          recipe.RecipePreferences.CuisineType == userPreferences.CuisineType &&
+                                          recipe.RecipePreferences.MealType == userPreferences.MealType &&
+                                          recipe.RecipePreferences.CaloriesRange == userPreferences.CaloriesRange &&
+                                          recipe.RecipePreferences.ProteinRange == userPreferences.ProteinRange &&
+                                          recipe.RecipePreferences.SugarRange == userPreferences.SugarRange &&
+                                          recipe.RecipePreferences.ServingsRange == userPreferences.ServingsRange &&
+                                          recipe.RecipePreferences.PrepTimeRange == userPreferences.PrepTimeRange &&
+                                          recipe.RecipePreferences.DietaryRestrictions.SequenceEqual(userPreferences.DietaryRestrictions) select recipe).Take(2).ToList();
+
+            return matchingRecipeRequests;
+            // EXPLAIN SEQUENCEEQUAL AND ToList, take 
+
+            //sequence equal https://www.codingame.com/playgrounds/213/using-c-linq---a-practical-overview/sequenceequal
+            //ToList: https://learn.microsoft.com/en-us/dotnet/api/system.linq.enumerable.tolist?view=net-8.0&redirectedfrom=MSDN#System_Linq_Enumerable_ToList__1_System_Collections_Generic_IEnumerable___0__
+            //TO LIST USAGE GUIDE: https://www.codingame.com/playgrounds/213/using-c-linq---a-practical-overview/tolist-and-toarray,
+            //TRY FROM WHERE SELECT SYNTAX https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/select-clause
+            //HAVE TO USE LINQ QUERY SYNATX : https://learn.microsoft.com/en-us/dotnet/csharp/linq/get-started/write-linq-queries
+
+            //figure out way to only get two recipes from all the matches, try TAKE() METHOD: https://www.tutorialspoint.com/chash-queryable-take-method
+        }
     }
+   
+  
+
+
 }
 
 
-///convert the things read from csv to individual preference properties get DIETTYPE= parts[1]
-///make a method to get preferences object with specific selected preferences
-///make a recipe search metod that compares the preference property to the recipe properties in the csv
-///return two recipes that match this.
-//nutrition class has the info about the meal type, diet type, cusine type, calories, protein, sugar, sering, prep time and dietary restirctions
-//The recipe class needs to have a composition relationship with the nutrition class to get the values of these 
-//then recipe manager class needs to check if the recipes property== preferencees.property, if it does, then return those recipes.
 
-//TRY FROM WHERE SELECT SYNTAX https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/select-clause
-
-//figure out way to only get two recipes from all the matches, try TAKE() METHOD: https://www.tutorialspoint.com/chash-queryable-take-method
-
-//can use list to hold all recipe objects,can idenitfy the recipes using ID property
-
-//ASK IF WE NEED TO USE ABSTARCT CLASS AND INTERFACES?
-//dfsdsdfs
 
 
