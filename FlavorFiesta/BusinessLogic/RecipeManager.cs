@@ -4,6 +4,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
+using FlavorFiesta.Data_Persistance;
 
 namespace FlavorFiesta.BusinessLogic
 {
@@ -11,61 +12,10 @@ namespace FlavorFiesta.BusinessLogic
     //Then, it will aid in displaying the chosen recipe by working with the code behind
     internal class RecipeManager
     {
-        string _filePath;
-
-
-        ///read recipes from csv file and make it into a list
-        public List<Recipe> ReadRecipesFromCSV()
+        
+        public List<Recipe> SearchRecipe(Preferences userPreferences,RecipeManagerDataPersistance csvAccess) //just used dependency relationship for loose coupling
         {
-            List<Recipe> list = new List<Recipe>();
-
-            try
-            {
-                string[] recipeObjects = File.ReadAllLines(_filePath);//used file path because that is the location, each line will have a recipe object
-
-                foreach (string line in recipeObjects)
-                {
-                    string[] parts = line.Split(',');
-
-                    //extracting needed information from the recipe 
-                    string name = parts[0];
-                    string recipeImage = parts[1];
-                    string recipeURL = parts[2];
-
-
-                    //now create the preferences object for this specific recipe 
-                    Preferences preferences = new Preferences(
-
-                        //the info and its corresponding property which will be used in Recipe class object made below
-                        parts[3], // dietType
-                        parts[4], // cuisineType
-                        parts[5], // mealType
-                        int.Parse(parts[6]), // caloriesRange
-                        int.Parse(parts[7]), // proteinRange
-                        int.Parse(parts[8]), // sugarRange
-                        int.Parse(parts[9]), // servingsRange
-                        TimeSpan.Parse(parts[10]), // prepTimeRange
-                        new List<string>(parts[11].Split(';')) // dietaryRestrictions
-                    );
-
-                    //new recipe object made
-                    Recipe recipe = new Recipe(name, recipeImage, recipeURL, preferences);
-                    //add this recipe to the list of recipes
-                    list.Add(recipe);
-                }
-
-                }
-                  catch (Exception ex)
-            {
-                Console.WriteLine("Error reading recipes: " + ex.Message);
-            }
-
-            return list;
-        }
-
-        public List<Recipe> SearchRecipe(Preferences userPreferences)
-        {
-            List<Recipe> recipes = ReadRecipesFromCSV(); //now we have the list of recipes from the CSV stored into this local list
+            List<Recipe> recipes = csvAccess.ReadRecipesFromCSV(); //now we have the list of recipes from the CSV stored into this local list
 
             //now we use the LINQ Query Syntax to filter through the recipes
 
