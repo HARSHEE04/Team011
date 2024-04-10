@@ -10,13 +10,13 @@ public partial class WelcomePage : ContentPage
 
     private async void OnSignInClicked(object sender, EventArgs e)
     {
-        // Will Work On Later
+        await Navigation.PushAsync(new SignInPage());
     }
 
     private async void OnSignUpClicked(object sender, EventArgs e)
     {
         // Navigate to the Sign-Up Page
-        await Navigation.PushAsync(new NutritionalPreferencesPage());
+        await Navigation.PushAsync(new SignUpPage());
 
     }
 }
