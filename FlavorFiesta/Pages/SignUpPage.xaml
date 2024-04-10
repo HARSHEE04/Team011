@@ -23,7 +23,7 @@
             Margin="8"/>
         <Grid
             ColumnDefinitions="*, 2*"
-            RowDefinitions="*,*,*,*,*,*">
+            RowDefinitions="*,*,*,*,*,*,*">
             <Label
                 Text="First Name"
                 Grid.Column="0"
@@ -72,6 +72,17 @@
                 x:Name="ConfirmPasswordEntry"
                 Grid.Column="1"
                 Grid.Row="5"/>
+            <CheckBox
+                x:Name="AcceptTermsCheckbox"
+                Grid.Column="0"
+                Grid.Row="6"
+                HorizontalOptions="End"/>
+            <Label
+                x:Name="CheckboxLabel"
+                Text="I accept and agree the Terms of Use."
+                Grid.Column="1"
+                VerticalOptions="Center"
+                Grid.Row="6"/>
 
         </Grid>
 
