@@ -15,9 +15,14 @@ namespace FlavorFiesta.BusinessLogic
         private string _name;
         private string _recipeImage;
         private string _recipeURL;
-        //Nutrition class is part of this; ensure to show composition relationship here
+        private Preferences _recipePreferences;
 
         //Properties
+
+        public Preferences  RecipePreferences
+        { get { return _recipePreferences; }
+          set { _recipePreferences = value; }
+            }
         public int ID
         {
             get { return id; }
@@ -55,12 +60,14 @@ namespace FlavorFiesta.BusinessLogic
             }
         }
 
-        public Recipe(string name, string recipeImage, string recipeURL)
+        public Recipe(string name, string recipeImage, string recipeURL, Preferences preferences)
         {
             id = ++lastId; // the ++ is an increment operator and it increments the variable by 1 and returns the incremented value
             Name = name;
             RecipeImage = recipeImage;
             RecipeURL = recipeURL;
+            RecipePreferences = preferences;
+
 
         }
 

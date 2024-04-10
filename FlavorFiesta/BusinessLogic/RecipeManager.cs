@@ -10,6 +10,19 @@ namespace FlavorFiesta.BusinessLogic
     //Then, it will aid in displaying the chosen recipe by working with the code behind
     internal class RecipeManager
     {
+        string _filePath;
+        private Preferences _userPreferences;
+        private Recipe _recipe;
+
+
+        static List<Recipe> ReadRecipes
+        ///read recipes from csv file and make it into a list
+
+        public
+        ///convert the things read from csv to individual preference properties get DIETTYPE= parts[1]
+        ///make a method to get preferences object with specific selected preferences
+        ///make a recipe search metod that compares the preference property to the recipe properties in the csv
+        ///return two recipes that match this.
         //nutrition class has the info about the meal type, diet type, cusine type, calories, protein, sugar, sering, prep time and dietary restirctions
         //The recipe class needs to have a composition relationship with the nutrition class to get the values of these 
         //then recipe manager class needs to check if the recipes property== preferencees.property, if it does, then return those recipes.
