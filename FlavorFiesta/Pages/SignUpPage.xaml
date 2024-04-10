@@ -77,13 +77,29 @@
                 Grid.Column="0"
                 Grid.Row="6"
                 HorizontalOptions="End"/>
-            <Label
+
+            <Label      
                 x:Name="CheckboxLabel"
-                Text="I accept and agree the Terms of Use."
                 Grid.Column="1"
                 VerticalOptions="Center"
-                Grid.Row="6"/>
-
+                Grid.Row="6">
+                <!---https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/label?view=net-maui-8.0#create-a-hyperlink-->
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="I accept and agree to the " />
+                        <Span Text="Terms of use"
+                              TextColor="Blue"
+                              TextDecorations="Underline">
+                            <Span.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding TapCommand}"
+                                          CommandParameter="https://learn.microsoft.com/dotnet/maui/" />
+                            </Span.GestureRecognizers>
+                        </Span>
+                        <Span Text="." />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+ 
         </Grid>
 
         <Button
