@@ -15,10 +15,36 @@ namespace FlavorFiesta.BusinessLogic
         private Recipe _recipe;
 
 
-        static List<Recipe> ReadRecipes
+        ///read recipes from csv file and make it into a list
+        public List<Recipe> ReadRecipes()
+        {
+            List<Recipe> list = new List<Recipe>();
+
+            try
+            {
+                string[] recipeObjects = File.ReadAllLines(_filePath);//used file path because that is the location, each line will have a recipe object
+
+                foreach(string line in recipeObjects)
+                {
+                    string[] parts = line.Split(',');
+
+                    //extracting needed information from the recipe 
+                    string name = parts[0];
+                    string recipeImage = parts[1];
+                    string recipeURL = parts[2];
+                    string allRecipePreferences = parts[3];
+
+
+                    //now create the preferences object for this specific recipe 
+                    Preferences recipePrefrences= new Preferences
+                }
+               
+            } 
+
+        }
         ///read recipes from csv file and make it into a list
 
-        public
+   
         ///convert the things read from csv to individual preference properties get DIETTYPE= parts[1]
         ///make a method to get preferences object with specific selected preferences
         ///make a recipe search metod that compares the preference property to the recipe properties in the csv
