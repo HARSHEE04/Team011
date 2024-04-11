@@ -70,5 +70,7 @@ namespace FlavorFiesta.BusinessLogic
             Password = password;
             DateOfBirth = dateOfBirth;
         }
+
+        
     }
 }
