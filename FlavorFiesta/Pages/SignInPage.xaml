@@ -47,7 +47,7 @@
         </Grid>
         <Button
             Text="Sign In"
-            Clicked="OnSignUp"
+            Clicked="OnSignIn"
             VerticalOptions="End"
             HorizontalOptions="Center"
             Margin="50"

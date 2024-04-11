@@ -35,6 +35,8 @@ public partial class SignUpPage : ContentPage
         _manager.AddUser(CaptureUserInput());
     }
 
-    
-
+    private void OnSignInAgain(object sender, EventArgs e)
+    {
+        Navigation.PushAsync(new SignInPage());
+    }
 }

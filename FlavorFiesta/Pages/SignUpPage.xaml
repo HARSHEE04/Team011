@@ -105,7 +105,17 @@
             BackgroundColor="Brown"
             HorizontalOptions="Center"
             Margin="50"/>
-        
+
+        <Button
+            x:Name="GobackToSignIn"
+            Text="Go Back To Sign In"
+            Clicked="OnSignInAgain"
+            VerticalOptions="Center"
+            BackgroundColor="Beige"
+            TextColor="Brown"
+            HorizontalOptions="Center"
+            Margin="50"/>
+
 
 
 
