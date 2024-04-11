@@ -5,6 +5,8 @@ public partial class DisplayRecipe : ContentPage
 	public DisplayRecipe()
 	{
 		InitializeComponent();
+        //use this to show the different infomation about the recipes
+
 	}
 
     private void OnExit(object sender, EventArgs e)

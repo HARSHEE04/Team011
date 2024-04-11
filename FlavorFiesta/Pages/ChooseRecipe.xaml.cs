@@ -7,7 +7,7 @@ public partial class ChooseRecipe : ContentPage
 		InitializeComponent();
 	}
 
-
+    //The At this point, two recipes are presented, the page before this sets the two presented recipes as variables so we can pass that specific recipe to each method. When recipe two is chosen, it passes that recipe to the next page
     private void OnRecipe1Chosen(object sender, EventArgs e)
     {
 
