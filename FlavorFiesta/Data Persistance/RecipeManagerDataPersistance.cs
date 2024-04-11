@@ -33,7 +33,7 @@ namespace FlavorFiesta.Data_Persistance
 
 
                     //now create the preferences object for this specific recipe 
-                    Preferences preferences = new Preferences(
+                    BusinessLogic.Preferences preferences = new BusinessLogic.Preferences(
 
                         //the info and its corresponding property which will be used in Recipe class object made below
                         parts[3], // dietType

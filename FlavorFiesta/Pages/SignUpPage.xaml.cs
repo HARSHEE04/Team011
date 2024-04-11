@@ -36,6 +36,13 @@ public partial class SignUpPage : ContentPage
 
 
     }
+    void OnSignUpButton(object sender, EventArgs e)
+    {
+        // Implementation for what should happen when the button is clicked
+    }
 
-    
+    void OnViewUsers(System.Object sender, System.EventArgs e)
+    {
+    }
+
 }
