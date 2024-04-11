@@ -105,6 +105,8 @@
             x:Name="SignUpButton"
             Clicked="OnSignUpButton"
             Text="Sign Up"
+            BindingContext="{x:Reference Name=AcceptTermsCheckbox}"
+            IsEnabled="{Binding Path=IsChecked, Mode=OneWay}"
             VerticalOptions="Center" 
             BackgroundColor="Brown"
             HorizontalOptions="Center"
