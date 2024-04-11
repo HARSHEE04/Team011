@@ -14,7 +14,7 @@ namespace FlavorFiesta.Data_Persistance
 
 
         ///read recipes from csv file and make it into a list
-        public List<Recipe> ReadRecipesFromCSV()
+        public List<Recipe> ReadRecipesFromCSV() //could have put this into a method
         {
             List<Recipe> list = new List<Recipe>();
 
