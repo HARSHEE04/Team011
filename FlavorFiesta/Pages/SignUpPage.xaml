@@ -62,15 +62,9 @@
             <Entry
                 x:Name="PasswordEntry"
                 Grid.Column="1"
+                IsPassword="True"
                 Grid.Row="4"/>
-            <Label
-                Text="Confirm Password"
-                Grid.Column="0"
-                Grid.Row="5"/>
-            <Entry
-                x:Name="ConfirmPasswordEntry"
-                Grid.Column="1"
-                Grid.Row="5"/>
+            
             <CheckBox
                 x:Name="AcceptTermsCheckbox"
                 Grid.Column="0"
@@ -111,12 +105,7 @@
             BackgroundColor="Brown"
             HorizontalOptions="Center"
             Margin="50"/>
-        <Button
-            x:Name="ViewUsers"
-            Clicked="OnViewUsers"
-            Text="View Users"
-            HorizontalOptions="Center"
-            />
+        
 
 
 
