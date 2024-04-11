@@ -39,15 +39,15 @@
                     TextColor="brown"
                     FontAttributes="Bold"
                     VerticalOptions="Center"/>
-                <Entry
+            <Entry
                     x:Name="PasswordEntry"
                     IsPassword="True"
                     Grid.Column="1"
                     Grid.Row="1"/>
-
         </Grid>
         <Button
             Text="Sign In"
+            Clicked="OnSignUp"
             VerticalOptions="End"
             HorizontalOptions="Center"
             Margin="50"

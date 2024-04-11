@@ -7,4 +7,8 @@ public partial class SignInPage : ContentPage
 		InitializeComponent();
 	}
 
+    private void OnSignUp(object sender, EventArgs e)
+    {
+
+    }
 }
