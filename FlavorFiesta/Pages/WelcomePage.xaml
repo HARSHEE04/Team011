@@ -2,8 +2,9 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FlavorFiesta.Pages.WelcomePage"
-             BackgroundColor="#FFF0CCCC"
-             Title="Welcome to Flavor Fiesta">
+             Title="Welcome to Flavor Fiesta"
+             BackgroundImageSource="background.png">
+
 
     <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
         <Label Text="WELCOME TO"
