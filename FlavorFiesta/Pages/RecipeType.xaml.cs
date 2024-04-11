@@ -20,6 +20,6 @@ public partial class RecipeType : ContentPage
 
     private async void OnSubmitClicked(object sender, EventArgs e)
     {
-        // TODO: implement what happens when the submit button is clicked
+       await Navigation.PushAsync(new NutritionalPreferencesPage());
     }
 }

@@ -24,5 +24,10 @@ public partial class FoodChoiceOptions : ContentPage
             // saving the choice to persistent storage
             // ex: Preferences.Set("foodChoice", selectedFoodChoice);
         }
+        private async void OnSubmitClicked(object sender, EventArgs e)
+        {
+            // Navigate to the RecipeType page
+            await Navigation.PushAsync(new RecipeType());
+        }
     }
 }

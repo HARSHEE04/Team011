@@ -14,6 +14,6 @@ public partial class NutritionalPreferencesPage : ContentPage
 
     private void OnSubmit()
     {
-        // still have to handle the submit action
+        Navigation.PushAsync(new DisplayRecipe());
     }
 }

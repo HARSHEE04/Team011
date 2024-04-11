@@ -29,7 +29,7 @@ public partial class SignInPage : ContentPage
 			DisplayAlert("Please sign up first.", "Create an Account", "Ok");
 			Navigation.PushAsync(new SignUpPage());
 		}
-        Navigation.PushAsync(new NutritionalPreferencesPage());
+        Navigation.PushAsync(new FoodChoiceOptions());
 
     }
 }

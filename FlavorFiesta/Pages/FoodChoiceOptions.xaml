@@ -28,5 +28,8 @@
             <RadioButton GroupName="FoodChoices" Content="Non-Vegetarian" CheckedChanged="OnFoodChoiceChanged" HorizontalOptions="Start" />
             <Image Source="non_vegetarian_icon.png" HeightRequest="24" WidthRequest="24" HorizontalOptions="End" VerticalOptions="Center" />
         </StackLayout>
+        <Button Text="Submit" 
+        HorizontalOptions="Center"
+        Clicked="OnSubmitClicked"/>
     </StackLayout>
 </ContentPage>
