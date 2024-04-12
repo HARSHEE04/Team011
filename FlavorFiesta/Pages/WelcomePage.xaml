@@ -1,35 +1,54 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FlavorFiesta.Pages.WelcomePage"
-             Title="Welcome to Flavor Fiesta"
-             BackgroundImageSource="background.png">
-
-
-    <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
-        <Label Text="WELCOME TO"
-               FontSize="Large"
-               FontAttributes="Bold"
-               HorizontalTextAlignment="Center"
-               TextColor="Black" />
-        <Label Text="FLAVOR FIESTA"
-               FontSize="Large"
-               FontAttributes="Bold"
-               HorizontalTextAlignment="Center"
-               TextColor="Black" />
-        <Button Text="Sign-In"
-                WidthRequest="200"
-                HeightRequest="50"
-                Margin="20"
-                BackgroundColor="#FFFFC0CB"
-                Command="{Binding SignInCommand}"
-                Clicked="OnSignInClicked"/>
-        <Button Text="Sign-Up"
-                WidthRequest="200"
-                HeightRequest="50"
-                Margin="20"
-                BackgroundColor="#FFFFC0CB"
-                Clicked="OnSignUpClicked" />
-    </StackLayout>
-
+             Title="Welcome to Flavor Fiesta">
+             
+    <Grid>
+        <!-- Removing the BoxView that might be obscuring the background image -->
+        
+        <Image Source="background.png" Aspect="AspectFill" Opacity="1"/> <!-- Set Aspect to AspectFill and Opacity to 1 for full coverage -->
+        
+        <ScrollView>
+            <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Spacing="30">
+                <!-- Frame with a semi-transparent background for the text -->
+                <Frame BackgroundColor="#000000" Opacity="0.6" Padding="20" CornerRadius="20">
+                    <StackLayout>
+                        <Label Text="WELCOME TO"
+                               FontSize="30"
+                               FontAttributes="Bold"
+                               HorizontalTextAlignment="Center"
+                               TextColor="White"/>
+                        
+                        <Label Text="FLAVOR FIESTA"
+                               FontSize="30"
+                               FontAttributes="Bold"
+                               HorizontalTextAlignment="Center"
+                               TextColor="#FF69B4"/>
+                    </StackLayout>
+                </Frame>
+                
+                <!-- Button styles -->
+                <Button Text="Sign-In"
+                        WidthRequest="200"
+                        HeightRequest="50"
+                        Margin="20"
+                        BackgroundColor="#FF69B4"
+                        TextColor="White"
+                        CornerRadius="10"
+                        Command="{Binding SignInCommand}"
+                        Clicked="OnSignInClicked"/>
+                
+                <Button Text="Sign-Up"
+                        WidthRequest="200"
+                        HeightRequest="50"
+                        Margin="20"
+                        BackgroundColor="#FF69B4"
+                        TextColor="White"
+                        CornerRadius="10"
+                        Command="{Binding SignUpCommand}"
+                        Clicked="OnSignUpClicked"/>
+            </StackLayout>
+        </ScrollView>
+    </Grid>
 </ContentPage>
