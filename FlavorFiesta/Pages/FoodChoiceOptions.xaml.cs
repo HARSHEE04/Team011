@@ -9,7 +9,7 @@ namespace FlavorFiesta.Pages
     public partial class FoodChoiceOptions : ContentPage
     {
         private string _dietType;
-       // private BusinessLogic.Preferences _preferences;
+        // private BusinessLogic.Preferences _preferences;
         // private BusinessLogic.PreferencesManager _preferencesManager;
 
 
