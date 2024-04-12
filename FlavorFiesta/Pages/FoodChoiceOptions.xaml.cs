@@ -6,35 +6,32 @@ namespace FlavorFiesta.Pages
 {
     public partial class FoodChoiceOptions : ContentPage
     {
-        private FlavorFiesta.BusinessLogic.Preferences _prefs; // Fully qualified the Preferences class with its namespace
+        private FlavorFiesta.BusinessLogic.Preferences _prefs;
 
-        public FoodChoiceOptions(FlavorFiesta.BusinessLogic.Preferences prefs)
+        public FoodChoiceOptions()
         {
             InitializeComponent();
-            _prefs = prefs ?? new FlavorFiesta.BusinessLogic.Preferences(
-                dietType: "",    // Provide a default value for dietType
-                cusineType: "",  // Provide a default value for cusineType
-                mealType: "",    // Provide a default value for mealType
-                caloriesRange: 0, // Provide a default value for caloriesRange
-                protenRange: 0,  // Provide a default value for protenRange
-                sugarRange: 0,   // Provide a default value for sugarRange
-                serveingsRange: 0, // Provide a default value for serveingsRange
-                prepTimeRange: TimeSpan.Zero, // Provide a default value for prepTimeRange
-                dietaryRestrictions: new List<string>() // Provide an empty list for dietaryRestrictions
+        }
+
+        public FoodChoiceOptions(string dietType, string cusineType, string mealType, int caloriesRange, int proteinRange, int sugarRange, int servingsRange, TimeSpan prepTimeRange, List<string> dietaryRestrictions)
+        {
+            InitializeComponent();
+            _prefs = new FlavorFiesta.BusinessLogic.Preferences(
+                dietType: dietType,
+                cusineType: cusineType,
+                mealType: mealType,
+                caloriesRange: caloriesRange,
+                protenRange: proteinRange,
+                sugarRange: sugarRange,
+                serveingsRange: servingsRange,
+                prepTimeRange: prepTimeRange,
+                dietaryRestrictions: dietaryRestrictions
             );
         }
 
         private void OnFoodChoiceChanged(object sender, CheckedChangedEventArgs e)
         {
-            var radioButton = sender as RadioButton;
-            if (e.Value)
-            {
-                string selectedFoodChoice = radioButton.Content.ToString();
-                DisplayAlert("Food Choice Selected", $"You have selected: {selectedFoodChoice}", "OK");
-
-                // Set the selected diet type to preferences
-                _prefs.DietType = selectedFoodChoice;
-            }
+            // Handle food choice selection
         }
 
         private async void OnSubmitClicked(object sender, EventArgs e)

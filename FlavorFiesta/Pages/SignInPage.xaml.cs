@@ -7,7 +7,8 @@ namespace FlavorFiesta.Pages;
 
 public partial class SignInPage : ContentPage
 {
-	AccountsManager _accountsManager;
+    AccountsManager _accountsManager;
+
     public SignInPage()
     {
         InitializeComponent();
@@ -44,20 +45,8 @@ public partial class SignInPage : ContentPage
 
             if (isAuthenticated)
             {
-                var preferences = new BusinessLogic.Preferences(
-                    dietType: "Standard",
-                    cusineType: "Any",
-                    mealType: "Any",
-                    caloriesRange: 2000, // Example value
-                    protenRange: 50, // Example value
-                    sugarRange: 30, // Example value
-                    serveingsRange: 3, // Example value
-                    prepTimeRange: TimeSpan.FromMinutes(30), // Example value
-                    dietaryRestrictions: new List<string>() // No restrictions by default
-                );
-
-                // Navigate to the FoodChoiceOptions page with the preferences
-                await Navigation.PushAsync(new FoodChoiceOptions(preferences));
+                // Navigate to the FoodChoiceOptions page without preferences
+                await Navigation.PushAsync(new FoodChoiceOptions());
             }
             else
             {
