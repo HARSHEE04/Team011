@@ -10,7 +10,7 @@ public partial class FoodChoiceOptions : ContentPage
     public FoodChoiceOptions(FlavorFiesta.BusinessLogic.Preferences prefs)
     {
         InitializeComponent();
-        _prefs = prefs ?? new BusinessLogic.Preferences();
+        _prefs = prefs ?? new Preferences();
     }
 
     private void OnFoodChoiceChanged(object sender, CheckedChangedEventArgs e)
@@ -21,20 +21,13 @@ public partial class FoodChoiceOptions : ContentPage
             string selectedFoodChoice = radioButton.Content.ToString();
             DisplayAlert("Food Choice Selected", $"You have selected: {selectedFoodChoice}", "OK");
 
-            //for the future: 
-            // set a property to the selected value.
-            // ex: viewModel.SelectedFoodChoice = selectedFoodChoice;
-
-            // navigate to another page based on the selection, you could do that here.
-
-            // saving the choice to persistent storage
-            // ex: Preferences.Set("foodChoice", selectedFoodChoice);
+            // Set the selected diet type to preferences
+            _prefs.DietType = selectedFoodChoice;
         }
     }
-
     private async void OnSubmitClicked(object sender, EventArgs e)
     {
-        _prefs.DietType = "Vegetarian"; // Example
+        // Navigate to the next page with the preferences
         await Navigation.PushAsync(new RecipeType(_prefs));
     }
 }
