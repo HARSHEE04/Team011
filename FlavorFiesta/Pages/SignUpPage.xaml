@@ -21,57 +21,66 @@
                     HorizontalOptions="Center"
                     Margin="0,0,0,10"/>
 
-                <Entry 
-                    x:Name="FirstNameEntry"
-                    Placeholder="First Name"
-                    FontSize="Medium"
-                    Margin="0,0,0,10"
+                <Frame
+                    Padding="10"
+                    CornerRadius="10"
+                    BorderColor="White" 
                     HorizontalOptions="Fill"
-                    VerticalOptions="Center"
-                    BackgroundColor="Transparent"
-                    TextColor="White"/>
+                    VerticalOptions="Start"
+                    BackgroundColor="#00000000">
+                <StackLayout>
+                    <Entry 
+                        x:Name="FirstNameEntry"
+                        Placeholder="First Name"
+                        FontSize="Medium"
+                        Margin="0,0,0,10"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Center"
+                        BackgroundColor="Transparent"
+                        TextColor="White"/>
                     
-                <Entry 
-                    x:Name="LastNameEntry"
-                    Placeholder="Last Name"
-                    FontSize="Medium"
-                    Margin="0,0,0,10"
-                    HorizontalOptions="Fill"
-                    VerticalOptions="Center"
-                    BackgroundColor="Transparent"
-                    TextColor="White"/>
+                    <Entry 
+                        x:Name="LastNameEntry"
+                        Placeholder="Last Name"
+                        FontSize="Medium"
+                        Margin="0,0,0,10"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Center"
+                        BackgroundColor="Transparent"
+                        TextColor="White"/>
                     
-                <Entry 
-                    x:Name="EmailEntry"
-                    Placeholder="Email Address"
-                    FontSize="Medium"
-                    Margin="0,0,0,10"
-                    HorizontalOptions="Fill"
-                    VerticalOptions="Center"
-                    Keyboard="Email"
-                    BackgroundColor="Transparent"
-                    TextColor="White"/>
+                    <Entry 
+                        x:Name="EmailEntry"
+                        Placeholder="Email Address"
+                        FontSize="Medium"
+                        Margin="0,0,0,10"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Center"
+                        Keyboard="Email"
+                        BackgroundColor="Transparent"
+                        TextColor="White"/>
                     
-                <DatePicker 
-                    x:Name="BirthDatePicker"
-                    FontSize="Medium"
-                    Margin="0,0,0,10"
-                    HorizontalOptions="Fill"
-                    VerticalOptions="Center"
-                    BackgroundColor="Transparent"
-                    TextColor="White"/>
+                    <DatePicker 
+                        x:Name="BirthDatePicker"
+                        FontSize="Medium"
+                        Margin="0,0,0,10"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Center"
+                        BackgroundColor="Transparent"
+                        TextColor="White"/>
                     
-                <Entry 
-                    x:Name="PasswordEntry"
-                    Placeholder="Password"
-                    IsPassword="True"
-                    FontSize="Medium"
-                    Margin="0,0,0,10"
-                    HorizontalOptions="Fill"
-                    VerticalOptions="Center"
-                    BackgroundColor="Transparent"
-                    TextColor="White"/>
-
+                    <Entry 
+                        x:Name="PasswordEntry"
+                        Placeholder="Password"
+                        IsPassword="True"
+                        FontSize="Medium"
+                        Margin="0,0,0,10"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Center"
+                        BackgroundColor="Transparent"
+                        TextColor="White"/>
+                    </StackLayout>
+                </Frame>
                 <HorizontalStackLayout HorizontalOptions="Center">
                     <CheckBox
                         x:Name="AcceptTermsCheckbox"
