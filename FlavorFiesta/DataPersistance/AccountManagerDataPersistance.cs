@@ -6,7 +6,7 @@ using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
 
-namespace FlavorFiesta.Data_Persistance
+namespace FlavorFiesta.DataPersistance
 {
     public class AccountManagerDataPersistance
     {

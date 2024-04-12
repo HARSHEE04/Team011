@@ -38,7 +38,7 @@ namespace FlavorFiesta.BusinessLogic
         {
             foreach (string email in _users.Keys)
             {
-                if (_users[email].Password == passwordEntry) 
+                if (_users[email].Password == passwordEntry)
                     return true;
             }
             return false;
