@@ -43,13 +43,6 @@ namespace FlavorFiesta.BusinessLogic
             }
             return false;
         }
-        public bool AuthenticateUser(string email, string password)
-        {
-            if (_users.TryGetValue(email, out var user))
-            {
-                return user.Password == password;
-            }
-            return false;
-        }
+
     }
 }

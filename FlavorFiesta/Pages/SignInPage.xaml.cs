@@ -34,23 +34,26 @@ public partial class SignInPage : ContentPage
             string email = EmailEntry.Text;
             string password = PasswordEntry.Text;
 
-            if (string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(password))
-            {
-                await DisplayAlert("Error", "Please enter both email and password.", "OK");
-                return;
-            }
+            bool searchUserResult = _accountsManager.SearchUser(email);
 
-            // Authenticate the user
-            bool isAuthenticated = _accountsManager.AuthenticateUser(email, password);
-
-            if (isAuthenticated)
+            if (searchUserResult == true)
             {
-                // Navigate to the FoodChoiceOptions page without preferences
-                await Navigation.PushAsync(new FoodChoiceOptions());
+                bool isAuthenticated = _accountsManager.SearchPassword(password);
+
+                if (isAuthenticated == true)
+                {
+                    // Navigate to the FoodChoiceOptions page without preferences
+                    await Navigation.PushAsync(new FoodChoiceOptions());
+                }
+                else
+                {
+                    await DisplayAlert("Error", "The password is incorrect.", "OK");
+                }
+
             }
             else
             {
-                await DisplayAlert("Error", "The email or password is incorrect.", "OK");
+                DisplayAlert("Please create an account", "Sign up", "Ok");
             }
         }
         catch (Exception ex)
