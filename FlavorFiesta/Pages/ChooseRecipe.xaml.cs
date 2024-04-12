@@ -1,8 +1,9 @@
+using FlavorFiesta.BusinessLogic;
 namespace FlavorFiesta.Pages;
 
 public partial class ChooseRecipe : ContentPage
 {
-	public ChooseRecipe()
+	public ChooseRecipe(BusinessLogic.Preferences prefs)
 	{
 		InitializeComponent();
 	}

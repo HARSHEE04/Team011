@@ -162,6 +162,11 @@ namespace FlavorFiesta.BusinessLogic
             _dietaryRestrictions.Add(restriction);
         }
 
+        public void RemoveDietaryRestriction(string restriction)
+        {
+            _dietaryRestrictions.Remove(restriction);
+        }
+
         // Helper method for validation
         private static string ValidateInput(string value, string propertyName)
         {
