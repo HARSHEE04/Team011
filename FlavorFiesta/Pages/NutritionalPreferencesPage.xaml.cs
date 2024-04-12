@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Windows.Input;
 using FlavorFiesta.BusinessLogic;
 
@@ -30,10 +31,11 @@ namespace FlavorFiesta.Pages
         }
 
         // Event handler for when the Submit button is clicked
-        private void OnSubmit(object sender, EventArgs e)
+        private async void OnSubmit(object sender, EventArgs e)
         {
-
-            Navigation.PushAsync(new ChooseRecipe(_preferences));
+            Debug.WriteLine("Current navigation stack count: " + Navigation.NavigationStack.Count);
+            MakeUserPreference();
+            await Navigation.PushAsync(new ChooseRecipe(_preferences));
         }
 
         //Make the user preferences object to send to next page

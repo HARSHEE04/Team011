@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using FlavorFiesta.BusinessLogic;
 using FlavorFiesta.DataPersistance;
 namespace FlavorFiesta.Pages;
@@ -17,16 +18,21 @@ public partial class ChooseRecipe : ContentPage
         _csvRecipes = new RecipeManagerDataPersistance();
 
         allMatchingRecipes = _recipeManager.SearchRecipe(prefs, _csvRecipes);
+        if (allMatchingRecipes.Count >= 2)
+        {
+            Recipe1Name.Text = allMatchingRecipes[0].Name;
+            Recipe1Image.Source = allMatchingRecipes[0].RecipeImage;
+            Recipe1PrepTme.Text = allMatchingRecipes[0].RecipePreferences.PrepTimeRange.ToString();
 
-        Recipe1Name.Text = allMatchingRecipes[0].Name;
-        Recipe1Image.Source = allMatchingRecipes[0].RecipeImage;
-        Recipe1PrepTme.Text = allMatchingRecipes[0].RecipePreferences.PrepTimeRange.ToString();
-
-        Recipe2Name.Text = allMatchingRecipes[1].Name;
-        Recipe2Image.Source = allMatchingRecipes[1].RecipeImage;
-        Recipe2PrepTme.Text = allMatchingRecipes[1].RecipePreferences.PrepTimeRange.ToString();
+            Recipe2Name.Text = allMatchingRecipes[1].Name;
+            Recipe2Image.Source = allMatchingRecipes[1].RecipeImage;
+            Recipe2PrepTme.Text = allMatchingRecipes[1].RecipePreferences.PrepTimeRange.ToString();
+        }
+        else
+        {
+            Debug.WriteLine("Not enough recipes found");
+        }
     }
-
     //private ChooseRecipe (BusinessLogic.Preferences prefs)
     //{
     //    InitializeComponent();
