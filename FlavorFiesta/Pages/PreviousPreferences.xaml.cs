@@ -14,6 +14,7 @@ public partial class NutritionalPreferencesSelectionPage : ContentPage
         _preferencesManager = preferencesManager;
         PreferencesListView.ItemsSource = _preferencesManager.GetUserPreferences();
     }
+    // make a comment rn
 
     private void OnCreateNewPreferencesClicked(object sender, EventArgs e)
     {
