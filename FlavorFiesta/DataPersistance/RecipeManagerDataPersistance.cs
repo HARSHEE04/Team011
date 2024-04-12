@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using FlavorFiesta.BusinessLogic;
 
-namespace FlavorFiesta.Data_Persistance
+namespace FlavorFiesta.DataPersistance
 {
     internal class RecipeManagerDataPersistance
     {
