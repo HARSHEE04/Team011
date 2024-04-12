@@ -1,33 +1,99 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="FlavorFiesta.Pages.FoodChoiceOptions"             >
+             x:Class="FlavorFiesta.Pages.FoodChoiceOptions">
 
-    <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Padding="20">
-        <Label Text="Food Choice Options" FontSize="Large" HorizontalTextAlignment="Center" />
-        <Label Text="The recipes today should be..." FontSize="Medium" Margin="0,20,0,10" />
+    <Grid>
+        <Image Source="backgroundprefs.png" Aspect="AspectFill" />
 
-        <StackLayout Orientation="Horizontal" Margin="0,10">
-            <RadioButton GroupName="FoodChoices" Content="Vegetarian" CheckedChanged="OnFoodChoiceChanged" HorizontalOptions="Start" />
-            <Image Source="vegetarian_icon.png" HeightRequest="24" WidthRequest="24" HorizontalOptions="End" VerticalOptions="Center" />
-        </StackLayout>
+        <VerticalStackLayout
+            Spacing="15"
+            Padding="30"
+            VerticalOptions="Center"
+            HorizontalOptions="Center">
 
-        <StackLayout Orientation="Horizontal" Margin="0,10">
-            <RadioButton GroupName="FoodChoices" Content="Vegan" CheckedChanged="OnFoodChoiceChanged" HorizontalOptions="Start" />
-            <Image Source="vegan_icon.png" HeightRequest="24" WidthRequest="24" HorizontalOptions="End" VerticalOptions="Center" />
-        </StackLayout>
+            <Frame 
+                BackgroundColor="#444444CC"
+                BorderColor="Aquamarine"
+                Padding="20"
+                CornerRadius="10"
+                HorizontalOptions="Fill"
+                VerticalOptions="Start">
+                
+                <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                    <Label Text="Food Choice Options" 
+                           FontSize="Header" 
+                           FontAttributes="Bold"
+                           TextColor="White"
+                           HorizontalTextAlignment="Center" />
+                           
+                    <Label Text="The recipes today should be..." 
+                           FontSize="Title" 
+                           TextColor="White"
+                           Margin="0,20,0,10" 
+                           HorizontalTextAlignment="Center" />
+                
+                    <StackLayout Orientation="Horizontal" Margin="0,10">
+                        <RadioButton GroupName="FoodChoices" 
+                                     Content="Vegetarian" 
+                                     CheckedChanged="OnFoodChoiceChanged" 
+                                     HorizontalOptions="Start" 
+                                     TextColor="White"/>
+                        <Image Source="vegetarian_icon.png" 
+                               HeightRequest="24" 
+                               WidthRequest="24" 
+                               HorizontalOptions="End" 
+                               VerticalOptions="Center" />
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" Margin="0,10">
+                        <RadioButton GroupName="FoodChoices" 
+                                     Content="Vegan" 
+                                     CheckedChanged="OnFoodChoiceChanged" 
+                                     HorizontalOptions="Start" 
+                                     TextColor="White"/>
+                        <Image Source="vegan_icon.png" 
+                               HeightRequest="24" 
+                               WidthRequest="24" 
+                               HorizontalOptions="End" 
+                               VerticalOptions="Center" />
+                    </StackLayout>
 
-        <StackLayout Orientation="Horizontal" Margin="0,10">
-            <RadioButton GroupName="FoodChoices" Content="Halal" CheckedChanged="OnFoodChoiceChanged" HorizontalOptions="Start" />
-            <Image Source="halal_icon.png" HeightRequest="24" WidthRequest="24" HorizontalOptions="End" VerticalOptions="Center" />
-        </StackLayout>
+                    <StackLayout Orientation="Horizontal" Margin="0,10">
+                        <RadioButton GroupName="FoodChoices" 
+                                     Content="Halal" 
+                                     CheckedChanged="OnFoodChoiceChanged" 
+                                     HorizontalOptions="Start" 
+                                     TextColor="White"/>
+                        <Image Source="halal_icon.png" 
+                               HeightRequest="24" 
+                               WidthRequest="24" 
+                               HorizontalOptions="End" 
+                               VerticalOptions="Center" />
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" Margin="0,10">
+                        <RadioButton GroupName="FoodChoices" 
+                                     Content="Non-Vegetarian" 
+                                     CheckedChanged="OnFoodChoiceChanged" 
+                                     HorizontalOptions="Start" 
+                                     TextColor="White"/>
+                        <Image Source="non_vegetarian_icon.png" 
+                               HeightRequest="24" 
+                               WidthRequest="24" 
+                               HorizontalOptions="End" 
+                               VerticalOptions="Center" />
+                    </StackLayout>
 
-        <StackLayout Orientation="Horizontal" Margin="0,10">
-            <RadioButton GroupName="FoodChoices" Content="Non-Vegetarian" CheckedChanged="OnFoodChoiceChanged" HorizontalOptions="Start" />
-            <Image Source="non_vegetarian_icon.png" HeightRequest="24" WidthRequest="24" HorizontalOptions="End" VerticalOptions="Center" />
-        </StackLayout>
-        <Button Text="Submit" 
-        HorizontalOptions="Center"
-        Clicked="OnSubmitClicked"/>
-    </StackLayout>
+                    <Button Text="Submit" 
+                            BackgroundColor="#FF69B4"
+                            TextColor="White"
+                            FontSize="Medium"
+                            CornerRadius="20"
+                            Margin="10"
+                            WidthRequest="200"
+                            HeightRequest="50"
+                            Clicked="OnSubmitClicked"/>
+                </StackLayout>
+            </Frame>
+        </VerticalStackLayout>
+    </Grid>
 </ContentPage>

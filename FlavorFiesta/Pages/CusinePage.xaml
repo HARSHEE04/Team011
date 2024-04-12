@@ -1,37 +1,102 @@
-﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FlavorFiesta.Pages.CusinePage"
              Title="Cuisine Page">
 
-    <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Padding="30">
-        <Label Text="Cuisine Options" FontSize="Large" HorizontalTextAlignment="Center" TextColor="#3c1361" />
-        <Label Text="The recipes today should be..." FontSize="Medium" HorizontalTextAlignment="Center" TextColor="#3c1361" Margin="0,10" />
+    <Grid>
+        <Image Source="backgroundprefs.png" Aspect="AspectFill" />
 
-        <Grid VerticalOptions="Start" HorizontalOptions="FillAndExpand" RowSpacing="10">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30"
+            VerticalOptions="Center"
+            HorizontalOptions="Center">
 
-            <!-- Chinese Cuisine Option -->
-            <RadioButton Grid.Row="0" Grid.Column="0" GroupName="CuisineTypes" Content="Chinese" />
-            <Image Source="chinese_food.png" Grid.Row="1" Grid.Column="0" HeightRequest="100" WidthRequest="100" HorizontalOptions="Center" />
+            <Frame 
+                BackgroundColor="#444444CC"
+                Padding="20"
+                CornerRadius="10"
+                HorizontalOptions="Fill"
+                VerticalOptions="Start">
 
-            <!-- Italian Cuisine Option -->
-            <RadioButton Grid.Row="0" Grid.Column="1" GroupName="CuisineTypes" Content="Italian" />
-            <Image Source="italian_food.png" Grid.Row="1" Grid.Column="1" HeightRequest="100" WidthRequest="100" HorizontalOptions="Center" />
+                <StackLayout>
+                    <Label Text="Cuisine Options" 
+                           FontSize="Header" 
+                           HorizontalTextAlignment="Center" 
+                           TextColor="White" />
+                    <Label Text="The recipes today should be..." 
+                           FontSize="Title" 
+                           HorizontalTextAlignment="Center" 
+                           TextColor="White"
+                           Margin="0,20,0,10" />
 
-            <!-- American Cuisine Option -->
-            <RadioButton Grid.Row="0" Grid.Column="2" GroupName="CuisineTypes" Content="American" />
-            <Image Source="american_food.png" Grid.Row="1" Grid.Column="2" HeightRequest="100" WidthRequest="100" HorizontalOptions="Center" />
-        </Grid>
+                    <Grid VerticalOptions="Start" 
+                          HorizontalOptions="FillAndExpand" 
+                          RowSpacing="10"
+                          Margin="20">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
 
-        <Button Text="SUBMIT" Margin="0,30" Padding="10" HorizontalOptions="FillAndExpand" BackgroundColor="Black" TextColor="#3c1361" />
-    </StackLayout>
+                        <!-- Chinese Cuisine Option -->
+                        <RadioButton GroupName="CuisineTypes" 
+                                     Content="Chinese" 
+                                     Grid.Row="0" 
+                                     Grid.Column="0" 
+                                     TextColor="White"/>
+                        <Image Source="chinese_food.png" 
+                               Grid.Row="1" 
+                               Grid.Column="0" 
+                               HeightRequest="100" 
+                               WidthRequest="100" 
+                               HorizontalOptions="Center" />
 
+                        <!-- Italian Cuisine Option -->
+                        <RadioButton GroupName="CuisineTypes" 
+                                     Content="Italian" 
+                                     Grid.Row="0" 
+                                     Grid.Column="1" 
+                                     TextColor="White"/>
+                        <Image Source="italian_food.png" 
+                               Grid.Row="1" 
+                               Grid.Column="1" 
+                               HeightRequest="100" 
+                               WidthRequest="100" 
+                               HorizontalOptions="Center" />
+
+                        <!-- American Cuisine Option -->
+                        <RadioButton GroupName="CuisineTypes" 
+                                     Content="American" 
+                                     Grid.Row="0" 
+                                     Grid.Column="2" 
+                                     TextColor="White"/>
+                        <Image Source="american_food.png" 
+                               Grid.Row="1" 
+                               Grid.Column="2" 
+                               HeightRequest="100" 
+                               WidthRequest="100" 
+                               HorizontalOptions="Center" />
+                    </Grid>
+
+                    <Button Text="SUBMIT" 
+                            BackgroundColor="#FF69B4" 
+                            TextColor="White" 
+                            FontSize="Medium" 
+                            CornerRadius="20" 
+                            WidthRequest="200"
+                            HeightRequest="50"
+                            Margin="20"
+                            HorizontalOptions="Center"
+                            Clicked="OnSubmitClicked"/>
+                </StackLayout>
+            </Frame>
+        </VerticalStackLayout>
+    </Grid>
 </ContentPage>

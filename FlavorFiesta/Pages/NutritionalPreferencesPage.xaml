@@ -4,179 +4,118 @@
              Title="Nutritional Preferences"
              BackgroundColor="#3c1361">
 
-    <ContentPage.Resources>
-        <Style TargetType="Label">
-            <Setter Property="TextColor"
-                    Value="White"/>
-            <Setter Property="FontAttributes"
-                    Value="Bold"/>
-        </Style>
+    <Grid>
+        <Image Source="backgroundprefs.png" Aspect="AspectFill" />
 
-        <Style TargetType="RadioButton">
-            <Setter Property="TextColor"
-                    Value="White"/>
-        </Style>
+        <VerticalStackLayout
+            Spacing="20"
+            Padding="30"
+            VerticalOptions="Center"
+            HorizontalOptions="Center">
 
-        <Style TargetType="CheckBox">
-            <Setter Property="Color"
-                    Value="White"/>
-        </Style>
+            <Frame 
+                BackgroundColor="#444444CC"
+                Padding="20"
+                CornerRadius="10"
+                HorizontalOptions="Fill"
+                VerticalOptions="Start">
 
-        <Style TargetType="Button">
-            <Setter Property="BackgroundColor"
-                    Value="#6200EE"/>
-            <Setter Property="TextColor"
-                    Value="White"/>
-            <Setter Property="Margin"
-                    Value="5"/>
-            <Setter Property="HorizontalOptions"
-                    Value="FillAndExpand"/>
-        </Style>
-    </ContentPage.Resources>
-    
-    <Grid Padding="30"
-            HorizontalOptions="FillAndExpand"
-            VerticalOptions="FillAndExpand"
-            RowSpacing="10"
-            ColumnSpacing="20"
-            RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto, Auto, Auto"
-            ColumnDefinitions="*, *, *, *, *">        
-        <!-- Calories Section -->
-        <Label Grid.Row="0"
-               Grid.Column="0"
-               Text="Calories:"/>
-        <RadioButton Grid.Row="0"
-                     Grid.Column="1"
-                     GroupName="CaloriesGroup"
-                     Content="100-300"/>
-        <RadioButton Grid.Row="0"
-                     Grid.Column="2"
-                     GroupName="CaloriesGroup"
-                     Content="300-600"/>
-        <RadioButton Grid.Row="0"
-                     Grid.Column="3"
-                     GroupName="CaloriesGroup"
-                     Content="600+"/>
-        
-        <!-- Protein Section -->
-        <Label Grid.Row="1"
-               Grid.Column="0"
-               Text="Protein (grams):"/>
-        <RadioButton Grid.Row="1"
-                     Grid.Column="1"
-                     GroupName="ProteinGroup"
-                     Content="5-15"/>
-        <RadioButton Grid.Row="1"
-                     Grid.Column="2"
-                     GroupName="ProteinGroup"
-                     Content="15-30"/>
-        <RadioButton Grid.Row="1"
-                     Grid.Column="3"
-                     GroupName="ProteinGroup"
-                     Content="30+"/>
-        
-        <!-- Sugar Section -->
-        <Label Grid.Row="2"
-               Grid.Column="0"
-               Text="Sugar (grams):"/>
-        <RadioButton Grid.Row="2"
-                     Grid.Column="1"
-                     GroupName="SugarGroup"
-                     Content="0-5"/>
-        <RadioButton Grid.Row="2"
-                     Grid.Column="2"
-                     GroupName="SugarGroup"
-                     Content="5-20"/>
-        <RadioButton Grid.Row="2"
-                     Grid.Column="3"
-                     GroupName="SugarGroup"
-                     Content="20+"/>
-        
-        <!-- Number of Servings Section -->
-        <Label Grid.Row="3"
-               Grid.Column="0"
-               Text="Number of Servings:"/>
-        <RadioButton Grid.Row="3"
-                     Grid.Column="1"
-                     GroupName="ServingsGroup"
-                     Content="0-2"/>
-        <RadioButton Grid.Row="3"
-                     Grid.Column="2"
-                     GroupName="ServingsGroup"
-                     Content="2-10"/>
-        <RadioButton Grid.Row="3"
-                     Grid.Column="3"
-                     GroupName="ServingsGroup"
-                     Content="12+"/>
-        
-        <!-- Preparation Time Section -->
-        <Label Grid.Row="4"
-               Grid.Column="0"
-               Text="Preparation Time (minutes):"/>
-        <RadioButton Grid.Row="4"
-                     Grid.Column="1"
-                     GroupName="PrepTimeGroup"
-                     Content="15-30"/>
-        <RadioButton Grid.Row="4"
-                     Grid.Column="2"
-                     GroupName="PrepTimeGroup"
-                     Content="30-60"/>
-        <RadioButton Grid.Row="4"
-                     Grid.Column="3"
-                     GroupName="PrepTimeGroup"
-                     Content="60+"/>
-        
-        <!-- Other Restrictions Section -->
-        <Label Grid.Row="5"
-               Grid.Column="0"
-               Text="Other Restrictions:"
-               Style="{StaticResource LabelStyle}"/>
+                <Grid Padding="20"
+                      HorizontalOptions="FillAndExpand"
+                      VerticalOptions="FillAndExpand"
+                      RowSpacing="10"
+                      ColumnSpacing="20"
+                      RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto, Auto"
+                      ColumnDefinitions="*, *, *, *, *">
 
-        <CheckBox Grid.Row="5"
-                  Grid.Column="1"
-                  Style="{StaticResource CheckBoxStyle}"/>
-        <Label Grid.Row="5"
-               Grid.Column="1"
-               Text="No-Nuts"
-               Style="{StaticResource LabelStyle}"
-               HorizontalOptions="Start"
-               VerticalOptions="Center"/>
+                    <!-- Calories Section -->
+                    <Label Grid.Row="0" Grid.Column="0" Text="Calories:" TextColor="White"/>
+                    <RadioButton Grid.Row="0" Grid.Column="1" GroupName="CaloriesGroup" Content="100-300" TextColor="White"/>
+                    <RadioButton Grid.Row="0" Grid.Column="2" GroupName="CaloriesGroup" Content="300-600" TextColor="White"/>
+                    <RadioButton Grid.Row="0" Grid.Column="3" GroupName="CaloriesGroup" Content="600+" TextColor="White"/>
 
-        <CheckBox Grid.Row="5"
-                  Grid.Column="2"
-                  Style="{StaticResource CheckBoxStyle}"/>
-        <Label Grid.Row="5"
-               Grid.Column="2"
-               Text="No-Eggs"
-               Style="{StaticResource LabelStyle}"
-               HorizontalOptions="Start"
-               VerticalOptions="Center"/>
+                    <!-- Protein Section -->
+                    <Label Grid.Row="1" Grid.Column="0" Text="Protein (grams):" TextColor="White"/>
+                    <RadioButton Grid.Row="1" Grid.Column="1" GroupName="ProteinGroup" Content="5-15" TextColor="White"/>
+                    <RadioButton Grid.Row="1" Grid.Column="2" GroupName="ProteinGroup" Content="15-30" TextColor="White"/>
+                    <RadioButton Grid.Row="1" Grid.Column="3" GroupName="ProteinGroup" Content="30+" TextColor="White"/>
 
-        <CheckBox Grid.Row="5"
-                  Grid.Column="3"
-                  Style="{StaticResource CheckBoxStyle}"/>
-        <Label Grid.Row="5"
-               Grid.Column="3"
-               Text="Gluten-Free"
-               Style="{StaticResource LabelStyle}"
-               HorizontalOptions="Start"
-               VerticalOptions="Center"/>
+                    <!-- Sugar Section -->
+                    <Label Grid.Row="2" Grid.Column="0" Text="Sugar (grams):" TextColor="White"/>
+                    <RadioButton Grid.Row="2" Grid.Column="1" GroupName="SugarGroup" Content="0-5" TextColor="White"/>
+                    <RadioButton Grid.Row="2" Grid.Column="2" GroupName="SugarGroup" Content="5-20" TextColor="White"/>
+                    <RadioButton Grid.Row="2" Grid.Column="3" GroupName="SugarGroup" Content="20+" TextColor="White"/>
 
-        <CheckBox Grid.Row="5"
-                  Grid.Column="4"
-                  Style="{StaticResource CheckBoxStyle}"/>
-        <Label Grid.Row="5"
-               Grid.Column="4"
-               Text="No-Seafood"
-               Style="{StaticResource LabelStyle}"
-               HorizontalOptions="Start"
-               VerticalOptions="Center"/>
+                    <!-- Number of Servings Section -->
+                    <Label Grid.Row="3" Grid.Column="0" Text="Number of Servings:" TextColor="White"/>
+                    <RadioButton Grid.Row="3" Grid.Column="1" GroupName="ServingsGroup" Content="0-2" TextColor="White"/>
+                    <RadioButton Grid.Row="3" Grid.Column="2" GroupName="ServingsGroup" Content="2-10" TextColor="White"/>
+                    <RadioButton Grid.Row="3" Grid.Column="3" GroupName="ServingsGroup" Content="12+" TextColor="White"/>
 
-        <!-- Submit Button -->
-        <Button Grid.Row="6"
-                Grid.Column="0"
-                Grid.ColumnSpan="5"
-                Text="SUBMIT"
-                Command="{Binding SubmitCommand}"/>
+                    <!-- Preparation Time Section -->
+                    <Label Grid.Row="4" Grid.Column="0" Text="Preparation Time (minutes):" TextColor="White"/>
+                    <RadioButton Grid.Row="4" Grid.Column="1" GroupName="PrepTimeGroup" Content="15-30" TextColor="White"/>
+                    <RadioButton Grid.Row="4" Grid.Column="2" GroupName="PrepTimeGroup" Content="30-60" TextColor="White"/>
+                    <RadioButton Grid.Row="4" Grid.Column="3" GroupName="PrepTimeGroup" Content="60+" TextColor="White"/>
+
+                    <!-- Other Restrictions Section -->
+                    <Label Grid.Row="5"
+                           Grid.Column="0"
+                           Text="Other Restrictions:"
+                           TextColor="White"/>
+
+                    <!-- No-Nuts Checkbox and Label -->
+                    <CheckBox Grid.Row="5"
+                              Grid.Column="1"
+                              Color="White"/>
+                    <Label Grid.Row="5"
+                           Grid.Column="1"
+                           Text="No-Nuts"
+                           TextColor="White"
+                           HorizontalOptions="Start"
+                           VerticalOptions="Center"
+                           Margin="90,0,0,0"/> 
+
+                    <!-- No-Eggs Checkbox and Label -->
+                    <CheckBox Grid.Row="5"
+                              Grid.Column="2"
+                              Color="White"/>
+                    <Label Grid.Row="5"
+                           Grid.Column="2"
+                           Text="No-Eggs"
+                           TextColor="White"
+                           HorizontalOptions="Start"
+                           VerticalOptions="Center"
+                           Margin="90,0,0,0"/> 
+
+                    <!-- Gluten-Free Checkbox and Label -->
+                    <CheckBox Grid.Row="5"
+                              Grid.Column="3"
+                              Color="White"/>
+                    <Label Grid.Row="5"
+                           Grid.Column="3"
+                           Text="Gluten-Free"
+                           TextColor="White"
+                           HorizontalOptions="Start"
+                           VerticalOptions="Center"
+                           Margin="90,0,0,0"/> 
+
+                    <!-- No-Seafood Checkbox and Label -->
+                    <CheckBox Grid.Row="5"
+                              Grid.Column="4"
+                              Color="White"/>
+                    <Label Grid.Row="5"
+                           Grid.Column="4"
+                           Text="No-Seafood"
+                           TextColor="White"
+                           HorizontalOptions="Start"
+                           VerticalOptions="Center"
+                           Margin="90,0,0,0"/> 
+                    <!-- Submit Button -->
+                    <Button Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="5" Text="SUBMIT" BackgroundColor="#FF69B4" TextColor="White" FontSize="Medium" CornerRadius="20" WidthRequest="200" HeightRequest="50" Margin="20" HorizontalOptions="Center"/>
+
+                </Grid>
+            </Frame>
+        </VerticalStackLayout>
     </Grid>
 </ContentPage>
