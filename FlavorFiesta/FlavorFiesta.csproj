@@ -60,6 +60,8 @@
 	  <None Remove="Resources\Images\background.png" />
 	  <None Remove="Resources\Images\signup.png" />
 	  <None Remove="Resources\Images\logo.png" />
+	  <None Remove="Resources\Images\image1.png" />
+	  <None Remove="Resources\Images\backgroundprefs.png" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -112,5 +114,7 @@
 	  <BundleResource Include="Resources\Images\background.png" />
 	  <BundleResource Include="Resources\Images\signup.png" />
 	  <BundleResource Include="Resources\Images\logo.png" />
+	  <BundleResource Include="Resources\Images\image1.png" />
+	  <BundleResource Include="Resources\Images\backgroundprefs.png" />
 	</ItemGroup>
 </Project>
