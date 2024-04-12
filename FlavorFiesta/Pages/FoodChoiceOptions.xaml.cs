@@ -44,6 +44,7 @@ namespace FlavorFiesta.Pages
             if (e.Value)
             {
                 _dietType = radioButton.Content.ToString();
+                DisplayAlert("Food choice Option", $"You have selected {_dietType}", "Ok");
             }
             await Task.CompletedTask;
         }
