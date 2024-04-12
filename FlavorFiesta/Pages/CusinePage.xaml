@@ -47,7 +47,7 @@
 
                         <!-- Chinese Cuisine Option -->
                         <RadioButton GroupName="CuisineTypes"
-                                     IsChecked="True"
+                                     CheckedChanged="OnCuisineTypeChanged"
                                      Content="Chinese" 
                                      Grid.Row="0" 
                                      Grid.Column="0" 
@@ -61,7 +61,7 @@
 
                         <!-- Italian Cuisine Option -->
                         <RadioButton GroupName="CuisineTypes" 
-                                     
+                                      CheckedChanged="OnCuisineTypeChanged"
                                      Content="Italian" 
                                      Grid.Row="0" 
                                      Grid.Column="1" 
@@ -75,6 +75,7 @@
 
                         <!-- American Cuisine Option -->
                         <RadioButton GroupName="CuisineTypes" 
+                                     CheckedChanged="OnCuisineTypeChanged"
                                      Content="American" 
                                      Grid.Row="0" 
                                      Grid.Column="2" 
