@@ -9,7 +9,7 @@ public partial class RecipeType : ContentPage
     public RecipeType(BusinessLogic.Preferences _prefs)
 	{
 		InitializeComponent();
-        _prefs = prefs;
+       // _prefs = prefs;
 
     }
 

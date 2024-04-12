@@ -18,6 +18,6 @@ public partial class NutritionalPreferencesSelectionPage : ContentPage
     private void OnCreateNewPreferencesClicked(object sender, EventArgs e)
     {
         // Navigate to the NutritionalPreferencesPage for creating new preferences
-        Navigation.PushAsync(new NutritionalPreferencesPage());
+        //Navigation.PushAsync(new NutritionalPreferencesPage());
     }
 }
