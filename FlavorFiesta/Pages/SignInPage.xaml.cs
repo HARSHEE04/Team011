@@ -28,31 +28,46 @@ public partial class SignInPage : ContentPage
 
     private async void OnSignIn(object sender, EventArgs e)
     {
-        string email = EmailEntry.Text;
-        string password = PasswordEntry.Text;
-
-        // Check if the email and password are not empty
-        if (string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(password))
+        try
         {
-            await DisplayAlert("Error", "Email and password cannot be empty.", "OK");
-            return;
+            string email = EmailEntry.Text;
+            string password = PasswordEntry.Text;
+
+            if (string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(password))
+            {
+                await DisplayAlert("Error", "Please enter both email and password.", "OK");
+                return;
+            }
+
+            // Authenticate the user
+            bool isAuthenticated = _accountsManager.AuthenticateUser(email, password);
+
+            if (isAuthenticated)
+            {
+                // Assuming you want to pass the user's email and default preferences for now
+                var preferences = new BusinessLogic.Preferences(
+                    dietType: "Standard",
+                    cusineType: "Any",
+                    mealType: "Any",
+                    caloriesRange: 2000, // Example value
+                    protenRange: 50, // Example value
+                    sugarRange: 30, // Example value
+                    serveingsRange: 3, // Example value
+                    prepTimeRange: TimeSpan.FromMinutes(30), // Example value
+                    dietaryRestrictions: new List<string>() // No restrictions by default
+                );
+
+                // Navigate to the FoodChoiceOptions page with the preferences
+                await Navigation.PushAsync(new FoodChoiceOptions(preferences));
+            }
+            else
+            {
+                await DisplayAlert("Error", "The email or password is incorrect.", "OK");
+            }
         }
-
-        // Search for user and password
-        bool userExists = _accountsManager.SearchUser(email);
-        bool passwordMatches = _accountsManager.SearchPassword(password);
-
-        if (userExists && passwordMatches)
+        catch (Exception ex)
         {
-            // If user is found and password matches, navigate to the next page
-            var prefs = new FlavorFiesta.BusinessLogic.Preferences(
-                email, "", "", 0, 0, 0, 0, TimeSpan.Zero, new List<string>()); // Placeholder values
-            await Navigation.PushAsync(new FoodChoiceOptions(prefs));
-        }
-        else
-        {
-            // If credentials do not match, display an error
-            await DisplayAlert("Error", "Incorrect email or password.", "OK");
+            await DisplayAlert("Error", "An unexpected error occurred.", "OK");
         }
     }
 }
