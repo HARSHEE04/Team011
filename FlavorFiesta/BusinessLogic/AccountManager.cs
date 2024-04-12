@@ -11,6 +11,12 @@ namespace FlavorFiesta.BusinessLogic
         Dictionary<string, User> _users = new Dictionary<string, User>();
 
         public Dictionary<string, User> Users => _users;
+
+        public void SetUsers(Dictionary<string, User> users)
+        {
+            _users = users ?? throw new ArgumentNullException(nameof(users));
+        }
+
         public void AddUser(User user)
         {
             if (_users.ContainsKey(user.Email))
