@@ -52,12 +52,6 @@ build_metadata.AdditionalFiles.ManifestResourceName = FlavorFiesta.Pages.Nutriti
 build_metadata.AdditionalFiles.TargetPath = Pages/NutritionalPreferencesPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Pages/NutritionalPreferencesPage.xaml
 
-[/Users/Yammy/Documents/GitHub/Team011/FlavorFiesta/Pages/PreviousPreferences.xaml]
-build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = FlavorFiesta.Pages.PreviousPreferences.xaml
-build_metadata.AdditionalFiles.TargetPath = Pages/PreviousPreferences.xaml
-build_metadata.AdditionalFiles.RelativePath = Pages/PreviousPreferences.xaml
-
 [/Users/Yammy/Documents/GitHub/Team011/FlavorFiesta/Pages/RecipeType.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = FlavorFiesta.Pages.RecipeType.xaml

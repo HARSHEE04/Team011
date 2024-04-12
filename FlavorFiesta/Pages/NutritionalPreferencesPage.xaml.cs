@@ -19,16 +19,7 @@ namespace FlavorFiesta.Pages
         // Event handler for when the Submit button is clicked
         private void OnSubmit(object sender, EventArgs e)
         {
-            try
-            {
-                // Navigate to the ChooseRecipe page and pass the _prefs object
-                Navigation.PushAsync(new ChooseRecipe(_prefs));
-            }
-            catch (Exception ex)
-            {
-                // Log any exceptions
-                Console.WriteLine($"Navigation error: {ex.Message}");
-            }
+            Navigation.PushAsync(new ChooseRecipe(_prefs));
         }
         // Sugar
         private void OnSugarSelectionChanged(object sender, CheckedChangedEventArgs e)
