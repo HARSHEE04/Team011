@@ -1,9 +1,7 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FlavorFiesta.Pages.CusinePage"
-             Title="Cusine Page"
-             BackgroundColor="AliceBlue">
+             Title="Cuisine Page">
 
     <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Padding="30">
         <Label Text="Cuisine Options" FontSize="Large" HorizontalTextAlignment="Center" TextColor="#3c1361" />
@@ -21,15 +19,15 @@
             </Grid.ColumnDefinitions>
 
             <!-- Chinese Cuisine Option -->
-            <RadioButton Grid.Row="0" Grid.Column="0" GroupName="CuisineTypes" Content="Chinese" TextColor="#3c1361" />
+            <RadioButton Grid.Row="0" Grid.Column="0" GroupName="CuisineTypes" Content="Chinese" />
             <Image Source="chinese_food.png" Grid.Row="1" Grid.Column="0" HeightRequest="100" WidthRequest="100" HorizontalOptions="Center" />
 
             <!-- Italian Cuisine Option -->
-            <RadioButton Grid.Row="0" Grid.Column="1" GroupName="CuisineTypes" Content="Italian" TextColor="#3c1361" />
+            <RadioButton Grid.Row="0" Grid.Column="1" GroupName="CuisineTypes" Content="Italian" />
             <Image Source="italian_food.png" Grid.Row="1" Grid.Column="1" HeightRequest="100" WidthRequest="100" HorizontalOptions="Center" />
 
             <!-- American Cuisine Option -->
-            <RadioButton Grid.Row="0" Grid.Column="2" GroupName="CuisineTypes" Content="American" TextColor="#3c1361" />
+            <RadioButton Grid.Row="0" Grid.Column="2" GroupName="CuisineTypes" Content="American" />
             <Image Source="american_food.png" Grid.Row="1" Grid.Column="2" HeightRequest="100" WidthRequest="100" HorizontalOptions="Center" />
         </Grid>
 

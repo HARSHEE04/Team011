@@ -45,6 +45,11 @@ namespace FlavorFiesta.BusinessLogic
 
             //figure out way to only get two recipes from all the matches, try TAKE() METHOD: https://www.tutorialspoint.com/chash-queryable-take-method
         }
+
+        internal void SearchRecipe(Preferences prefs)
+        {
+            throw new NotImplementedException();
+        }
     }
 
 

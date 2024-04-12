@@ -5,6 +5,7 @@ namespace FlavorFiesta.Pages;
 public partial class ChooseRecipe : ContentPage
 {
     private RecipeManager _recipeManager;
+<<<<<<< Updated upstream
     private RecipeManagerDataPersistance _csvRecipes;
 
     private List<Recipe> allMatchingRecipes;
@@ -25,7 +26,15 @@ public partial class ChooseRecipe : ContentPage
         Recipe2Name.Text = allMatchingRecipes[1].Name;
         Recipe2Image.Source = allMatchingRecipes[1].RecipeImage;
         Recipe2PrepTme.Text = allMatchingRecipes[1].RecipePreferences.PrepTimeRange.ToString();
+=======
+>>>>>>> Stashed changes
 
+    public ChooseRecipe(BusinessLogic.Preferences prefs)
+    {
+        InitializeComponent();
+        BindingContext = this;
+        _recipeManager = new RecipeManager(); // Initialize the _recipeManager instance
+        _recipeManager.SearchRecipe(prefs);
     }
 
 
