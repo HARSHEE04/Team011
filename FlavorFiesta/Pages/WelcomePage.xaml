@@ -5,13 +5,11 @@
              Title="Welcome to Flavor Fiesta">
              
     <Grid>
-        <!-- Removing the BoxView that might be obscuring the background image -->
         
-        <Image Source="background.png" Aspect="AspectFill" Opacity="1"/> <!-- Set Aspect to AspectFill and Opacity to 1 for full coverage -->
+        <Image Source="background.png" Aspect="AspectFill" Opacity="1"/> 
         
         <ScrollView>
             <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Spacing="30">
-                <!-- Frame with a semi-transparent background for the text -->
                 <Frame BackgroundColor="#000000" Opacity="0.6" Padding="20" CornerRadius="20">
                     <StackLayout>
                         <Label Text="WELCOME TO"
