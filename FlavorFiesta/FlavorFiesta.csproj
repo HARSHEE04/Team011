@@ -59,6 +59,7 @@
 	  <None Remove="DataPersistence\**" />
 	  <None Remove="Resources\Images\background.png" />
 	  <None Remove="Resources\Images\signup.png" />
+	  <None Remove="Resources\Images\logo.png" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -110,5 +111,6 @@
 	  <BundleResource Include="Resources\Images\italian_food.svg" />
 	  <BundleResource Include="Resources\Images\background.png" />
 	  <BundleResource Include="Resources\Images\signup.png" />
+	  <BundleResource Include="Resources\Images\logo.png" />
 	</ItemGroup>
 </Project>

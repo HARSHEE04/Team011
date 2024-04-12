@@ -1,71 +1,96 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="FlavorFiesta.Pages.SignInPage"
-             >
-    <VerticalStackLayout
-        BackgroundColor="LightSlateGrey">
-        <Label 
-            Text="Sign In"
-            Margin="20"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center"
-            FontSize="Title"
-            FontFamily="Algerian"
-            FontAttributes="Bold"/>
+             x:Class="FlavorFiesta.Pages.SignInPage">
 
-        <Image
-            Source="logo21.png"
-            MaximumHeightRequest="350"
-            MaximumWidthRequest="400"/>
+    <Grid>
+        <Image Source="signup.png" Aspect="AspectFill" />
 
-        <Grid
-            ColumnDefinitions="*, 2*"
-            RowDefinitions="*,*,*">
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30"
+            VerticalOptions="Center"
+            HorizontalOptions="Center">
 
-            <Label
-                    Text="Email :"
-                    Grid.Column="0"
-                    Grid.Row="0"
-                    VerticalOptions="Center"
-                    FontSize="Medium"
-                    FontAttributes="Bold"
-                    HorizontalOptions="Center"/>
-            <Entry
-                    x:Name="EmailEntry"
-                    BackgroundColor="AliceBlue"
-                    TextColor="White"
-                    Grid.Column="1"
-                    Margin="50"
-                    Grid.Row="0"/>
-            <Label
-                    Text="Password :"
-                    Grid.Column="0"
-                    Grid.Row="1"
-                    Margin="50"
-                    FontSize="Medium"
-                    HorizontalOptions="Center"
-                    FontAttributes="Bold"
-                    VerticalOptions="Center"/>
-            <Entry
-                    x:Name="PasswordEntry"
-                    IsPassword="True"
-                    BackgroundColor="AliceBlue"
-                    Margin="50"
-                    Grid.Column="1"
-                    Grid.Row="1"/>
-        </Grid>
-        <Button
-            Text="Sign In"
-            Clicked="OnSignIn"
-            VerticalOptions="End"
-            HorizontalOptions="Center"
-            Margin="40"
-            HeightRequest="50"
-            BackgroundColor="DarkBlue"
-            WidthRequest="150"
-            FontSize="Medium"
-            />
+            <Label 
+                Text="Sign In"
+                FontSize="32"
+                FontAttributes="Bold"
+                TextColor="White"
+                HorizontalOptions="Center"/>
 
-    </VerticalStackLayout>
+            <Image
+                Source="logo.png"
+                Aspect="AspectFit"
+                HeightRequest="200"
+                HorizontalOptions="Center"
+                Margin="0,20,0,20"/>
+
+            <Frame
+                BackgroundColor="#444444CC"
+                Padding="15"
+                CornerRadius="10"
+                HorizontalOptions="Fill"
+                VerticalOptions="Start">
+
+                <Grid
+                    ColumnDefinitions="Auto, *"
+                    RowDefinitions="Auto, Auto">
+
+                    <Label
+                        Text="Email:"
+                        Grid.Column="0"
+                        Grid.Row="0"
+                        FontSize="Medium"
+                        FontAttributes="Bold"
+                        TextColor="White"
+                        VerticalOptions="Center"
+                        HorizontalOptions="End"/>
+
+                    <Entry
+                        x:Name="EmailEntry"
+                        Placeholder="Enter email"
+                        Keyboard="Email"
+                        Grid.Column="1"
+                        Grid.Row="0"
+                        Margin="10"
+                        FontSize="Medium"
+                        BackgroundColor="Transparent"
+                        TextColor="White"/>
+                    
+                    <Label
+                        Text="Password:"
+                        Grid.Column="0"
+                        Grid.Row="1"
+                        FontSize="Medium"
+                        FontAttributes="Bold"
+                        TextColor="White"
+                        VerticalOptions="Center"
+                        HorizontalOptions="End"/>
+
+                    <Entry
+                        x:Name="PasswordEntry"
+                        Placeholder="Enter password"
+                        IsPassword="True"
+                        Grid.Column="1"
+                        Grid.Row="1"
+                        Margin="10"
+                        FontSize="Medium"
+                        BackgroundColor="Transparent"
+                        TextColor="White"/>
+                </Grid>
+            </Frame>
+
+            <Button
+                Text="Sign In"
+                BackgroundColor="#FF69B4"
+                TextColor="White"
+                FontSize="Medium"
+                CornerRadius="20"
+                WidthRequest="200"
+                HeightRequest="50"
+                Margin="10"
+                Clicked="OnSignIn"/>
+        </VerticalStackLayout>
+    </Grid>
 </ContentPage>
