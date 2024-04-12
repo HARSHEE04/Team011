@@ -6,28 +6,29 @@ using System.Threading.Tasks;
 
 namespace FlavorFiesta.BusinessLogic
 {
-    //this is the recipe class
+    //This class was developed by Harsheta Sharma
+    //this is the recipe class which holds all the recipe objects. This class has an association relationship with the preferences class.
+
+    /// <summary>
+    /// This recipe class was created to be able to hold the recipe objects so when we get the recipes from the csv file, we are able to make an object from it. The object will have properties as seen below which 
+    /// allows us to use data binding, perform validation checks and acesss field variable values of each object    /// </summary>
     public class Recipe
     {
-        //test comment for desktop github
+       
         //Field Variables for Recipe Class
-        private static int lastId = 0;
-        private int id; // the id of the recipe will be used in for the recipe searching process and displaying process in the Recipe Manager class
         private string _name;
         private string _recipeImage;
         private string _recipeURL;
         private Preferences _recipePreferences;
 
+        #region Properties
         //Properties
 
         public Preferences  RecipePreferences
         { get { return _recipePreferences; }
           set { _recipePreferences = value; }
             }
-        public int ID
-        {
-            get { return id; }
-        }
+     
 
         public string Name
         {
@@ -42,7 +43,7 @@ namespace FlavorFiesta.BusinessLogic
             }
         }
 
-        public string RecipeImage
+        public string RecipeImage  // no validation required for this property since if the image is not found, system throws an error
         {
             get { return _recipeImage; }
             init { _recipeImage = value; }
@@ -60,10 +61,12 @@ namespace FlavorFiesta.BusinessLogic
                 _recipeURL = value;
             }
         }
+        #endregion
 
+        #region Constructor
         public Recipe(string name, string recipeImage, string recipeURL, Preferences preferences)
         {
-            id = ++lastId; // the ++ is an increment operator and it increments the variable by 1 and returns the incremented value
+           
             Name = name;
             RecipeImage = recipeImage;
             RecipeURL = recipeURL;
@@ -71,6 +74,6 @@ namespace FlavorFiesta.BusinessLogic
 
 
         }
-
+        #endregion
     }
 }
