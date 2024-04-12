@@ -26,7 +26,7 @@
 
         <Label
             Grid.Row="0"  Grid.Column="1"
-            Text="{Binding ChosenRecipe,StringFormat='Recipe info for : {0}'}"
+            Text="{Binding Name,StringFormat='Recipe info for : {0}'}"
             VerticalOptions="Center">
         </Label>
 
@@ -38,7 +38,7 @@
 
         <Label
            Grid.Row="1"  Grid.Column="1"
-           Text="{Binding ChosenRecipeURL,StringFormat='Recipe info for : {0}'}"
+           Text="{Binding RecipeURL,StringFormat='Recipe info for : {0}'}"
            VerticalOptions="Center">
         </Label>
 
@@ -51,19 +51,19 @@
         <ListView
             Grid.Row="3"  Grid.Column="0"  Grid.ColumnSpan="2"
             BackgroundColor="AntiqueWhite"
-            ItemsSource="{Binding Recipes}">
+            ItemsSource="{Binding RecipePreferences}">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
                         <StackLayout Padding="10">
-                            <Label Text="{Binding DietType, StringFormat='Diet Type: {0}'}" TextColor="Black" />
-                            <Label Text="{Binding CuisineType, StringFormat='Cuisine Type: {0}'}" TextColor="Black" />
-                            <Label Text="{Binding MealType, StringFormat='Meal Type: {0}'}" TextColor="Black" />
-                            <Label Text="{Binding CaloriesRange, StringFormat='Calories Range: {0}'}" TextColor="Black" />
-                            <Label Text="{Binding ProteinRange, StringFormat='Protein Range: {0}'}" TextColor="Black" />
-                            <Label Text="{Binding SugarRange, StringFormat='Sugar Range: {0}'}" TextColor="Black" />
-                            <Label Text="{Binding ServingsRange, StringFormat='Servings Range: {0}'}" TextColor="Black" />
-                            <Label Text="{Binding PrepTimeRange, StringFormat='Prep Time Range: {0}'}" TextColor="Black" />
+                            <Label Text="{Binding RecipePreferences.DietType, StringFormat='Diet Type: {0}'}" TextColor="Black" />
+                            <Label Text="{Binding RecipePreferences.CuisineType, StringFormat='Cuisine Type: {0}'}" TextColor="Black" />
+                            <Label Text="{Binding RecipePreferences.MealType, StringFormat='Meal Type: {0}'}" TextColor="Black" />
+                            <Label Text="{Binding RecipePreferences.CaloriesRange, StringFormat='Calories Range: {0}'}" TextColor="Black" />
+                            <Label Text="{Binding RecipePreferences. ProteinRange, StringFormat='Protein Range: {0}'}" TextColor="Black" />
+                            <Label Text="{Binding RecipePreferences.SugarRange, StringFormat='Sugar Range: {0}'}" TextColor="Black" />
+                            <Label Text="{Binding RecipePreferences.ServingsRange, StringFormat='Servings Range: {0}'}" TextColor="Black" />
+                            <Label Text="{Binding RecipePreferences.PrepTimeRange, StringFormat='Prep Time Range: {0}'}" TextColor="Black" />
                         </StackLayout>
                     </ViewCell>
                 </DataTemplate>
@@ -73,6 +73,7 @@
         <Image
             Grid.Row="1" Grid.Column="2" Grid.RowSpan="2"
             x:Name="ChosenRecipeImage"
+             Source="{Binding RecipeImage}"
             VerticalOptions="Center"
             HorizontalOptions="Center">
         </Image>
