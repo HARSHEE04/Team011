@@ -5,17 +5,16 @@ namespace FlavorFiesta.Pages;
 public partial class ChooseRecipe : ContentPage
 {
     private RecipeManager _recipeManager;
-<<<<<<< Updated upstream
     private RecipeManagerDataPersistance _csvRecipes;
 
     private List<Recipe> allMatchingRecipes;
     public ChooseRecipe(BusinessLogic.Preferences prefs)
-	{
-		InitializeComponent();
+    {
+        InitializeComponent();
         BindingContext = this;
 
         _recipeManager = new RecipeManager();
-        _csvRecipes=new RecipeManagerDataPersistance();
+        _csvRecipes = new RecipeManagerDataPersistance();
 
         allMatchingRecipes = _recipeManager.SearchRecipe(prefs, _csvRecipes);
 
@@ -26,32 +25,32 @@ public partial class ChooseRecipe : ContentPage
         Recipe2Name.Text = allMatchingRecipes[1].Name;
         Recipe2Image.Source = allMatchingRecipes[1].RecipeImage;
         Recipe2PrepTme.Text = allMatchingRecipes[1].RecipePreferences.PrepTimeRange.ToString();
-=======
->>>>>>> Stashed changes
-
-    public ChooseRecipe(BusinessLogic.Preferences prefs)
-    {
-        InitializeComponent();
-        BindingContext = this;
-        _recipeManager = new RecipeManager(); // Initialize the _recipeManager instance
-        _recipeManager.SearchRecipe(prefs);
-    }
 
 
-    //when either button is chosen, send the appropriate info about the recipe
-    private void OnRecipe1Chosen(object sender, EventArgs e)
-    {
-        Recipe selectedRecipe = allMatchingRecipes[0];
+        public ChooseRecipe(BusinessLogic.Preferences prefs)
+        {
+            InitializeComponent();
+            BindingContext = this;
+            _recipeManager = new RecipeManager(); // Initialize the _recipeManager instance
+            _recipeManager.SearchRecipe(prefs);
+        }
 
-        Navigation.PushAsync(new DisplayRecipe(selectedRecipe));
+
+        //when either button is chosen, send the appropriate info about the recipe
+        private void OnRecipe1Chosen(object sender, EventArgs e)
+        {
+            Recipe selectedRecipe = allMatchingRecipes[0];
+
+            Navigation.PushAsync(new DisplayRecipe(selectedRecipe));
 
 
-    }
+        }
 
-    private void OnRecipe2Chosen(object sender, EventArgs e)
-    {
-        Recipe selectedRecipe = allMatchingRecipes[1];
+        private void OnRecipe2Chosen(object sender, EventArgs e)
+        {
+            Recipe selectedRecipe = allMatchingRecipes[1];
 
-        Navigation.PushAsync(new DisplayRecipe(selectedRecipe));
+            Navigation.PushAsync(new DisplayRecipe(selectedRecipe));
+        }
     }
 }
