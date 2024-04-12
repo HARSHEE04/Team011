@@ -31,6 +31,7 @@ namespace FlavorFiesta.Pages
             _cuisineType = cuisineType;
             _recipeType = recipeType;
             _dietaryRestrictions = new List<string>();
+
             _prefManager = new PrefManagerDataPersistence(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "preferences.json"));
 
         }
@@ -48,15 +49,10 @@ namespace FlavorFiesta.Pages
         //Make the user preferences object to send to next page
         public FlavorFiesta.BusinessLogic.Preferences MakeUserPreference()
         {
-            List<string> dietaryRestrictions = new List<string>
-            {
-                "No-Nuts",
-                "No-Eggs"
-            };
 
             //make a new instance of preferences class
             FlavorFiesta.BusinessLogic.Preferences preference1 = new FlavorFiesta.BusinessLogic.Preferences(
-                _dietType, _cuisineType, _recipeType, _caloriesRange, _proteinRange, _sugarRange, _servingsRange, _prepTimeRange, dietaryRestrictions);
+                _dietType, _cuisineType, _recipeType, _caloriesRange, _proteinRange, _sugarRange, _servingsRange, _prepTimeRange, _dietaryRestrictions);
 
             _preferences = preference1;
             return _preferences;
