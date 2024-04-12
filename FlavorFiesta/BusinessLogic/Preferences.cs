@@ -7,17 +7,17 @@ namespace FlavorFiesta.BusinessLogic
         private string _dietType;
         private string _cuisineType;
         private string _mealType;
-        private int _caloriesRange;
-        private int _proteinRange;
-        private int _sugarRange;
-        private int _servingsRange;
-        private TimeSpan _prepTimeRange;
+        private string _caloriesRange;
+        private string _proteinRange;
+        private string _sugarRange;
+        private string _servingsRange;
+        private string _prepTimeRange;
         private List<string> _dietaryRestrictions;
         #endregion
 
         #region Constructor
-        public Preferences(string dietType, string cusineType, string mealType, int caloriesRange, int protenRange,
-            int sugarRange, int serveingsRange, TimeSpan prepTimeRange, List<string> dietaryRestrictions)
+        public Preferences(string dietType, string cusineType, string mealType, string caloriesRange, string protenRange,
+            string sugarRange, string serveingsRange, string prepTimeRange, List<string> dietaryRestrictions)
         {
             DietType = dietType;
             CuisineType = cusineType;
@@ -71,12 +71,12 @@ namespace FlavorFiesta.BusinessLogic
             }
         }
 
-        public int CaloriesRange
+        public string CaloriesRange
         {
             get { return _caloriesRange; }
             set
             {
-                if (value < 0)
+                if (string.IsNullOrWhiteSpace(value))
                 {
                     throw new ArgumentException("Calories range cannot be negative.", nameof(CaloriesRange));
                 }
@@ -84,12 +84,12 @@ namespace FlavorFiesta.BusinessLogic
             }
         }
 
-        public int ProteinRange
+        public string ProteinRange
         {
             get { return _proteinRange; }
             set
             {
-                if (value < 0)
+                if (string.IsNullOrWhiteSpace(value))
                 {
                     throw new ArgumentException("Protein range cannot be negative.", nameof(ProteinRange));
                 }
@@ -97,12 +97,12 @@ namespace FlavorFiesta.BusinessLogic
             }
         }
 
-        public int SugarRange
+        public string SugarRange
         {
             get { return _sugarRange; }
             set
             {
-                if (value < 0)
+                if (string.IsNullOrWhiteSpace(value))
                 {
                     throw new ArgumentException("Sugar range cannot be negative.", nameof(SugarRange));
                 }
@@ -111,12 +111,12 @@ namespace FlavorFiesta.BusinessLogic
         }
 
 
-        public int ServingsRange
+        public string ServingsRange
         {
             get { return _servingsRange; }
             set
             {
-                if (value < 0)
+                if (string.IsNullOrWhiteSpace(value))
                 {
                     throw new ArgumentException("Servings range cannot be negative.", nameof(ServingsRange));
                 }
@@ -124,12 +124,12 @@ namespace FlavorFiesta.BusinessLogic
             }
         }
 
-        public TimeSpan PrepTimeRange
+        public string PrepTimeRange
         {
             get { return _prepTimeRange; }
             set
             {
-                if (value.TotalMinutes < 0)
+                if(string.IsNullOrWhiteSpace(value))
                 {
                     throw new ArgumentException("Preparation time cannot be negative.", nameof(PrepTimeRange));
                 }
