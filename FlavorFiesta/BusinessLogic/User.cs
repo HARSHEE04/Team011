@@ -12,11 +12,10 @@ namespace FlavorFiesta.BusinessLogic
         string _email;
         string _password;
         DateTime _dateOfBirth;
-        Random _random;
 
         public string Name
         {
-            get => Name;
+            get => _name;
             set
             {
                 if (string.IsNullOrEmpty(value))
@@ -27,7 +26,7 @@ namespace FlavorFiesta.BusinessLogic
 
         public string Email
         {
-            get => Email;
+            get => _email;
             set
             {
                 if (string.IsNullOrEmpty(value))
@@ -40,7 +39,7 @@ namespace FlavorFiesta.BusinessLogic
 
         public string Password
         {
-            get => Password;
+            get => _password;
             set
             {
                 if (string.IsNullOrEmpty(value))
@@ -53,7 +52,7 @@ namespace FlavorFiesta.BusinessLogic
 
         public DateTime DateOfBirth
         {
-            get => DateOfBirth;
+            get => _dateOfBirth;
             set
             {
                 if (value == DateTime.Today)
