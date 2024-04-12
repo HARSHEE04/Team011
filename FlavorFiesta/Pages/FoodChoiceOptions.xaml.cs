@@ -40,7 +40,7 @@ namespace FlavorFiesta.Pages
         private async void OnSubmitClicked(object sender, EventArgs e)
         {
             // Navigate to the next page with the preferences
-            await Navigation.PushAsync(new RecipeType(_prefs));
+            await Navigation.PushAsync(new CusinePage(_prefs));
         }
     }
 }

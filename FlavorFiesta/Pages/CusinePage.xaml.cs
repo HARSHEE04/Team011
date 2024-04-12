@@ -1,23 +1,33 @@
-﻿namespace FlavorFiesta.Pages;
+﻿using FlavorFiesta.BusinessLogic;
+using System;
 
-public partial class CusinePage : ContentPage
+namespace FlavorFiesta.Pages
 {
-	public CusinePage()
-	{
-		InitializeComponent();
-	}
-
-    private void OnCuisineTypeChanged(object sender, CheckedChangedEventArgs e)
+    public partial class CusinePage : ContentPage
     {
-        var radioButton = sender as RadioButton;
-        if (e.Value)
+        private BusinessLogic.Preferences _prefs; // Declare _prefs as an instance variable of type Preferences
+
+        public CusinePage(BusinessLogic.Preferences prefs) // Accept Preferences as an instance parameter
         {
-            // TODO: Handle the logic when a cuisine type is selected.
-            string selectedCuisineType = radioButton.Content.ToString();
+            InitializeComponent();
+            _prefs = prefs; // Assign the parameter to the instance variable
         }
-    }
 
-    private async void OnSubmitClicked(object sender, EventArgs e)
-    {
+        private void OnCuisineTypeChanged(object sender, CheckedChangedEventArgs e)
+        {
+            var radioButton = sender as RadioButton;
+            if (e.Value)
+            {
+                // Set the selected cuisine type to preferences
+                string selectedCuisineType = radioButton.Content.ToString();
+                _prefs.CuisineType = selectedCuisineType;
+            }
+        }
+
+        private async void OnSubmitClicked(object sender, EventArgs e)
+        {
+            // Navigate to the next page with the preferences
+            await Navigation.PushAsync(new RecipeType(_prefs));
+        }
     }
 }
