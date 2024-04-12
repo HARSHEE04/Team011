@@ -33,27 +33,16 @@ public partial class ChooseRecipe : ContentPage
             Debug.WriteLine("Not enough recipes found");
         }
     }
-    //private ChooseRecipe (BusinessLogic.Preferences prefs)
-    //{
-    //    InitializeComponent();
-    //    BindingContext = this;
-    //    _recipeManager = new RecipeManager(); // Initialize the _recipeManager instance
-    //    _recipeManager.SearchRecipe(prefs);
-    //}
 
     private void OnRecipe1Chosen(object sender, EventArgs e)
     {
         Recipe selectedRecipe = allMatchingRecipes[0];
-
         Navigation.PushAsync(new DisplayRecipe(selectedRecipe));
-
-
     }
 
     private void OnRecipe2Chosen(object sender, EventArgs e)
     {
         Recipe selectedRecipe = allMatchingRecipes[1];
-
         Navigation.PushAsync(new DisplayRecipe(selectedRecipe));
     }
 }
