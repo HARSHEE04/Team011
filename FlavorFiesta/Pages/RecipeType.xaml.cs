@@ -6,10 +6,10 @@ namespace FlavorFiesta.Pages
     {
         private BusinessLogic.Preferences _prefs; // Fully qualified the Preferences class with its namespace
 
-        public RecipeType(BusinessLogic.Preferences prefs) // Fully qualified the Preferences class with its namespace
+        public RecipeType(string dietType, string cuisineType) // Fully qualified the Preferences class with its namespace
         {
             InitializeComponent();
-            _prefs = prefs;
+            //_prefs = prefs;
         }
         //example
 
