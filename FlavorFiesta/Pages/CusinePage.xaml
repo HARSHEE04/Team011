@@ -46,7 +46,8 @@
                         </Grid.ColumnDefinitions>
 
                         <!-- Chinese Cuisine Option -->
-                        <RadioButton GroupName="CuisineTypes" 
+                        <RadioButton GroupName="CuisineTypes"
+                                     IsChecked="True"
                                      Content="Chinese" 
                                      Grid.Row="0" 
                                      Grid.Column="0" 
@@ -60,6 +61,7 @@
 
                         <!-- Italian Cuisine Option -->
                         <RadioButton GroupName="CuisineTypes" 
+                                     
                                      Content="Italian" 
                                      Grid.Row="0" 
                                      Grid.Column="1" 
