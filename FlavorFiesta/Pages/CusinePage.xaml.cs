@@ -7,10 +7,10 @@ namespace FlavorFiesta.Pages
     {
         private BusinessLogic.Preferences _prefs; // Declare _prefs as an instance variable of type Preferences
 
-        public CusinePage(BusinessLogic.Preferences prefs) // Accept Preferences as an instance parameter
+        public CusinePage(string DietType) // Accept Preferences as an instance parameter
         {
             InitializeComponent();
-            _prefs = prefs; // Assign the parameter to the instance variable
+            //_prefs = prefs; // Assign the parameter to the instance variable
         }
 
         private void OnCuisineTypeChanged(object sender, CheckedChangedEventArgs e)
