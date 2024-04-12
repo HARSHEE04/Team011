@@ -31,10 +31,7 @@ namespace FlavorFiesta.Pages
                 _cuisineType = selectedCuisineType;
                 DisplayAlert("Cuisine Type Selected", $"You have selected: {_cuisineType} ", "OK");
             }
-            else
-            {
-                DisplayAlert("Cuisine Type Selected", $"You have selected:  ", "OK");
-            }
+          
 
         }
 
