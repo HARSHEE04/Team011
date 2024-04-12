@@ -43,7 +43,7 @@ public partial class SignInPage : ContentPage
             // Authenticate the user
             bool isAuthenticated = _accountsManager.AuthenticateUser(email, password);
 
-            if (isAuthenticated == true)
+            if (isAuthenticated)
             {
                 // Navigate to the FoodChoiceOptions page without preferences
                 await Navigation.PushAsync(new FoodChoiceOptions());
