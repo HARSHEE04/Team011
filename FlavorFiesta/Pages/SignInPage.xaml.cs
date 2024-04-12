@@ -44,7 +44,6 @@ public partial class SignInPage : ContentPage
 
             if (isAuthenticated)
             {
-                // Assuming you want to pass the user's email and default preferences for now
                 var preferences = new BusinessLogic.Preferences(
                     dietType: "Standard",
                     cusineType: "Any",
