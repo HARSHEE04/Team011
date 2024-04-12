@@ -9,6 +9,7 @@ namespace FlavorFiesta.BusinessLogic
     //this is the recipe class
     public class Recipe
     {
+        //test comment for desktop github
         //Field Variables for Recipe Class
         private static int lastId = 0;
         private int id; // the id of the recipe will be used in for the recipe searching process and displaying process in the Recipe Manager class
