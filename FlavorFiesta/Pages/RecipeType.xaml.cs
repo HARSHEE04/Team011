@@ -11,6 +11,7 @@ namespace FlavorFiesta.Pages
             InitializeComponent();
             _prefs = prefs;
         }
+        //example
 
         private void OnMealTimeChanged(object sender, CheckedChangedEventArgs e)
         {
