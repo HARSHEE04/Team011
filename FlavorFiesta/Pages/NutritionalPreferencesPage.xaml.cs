@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Windows.Input;
 using FlavorFiesta.BusinessLogic;
 using FlavorFiesta.DataPersistance;
+using Microsoft.Maui.Controls;
 
 namespace FlavorFiesta.Pages
 {
@@ -18,7 +19,8 @@ namespace FlavorFiesta.Pages
         private string _servingsRange;
         private string _prepTimeRange;
         private List<string> _dietaryRestrictions;
-        private FlavorFiesta.BusinessLogic.Preferences _preferences;
+        private BusinessLogic.Preferences _preferences;
+        private PrefManagerDataPersistence _prefManager;
 
 
         public NutritionalPreferencesPage(string dietType, string cuisineType, string recipeType)
@@ -29,17 +31,17 @@ namespace FlavorFiesta.Pages
             _cuisineType = cuisineType;
             _recipeType = recipeType;
             _dietaryRestrictions = new List<string>();
+            _prefManager = new PrefManagerDataPersistence(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "preferences.json"));
+
         }
 
         // Event handler for when the Submit button is clicked
         private async void OnSubmit(object sender, EventArgs e)
         {
             MakeUserPreference();
-            var prefManager = new PrefManagerDataPersistence("preferences.json");
-            prefManager.AddPreferences(_preferences);
+            _prefManager.AddPreferences(_preferences);
 
             Debug.WriteLine("Current navigation stack count: " + Navigation.NavigationStack.Count);
-            
             await Navigation.PushAsync(new ChooseRecipe(_preferences));
         }
 
@@ -57,7 +59,7 @@ namespace FlavorFiesta.Pages
                 _dietType, _cuisineType, _recipeType, _caloriesRange, _proteinRange, _sugarRange, _servingsRange, _prepTimeRange, dietaryRestrictions);
 
             _preferences = preference1;
-            return preference1;
+            return _preferences;
 
         }
 
