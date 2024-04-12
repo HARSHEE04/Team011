@@ -61,7 +61,6 @@ public partial class SignUpPage : ContentPage
         {
             User newUser = CaptureUserInput();
 
-            // Add more validation as needed, for example:
             if (string.IsNullOrWhiteSpace(newUser.Email) || string.IsNullOrWhiteSpace(newUser.Password))
             {
                 await DisplayAlert("Error", "Email and password cannot be empty.", "OK");
