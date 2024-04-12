@@ -65,52 +65,21 @@
                            TextColor="White"/>
 
                     <!-- No-Nuts Checkbox and Label -->
-                    <CheckBox Grid.Row="5"
-                              Grid.Column="1"
-                              Color="White"/>
-                    <Label Grid.Row="5"
-                           Grid.Column="1"
-                           Text="No-Nuts"
-                           TextColor="White"
-                           HorizontalOptions="Start"
-                           VerticalOptions="Center"
-                           Margin="90,0,0,0"/> 
+                    <CheckBox Grid.Row="5" Grid.Column="1" Color="White" CheckedChanged="OnDietaryRestrictionChanged" ClassId="No-Nuts"/>
+                    <Label Grid.Row="5" Grid.Column="1" Text="No-Nuts" TextColor="White" HorizontalOptions="Start" VerticalOptions="Center" Margin="90,0,0,0"/> 
 
                     <!-- No-Eggs Checkbox and Label -->
-                    <CheckBox Grid.Row="5"
-                              Grid.Column="2"
-                              Color="White"/>
-                    <Label Grid.Row="5"
-                           Grid.Column="2"
-                           Text="No-Eggs"
-                           TextColor="White"
-                           HorizontalOptions="Start"
-                           VerticalOptions="Center"
-                           Margin="90,0,0,0"/> 
+                    <CheckBox Grid.Row="5" Grid.Column="2" Color="White" CheckedChanged="OnDietaryRestrictionChanged" ClassId="No-Eggs"/>
+                    <Label Grid.Row="5" Grid.Column="2" Text="No-Eggs" TextColor="White" HorizontalOptions="Start" VerticalOptions="Center" Margin="90,0,0,0"/> 
 
                     <!-- Gluten-Free Checkbox and Label -->
-                    <CheckBox Grid.Row="5"
-                              Grid.Column="3"
-                              Color="White"/>
-                    <Label Grid.Row="5"
-                           Grid.Column="3"
-                           Text="Gluten-Free"
-                           TextColor="White"
-                           HorizontalOptions="Start"
-                           VerticalOptions="Center"
-                           Margin="90,0,0,0"/> 
+                    <CheckBox Grid.Row="5" Grid.Column="3" Color="White" CheckedChanged="OnDietaryRestrictionChanged" ClassId="Gluten-Free"/>
+                    <Label Grid.Row="5" Grid.Column="3" Text="Gluten-Free" TextColor="White" HorizontalOptions="Start" VerticalOptions="Center" Margin="90,0,0,0"/> 
 
                     <!-- No-Seafood Checkbox and Label -->
-                    <CheckBox Grid.Row="5"
-                              Grid.Column="4"
-                              Color="White"/>
-                    <Label Grid.Row="5"
-                           Grid.Column="4"
-                           Text="No-Seafood"
-                           TextColor="White"
-                           HorizontalOptions="Start"
-                           VerticalOptions="Center"
-                           Margin="90,0,0,0"/> 
+                    <CheckBox Grid.Row="5" Grid.Column="4" Color="White" CheckedChanged="OnDietaryRestrictionChanged" ClassId="No-Seafood"/>
+                    <Label Grid.Row="5" Grid.Column="4" Text="No-Seafood" TextColor="White" HorizontalOptions="Start" VerticalOptions="Center" Margin="90,0,0,0"/>
+ 
                     <!-- Submit Button -->
                     <Button Grid.Row="6"
                         Grid.Column="0"
