@@ -31,6 +31,7 @@ public partial class SignUpPage : ContentPage
     }
     void OnSignUpButton(object sender, EventArgs e)
     {
+        DisplayAlert("Congratulations", "You have successfully created an account", "Ok");
         // Implementation for what should happen when the button is clicked
         _manager.AddUser(CaptureUserInput());
     }
