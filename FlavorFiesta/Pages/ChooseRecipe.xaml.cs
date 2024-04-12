@@ -25,32 +25,29 @@ public partial class ChooseRecipe : ContentPage
         Recipe2Name.Text = allMatchingRecipes[1].Name;
         Recipe2Image.Source = allMatchingRecipes[1].RecipeImage;
         Recipe2PrepTme.Text = allMatchingRecipes[1].RecipePreferences.PrepTimeRange.ToString();
+    }
+
+    //private ChooseRecipe (BusinessLogic.Preferences prefs)
+    //{
+    //    InitializeComponent();
+    //    BindingContext = this;
+    //    _recipeManager = new RecipeManager(); // Initialize the _recipeManager instance
+    //    _recipeManager.SearchRecipe(prefs);
+    //}
+
+    private void OnRecipe1Chosen(object sender, EventArgs e)
+    {
+        Recipe selectedRecipe = allMatchingRecipes[0];
+
+        Navigation.PushAsync(new DisplayRecipe(selectedRecipe));
 
 
-        public ChooseRecipe(BusinessLogic.Preferences prefs)
-        {
-            InitializeComponent();
-            BindingContext = this;
-            _recipeManager = new RecipeManager(); // Initialize the _recipeManager instance
-            _recipeManager.SearchRecipe(prefs);
-        }
+    }
 
+    private void OnRecipe2Chosen(object sender, EventArgs e)
+    {
+        Recipe selectedRecipe = allMatchingRecipes[1];
 
-        //when either button is chosen, send the appropriate info about the recipe
-        private void OnRecipe1Chosen(object sender, EventArgs e)
-        {
-            Recipe selectedRecipe = allMatchingRecipes[0];
-
-            Navigation.PushAsync(new DisplayRecipe(selectedRecipe));
-
-
-        }
-
-        private void OnRecipe2Chosen(object sender, EventArgs e)
-        {
-            Recipe selectedRecipe = allMatchingRecipes[1];
-
-            Navigation.PushAsync(new DisplayRecipe(selectedRecipe));
-        }
+        Navigation.PushAsync(new DisplayRecipe(selectedRecipe));
     }
 }
