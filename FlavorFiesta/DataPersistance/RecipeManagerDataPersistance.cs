@@ -12,14 +12,12 @@ namespace FlavorFiesta.DataPersistance
     {
         string _filePath;
 
-        //public RecipeManagerDataPersistance(string filePath)
-        //{
-        //    _filePath = filePath;
-        //}
+        
 
         ///read recipes from csv file and make it into a list
         public List<Recipe> ReadRecipesFromCSV() //could have put this into a method
         {
+            //_filePath= ""
             List<Recipe> list = new List<Recipe>();
 
             try
@@ -40,9 +38,9 @@ namespace FlavorFiesta.DataPersistance
                     BusinessLogic.Preferences preferences = new BusinessLogic.Preferences(
 
                         //the info and its corresponding property which will be used in Recipe class object made below
-                        parts[3], // dietType
+                        parts[3], // dietType, vegan etc
                         parts[4], // cuisineType
-                        parts[5], // mealType
+                        parts[5], // mealType, lunch etc
                         parts[6], // caloriesRange
                         parts[7], // proteinRange
                         parts[8], // sugarRange

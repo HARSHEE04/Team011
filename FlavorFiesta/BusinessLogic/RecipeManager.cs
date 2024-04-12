@@ -16,6 +16,9 @@ namespace FlavorFiesta.BusinessLogic
     /// </summary>
     //The recipe manager class will manage the list of recipes, it will have a method that searches the collection of recipes based on the info recieved from the preferences class
     //Then, it will aid in displaying the chosen recipe by working with the code behind
+
+
+
     internal class RecipeManager
     {
         /// <summary>
@@ -29,8 +32,8 @@ namespace FlavorFiesta.BusinessLogic
         {
             List<Recipe> recipes = csvAccess.ReadRecipesFromCSV(); //now we have the list of recipes from the CSV stored into this local list
 
-            //now we use the LINQ Query Syntax to filter through the recipes
-
+           
+            ///The methods used here are referenced below and explained in the project report in the learnings section
             
             var matchingRecipeRequests = (from recipe in recipes
                                           where recipe.RecipePreferences.DietType == userPreferences.DietType &&
