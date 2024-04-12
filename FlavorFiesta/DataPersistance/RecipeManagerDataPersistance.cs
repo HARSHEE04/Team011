@@ -43,11 +43,11 @@ namespace FlavorFiesta.DataPersistance
                         parts[3], // dietType
                         parts[4], // cuisineType
                         parts[5], // mealType
-                        int.Parse(parts[6]), // caloriesRange
-                        int.Parse(parts[7]), // proteinRange
-                        int.Parse(parts[8]), // sugarRange
-                        int.Parse(parts[9]), // servingsRange
-                        TimeSpan.Parse(parts[10]), // prepTimeRange
+                        parts[6], // caloriesRange
+                        parts[7], // proteinRange
+                        parts[8], // sugarRange
+                        parts[9], // servingsRange
+                        parts[10], // prepTimeRange
                         new List<string>(parts[11].Split(';')) // dietaryRestrictions
                     );
 

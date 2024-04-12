@@ -46,19 +46,19 @@
                         </Grid.ColumnDefinitions>
 
                         <!-- Breakfast Option -->
-                        <RadioButton Grid.Row="0" Grid.Column="0" GroupName="MealTimes" Content="Breakfast" TextColor="White"/>
+                        <RadioButton Grid.Row="0" Grid.Column="0" GroupName="MealTimes" Content="Breakfast" TextColor="White" CheckedChanged="OnMealTimeChanged"/>
                         <Image Source="breakfast_icon.png" Grid.Row="1" Grid.Column="0" HeightRequest="50" WidthRequest="50" HorizontalOptions="Center" />
 
                         <!-- Lunch Option -->
-                        <RadioButton Grid.Row="0" Grid.Column="1" GroupName="MealTimes" Content="Lunch" TextColor="White"/>
+                        <RadioButton Grid.Row="0" Grid.Column="1" GroupName="MealTimes" Content="Lunch" TextColor="White" CheckedChanged="OnMealTimeChanged"/>
                         <Image Source="lunch_icon.png" Grid.Row="1" Grid.Column="1" HeightRequest="50" WidthRequest="50" HorizontalOptions="Center" />
 
                         <!-- Dinner Option -->
-                        <RadioButton Grid.Row="0" Grid.Column="2" GroupName="MealTimes" Content="Dinner" TextColor="White"/>
+                        <RadioButton Grid.Row="0" Grid.Column="2" GroupName="MealTimes" Content="Dinner" TextColor="White" CheckedChanged="OnMealTimeChanged"/>
                         <Image Source="dinner_icon.png" Grid.Row="1" Grid.Column="2" HeightRequest="50" WidthRequest="50" HorizontalOptions="Center" />
 
                         <!-- Desserts Option -->
-                        <RadioButton Grid.Row="0" Grid.Column="3" GroupName="MealTimes" Content="Desserts" TextColor="White"/>
+                        <RadioButton Grid.Row="0" Grid.Column="3" GroupName="MealTimes" Content="Desserts" TextColor="White" CheckedChanged="OnMealTimeChanged"/>
                         <Image Source="dessert_icon.png" Grid.Row="1" Grid.Column="3" HeightRequest="50" WidthRequest="50" HorizontalOptions="Center" />
                     </Grid>
 

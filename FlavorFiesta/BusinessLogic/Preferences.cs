@@ -176,35 +176,35 @@ namespace FlavorFiesta.BusinessLogic
             }
             return value;
         }
-        public bool IsPreferencesValid()
-        {
-            bool isValidDietType = !string.IsNullOrWhiteSpace(DietType);
-            bool isValidCuisineType = !string.IsNullOrWhiteSpace(CuisineType);
-            bool isValidMealType = !string.IsNullOrWhiteSpace(MealType);
+        //public bool IsPreferencesValid()
+        //{
+        //    bool isValidDietType = !string.IsNullOrWhiteSpace(DietType);
+        //    bool isValidCuisineType = !string.IsNullOrWhiteSpace(CuisineType);
+        //    bool isValidMealType = !string.IsNullOrWhiteSpace(MealType);
 
-            // Validate numeric ranges; adjust according to your application's logic
-            bool isValidCaloriesRange = CaloriesRange >= 1000 && CaloriesRange <= 3000;
-            bool isValidProteinRange = ProteinRange >= 10 && ProteinRange <= 150;
-            bool isValidSugarRange = SugarRange >= 0 && SugarRange <= 50;
-            bool isValidServingsRange = ServingsRange >= 1 && ServingsRange <= 10;
+        //    // Validate numeric ranges; adjust according to your application's logic
+        //    bool isValidCaloriesRange = CaloriesRange >= 1000 && CaloriesRange <= 3000;
+        //    bool isValidProteinRange = ProteinRange >= 10 && ProteinRange <= 150;
+        //    bool isValidSugarRange = SugarRange >= 0 && SugarRange <= 50;
+        //    bool isValidServingsRange = ServingsRange >= 1 && ServingsRange <= 10;
 
-            // Validate prep time; ensure it's within a reasonable limit
-            bool isValidPrepTime = PrepTimeRange.TotalMinutes >= 15 && PrepTimeRange.TotalMinutes <= 120;
+        //    // Validate prep time; ensure it's within a reasonable limit
+        //    bool isValidPrepTime = PrepTimeRange.TotalMinutes >= 15 && PrepTimeRange.TotalMinutes <= 120;
 
-            // Check if there's at least one dietary restriction
-            bool hasDietaryRestrictions = DietaryRestrictions != null && DietaryRestrictions.Any();
+        //    // Check if there's at least one dietary restriction
+        //    bool hasDietaryRestrictions = DietaryRestrictions != null && DietaryRestrictions.Any();
 
-            // Combine all validations to determine if preferences are fully valid
-            return isValidDietType &&
-                   isValidCuisineType &&
-                   isValidMealType &&
-                   isValidCaloriesRange &&
-                   isValidProteinRange &&
-                   isValidSugarRange &&
-                   isValidServingsRange &&
-                   isValidPrepTime &&
-                   hasDietaryRestrictions;
-        }
+        //    // Combine all validations to determine if preferences are fully valid
+        //    return isValidDietType &&
+        //           isValidCuisineType &&
+        //           isValidMealType &&
+        //           isValidCaloriesRange &&
+        //           isValidProteinRange &&
+        //           isValidSugarRange &&
+        //           isValidServingsRange &&
+        //           isValidPrepTime &&
+        //           hasDietaryRestrictions;
+        //}
         #endregion
     }
 

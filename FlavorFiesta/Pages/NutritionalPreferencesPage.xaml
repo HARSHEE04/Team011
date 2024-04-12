@@ -30,33 +30,33 @@
 
                     <!-- Calories Section -->
                     <Label Grid.Row="0" Grid.Column="0" Text="Calories:" TextColor="White"/>
-                    <RadioButton Grid.Row="0" Grid.Column="1" GroupName="CaloriesGroup" Content="100-300" TextColor="White"/>
-                    <RadioButton Grid.Row="0" Grid.Column="2" GroupName="CaloriesGroup" Content="300-600" TextColor="White"/>
-                    <RadioButton Grid.Row="0" Grid.Column="3" GroupName="CaloriesGroup" Content="600+" TextColor="White"/>
+                    <RadioButton Grid.Row="0" Grid.Column="1" GroupName="CaloriesGroup" Content="100-300" TextColor="White" CheckedChanged="OnCaloriesRangeChanged"/>
+                    <RadioButton Grid.Row="0" Grid.Column="2" GroupName="CaloriesGroup" Content="300-600" TextColor="White" CheckedChanged="OnCaloriesRangeChanged"/>
+                    <RadioButton Grid.Row="0" Grid.Column="3" GroupName="CaloriesGroup" Content="600+" TextColor="White" CheckedChanged="OnCaloriesRangeChanged"/>
 
                     <!-- Protein Section -->
                     <Label Grid.Row="1" Grid.Column="0" Text="Protein (grams):" TextColor="White"/>
-                    <RadioButton Grid.Row="1" Grid.Column="1" GroupName="ProteinGroup" Content="5-15" TextColor="White"/>
-                    <RadioButton Grid.Row="1" Grid.Column="2" GroupName="ProteinGroup" Content="15-30" TextColor="White"/>
-                    <RadioButton Grid.Row="1" Grid.Column="3" GroupName="ProteinGroup" Content="30+" TextColor="White"/>
+                    <RadioButton Grid.Row="1" Grid.Column="1" GroupName="ProteinGroup" Content="5-15" TextColor="White" CheckedChanged="OnProtienRangeChanged"/>
+                    <RadioButton Grid.Row="1" Grid.Column="2" GroupName="ProteinGroup" Content="15-30" TextColor="White" CheckedChanged="OnProtienRangeChanged"/>
+                    <RadioButton Grid.Row="1" Grid.Column="3" GroupName="ProteinGroup" Content="30+" TextColor="White" CheckedChanged="OnProtienRangeChanged" />
 
                     <!-- Sugar Section -->
                     <Label Grid.Row="2" Grid.Column="0" Text="Sugar (grams):" TextColor="White"/>
-                    <RadioButton Grid.Row="2" Grid.Column="1" GroupName="SugarGroup" Content="0-5" TextColor="White"/>
-                    <RadioButton Grid.Row="2" Grid.Column="2" GroupName="SugarGroup" Content="5-20" TextColor="White"/>
-                    <RadioButton Grid.Row="2" Grid.Column="3" GroupName="SugarGroup" Content="20+" TextColor="White"/>
+                    <RadioButton Grid.Row="2" Grid.Column="1" GroupName="SugarGroup" Content="0-5" TextColor="White" CheckedChanged="OnSugarRangeChanged"/>
+                    <RadioButton Grid.Row="2" Grid.Column="2" GroupName="SugarGroup" Content="5-20" TextColor="White" CheckedChanged="OnSugarRangeChanged"/>
+                    <RadioButton Grid.Row="2" Grid.Column="3" GroupName="SugarGroup" Content="20+" TextColor="White" CheckedChanged="OnSugarRangeChanged"/>
 
                     <!-- Number of Servings Section -->
                     <Label Grid.Row="3" Grid.Column="0" Text="Number of Servings:" TextColor="White"/>
-                    <RadioButton Grid.Row="3" Grid.Column="1" GroupName="ServingsGroup" Content="0-2" TextColor="White"/>
-                    <RadioButton Grid.Row="3" Grid.Column="2" GroupName="ServingsGroup" Content="2-10" TextColor="White"/>
-                    <RadioButton Grid.Row="3" Grid.Column="3" GroupName="ServingsGroup" Content="12+" TextColor="White"/>
+                    <RadioButton Grid.Row="3" Grid.Column="1" GroupName="ServingsGroup" Content="0-2" TextColor="White" CheckedChanged="OnNumberofServingsChanged"/>
+                    <RadioButton Grid.Row="3" Grid.Column="2" GroupName="ServingsGroup" Content="2-10" TextColor="White" CheckedChanged="OnNumberofServingsChanged"/>
+                    <RadioButton Grid.Row="3" Grid.Column="3" GroupName="ServingsGroup" Content="12+" TextColor="White" CheckedChanged="OnNumberofServingsChanged" />
 
                     <!-- Preparation Time Section -->
-                    <Label Grid.Row="4" Grid.Column="0" Text="Preparation Time (minutes):" TextColor="White"/>
-                    <RadioButton Grid.Row="4" Grid.Column="1" GroupName="PrepTimeGroup" Content="15-30" TextColor="White"/>
-                    <RadioButton Grid.Row="4" Grid.Column="2" GroupName="PrepTimeGroup" Content="30-60" TextColor="White"/>
-                    <RadioButton Grid.Row="4" Grid.Column="3" GroupName="PrepTimeGroup" Content="60+" TextColor="White"/>
+                    <Label Grid.Row="4" Grid.Column="0" Text="Preparation Time (minutes):" TextColor="White" />
+                    <RadioButton Grid.Row="4" Grid.Column="1" GroupName="PrepTimeGroup" Content="15-30" TextColor="White" CheckedChanged="OnPrepTimeRangeChanged"/>
+                    <RadioButton Grid.Row="4" Grid.Column="2" GroupName="PrepTimeGroup" Content="30-60" TextColor="White" CheckedChanged="OnPrepTimeRangeChanged"/>
+                    <RadioButton Grid.Row="4" Grid.Column="3" GroupName="PrepTimeGroup" Content="60+" TextColor="White" CheckedChanged="OnPrepTimeRangeChanged" />
 
                     <!-- Other Restrictions Section -->
                     <Label Grid.Row="5"

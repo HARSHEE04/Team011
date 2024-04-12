@@ -16,6 +16,7 @@ namespace FlavorFiesta.Pages
         private string _servingsRange;
         private string _prepTimeRange;
         private List<string> _dietaryRestrictions;
+        private FlavorFiesta.BusinessLogic.Preferences _preferences;
 
 
         public NutritionalPreferencesPage(string dietType, string cuisineType, string recipeType)
@@ -34,16 +35,25 @@ namespace FlavorFiesta.Pages
         private void OnSubmit(object sender, EventArgs e)
         {
             
-            Navigation.PushAsync(new ChooseRecipe());
+            Navigation.PushAsync(new ChooseRecipe(_preferences));
         }
 
         //Make the user preferences object to send to next page
 
         public FlavorFiesta.BusinessLogic.Preferences MakeUserPreference()
         {
+            List<string> dietaryRestrictions = new List<string>
+{
+                "No-Nuts",
+                "No-Eggs"
+            };
+
             //make a new instance of preferences class
             FlavorFiesta.BusinessLogic.Preferences preference1 = new FlavorFiesta.BusinessLogic.Preferences(
-                _dietType, _cuisineType, _recipeType, _caloriesRange, _proteinRange,_sugarRange, _servingsRange, _prepTimeRange,
+                _dietType, _cuisineType, _recipeType, _caloriesRange, _proteinRange, _sugarRange, _servingsRange, _prepTimeRange, dietaryRestrictions);
+
+            _preferences= preference1;
+            return preference1;
 
         }
 
@@ -119,18 +129,26 @@ namespace FlavorFiesta.Pages
         }
 
 
-        // Other Restrictions (example: No-Nuts)
-        //private void OnNoNutsCheckedChanged(object sender, CheckedChangedEventArgs e)
-        //{
-        //    if (e.Value)
-        //    {
-        //        _prefs.AddDietaryRestriction("No-Nuts");
-        //    }
-        //    else
-        //    {
-        //        _prefs.RemoveDietaryRestriction("No-Nuts");
-        //    }
-        //}
+       //// other restrictions(example: no-nuts)
+       // private void onnonutscheckedchanged(object sender, checkedchangedeventargs e)
+       // {
+       //     if (e.value)
+       //     {
+       //         _preferences.adddietaryrestriction("no-nuts");
+       //     }
+       //     else
+       //     {
+       //         _preferences.removedietaryrestriction("no-nuts");
+       //     }
+       // }
+
+
+
+
+
+
+
+
 
         //    // Helper methods to get ranges from radio buttons
         //    private int GetSugarRangeFromRadioButton(RadioButton radioButton)
