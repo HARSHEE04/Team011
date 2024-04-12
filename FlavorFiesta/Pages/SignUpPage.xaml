@@ -24,10 +24,10 @@
                 <Frame
                     Padding="10"
                     CornerRadius="10"
-                    BorderColor="White" 
+                    BorderColor="White"
                     HorizontalOptions="Fill"
                     VerticalOptions="Start"
-                    BackgroundColor="#00000000">
+                    BackgroundColor="#FF69B4">
                 <StackLayout>
                     <Entry 
                         x:Name="FirstNameEntry"
