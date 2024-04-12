@@ -45,6 +45,7 @@ namespace FlavorFiesta.Pages
             {
                 _dietType = radioButton.Content.ToString();
             }
+            await Task.CompletedTask;
         }
 
         private async void OnSubmitClicked(object sender, EventArgs e)

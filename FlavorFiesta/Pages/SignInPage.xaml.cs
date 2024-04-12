@@ -53,12 +53,12 @@ public partial class SignInPage : ContentPage
             }
             else
             {
-                DisplayAlert("Please create an account", "Sign up", "Ok");
+                await DisplayAlert("Please create an account", "Sign up", "Ok");
             }
         }
         catch (Exception ex)
         {
-            await DisplayAlert("Error", "An unexpected error occurred.", "OK");
+            await DisplayAlert("Error",ex.Message, "OK");
         }
     }
 }

@@ -12,8 +12,6 @@ namespace FlavorFiesta.DataPersistance
     {
         string _filePath;
 
-        
-
         ///read recipes from csv file and make it into a list
         public List<Recipe> ReadRecipesFromCSV() //could have put this into a method
         {

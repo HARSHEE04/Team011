@@ -31,9 +31,7 @@ namespace FlavorFiesta.Pages
             _cuisineType = cuisineType;
             _recipeType = recipeType;
             _dietaryRestrictions = new List<string>();
-
-            _prefManager = new PrefManagerDataPersistence(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "preferences.json"));
-
+            _prefManager = new PrefManagerDataPersistence($"{Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData)}/preferences.json");
         }
 
         // Event handler for when the Submit button is clicked
@@ -49,7 +47,6 @@ namespace FlavorFiesta.Pages
         //Make the user preferences object to send to next page
         public FlavorFiesta.BusinessLogic.Preferences MakeUserPreference()
         {
-
             //make a new instance of preferences class
             FlavorFiesta.BusinessLogic.Preferences preference1 = new FlavorFiesta.BusinessLogic.Preferences(
                 _dietType, _cuisineType, _recipeType, _caloriesRange, _proteinRange, _sugarRange, _servingsRange, _prepTimeRange, _dietaryRestrictions);
@@ -67,8 +64,8 @@ namespace FlavorFiesta.Pages
             {
                 string selectedSugarRange = radioButton.Content.ToString();
                 _sugarRange = selectedSugarRange;
-
             }
+            await Task.CompletedTask;
         }
 
         // Calories
@@ -80,6 +77,7 @@ namespace FlavorFiesta.Pages
                 string selectedCaloriesRange = radioButton.Content.ToString();
                 _caloriesRange = selectedCaloriesRange;
             }
+            await Task.CompletedTask;
         }
         // Protein
         private async void OnProtienRangeChanged(object sender, CheckedChangedEventArgs e)
@@ -90,6 +88,7 @@ namespace FlavorFiesta.Pages
                 string selectedProtienType = radioButton.Content.ToString();
                 _proteinRange = selectedProtienType;
             }
+            await Task.CompletedTask;
         }
 
         // Number of servings
@@ -101,6 +100,7 @@ namespace FlavorFiesta.Pages
                 string selectedServings = radioButton.Content.ToString();
                 _servingsRange = selectedServings;
             }
+            await Task.CompletedTask;
         }
         // Prep time
         private async void OnPrepTimeRangeChanged(object sender, CheckedChangedEventArgs e)
@@ -111,12 +111,13 @@ namespace FlavorFiesta.Pages
                 string selectedPrepTime = radioButton.Content.ToString();
                 _prepTimeRange = selectedPrepTime;
             }
+            await Task.CompletedTask;
         }
 
         private void OnDietaryRestrictionChanged(object sender, CheckedChangedEventArgs e)
         {
             var checkBox = sender as CheckBox;
-            string restriction = checkBox.ClassId; // Assuming ClassId is used to identify the restriction type
+            string restriction = checkBox.ClassId;
 
             if (e.Value)
             {

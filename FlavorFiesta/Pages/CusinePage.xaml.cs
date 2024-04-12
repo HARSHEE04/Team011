@@ -29,10 +29,8 @@ namespace FlavorFiesta.Pages
 
                 //_prefs.CuisineType = selectedCuisineType;
                 _cuisineType = selectedCuisineType;
-                DisplayAlert("Cuisine Type Selected", $"You have selected: {_cuisineType} ", "OK");
+                await DisplayAlert("Cuisine Type Selected", $"You have selected: {_cuisineType} ", "OK");
             }
-          
-
         }
 
         private async void OnSubmitClicked(object sender, EventArgs e)
