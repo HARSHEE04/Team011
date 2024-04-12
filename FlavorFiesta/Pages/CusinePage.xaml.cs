@@ -3,45 +3,35 @@ using System;
 
 namespace FlavorFiesta.Pages
 {
-    public partial class CusinePage : ContentPage
+    public partial class CuisinePage : ContentPage
     {
-        private string _cuisineType;
-        private string _dietType;
-        //private BusinessLogic.Preferences _prefs; // Declare _prefs as an instance variable of type Preferences
+        private string _selectedCuisine;
 
-        public CusinePage(string DietType) // Accept Preferences as an instance parameter
+        public CuisinePage()
         {
             InitializeComponent();
-            _dietType = DietType;
-            
-            //_prefs = prefs; // Assign the parameter to the instance variable
         }
 
-
-     
-        private async void OnCuisineTypeChanged(object sender, CheckedChangedEventArgs e)
+        private void OnCuisineTypeChanged(object sender, CheckedChangedEventArgs e)
         {
             var radioButton = sender as RadioButton;
-            if (e.Value == true)
+            if (e.Value) // Check if the radio button is checked
             {
-                // Set the selected cuisine type to preferences
-                string selectedCuisineType = radioButton.Content.ToString();
-
-                //_prefs.CuisineType = selectedCuisineType;
-                _cuisineType = selectedCuisineType;
-                DisplayAlert("Cuisine Type Selected", $"You have selected: {_cuisineType} ", "OK");
+                _selectedCuisine = radioButton.Content.ToString();
+                Console.WriteLine($"Cuisine selected: {_selectedCuisine}");
             }
-            else
-            {
-                DisplayAlert("Cuisine Type Selected", $"You have selected:  ", "OK");
-            }
-
         }
 
         private async void OnSubmitClicked(object sender, EventArgs e)
         {
-            // Navigate to the next page with the preferences
-            await Navigation.PushAsync(new RecipeType(_dietType, _cuisineType));
+            if (!string.IsNullOrEmpty(_selectedCuisine))
+            {
+                await DisplayAlert("Cuisine Selected", $"You have selected: {_selectedCuisine}", "OK");
+            }
+            else
+            {
+                await DisplayAlert("Selection Missing", "Please select a cuisine type.", "OK");
+            }
         }
     }
 }

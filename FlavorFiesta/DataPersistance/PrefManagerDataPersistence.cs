@@ -25,7 +25,8 @@ namespace FlavorFiesta.DataPersistance
         private void SavePreferences()
         {
             var options = new JsonSerializerOptions { WriteIndented = true };
-            File.WriteAllText(_filePath, JsonSerializer.Serialize(_preferencesList, options));
+            string jsonString = JsonSerializer.Serialize(_preferencesList, options);
+            File.WriteAllText(_filePath, jsonString);
         }
 
 

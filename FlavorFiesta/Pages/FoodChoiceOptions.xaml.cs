@@ -43,29 +43,19 @@ namespace FlavorFiesta.Pages
             var radioButton = sender as RadioButton;
             if (e.Value)
             {
-                string selectedFoodChoice = radioButton.Content.ToString();
-                DisplayAlert("Food Choice Selected", $"You have selected: {selectedFoodChoice}", "OK");
-
-                // Set the selected diet type to preferences
-                _dietType = selectedFoodChoice;
-                
+                _dietType = radioButton.Content.ToString();
             }
         }
 
-
         private async void OnSubmitClicked(object sender, EventArgs e)
         {
-            try
+            if (!string.IsNullOrEmpty(_dietType))
             {
-                // Save the preferences
-                //_prefManager.AddPreferences(_prefs);
-
-                // Navigate to the next page with the preferences
-                await Navigation.PushAsync(new CusinePage(_dietType));
+                await Navigation.PushAsync(new CuisinePage());
             }
-            catch (Exception ex)
+            else
             {
-                await DisplayAlert("Error", "An unexpected error occurred.", "OK");
+                await DisplayAlert("Selection Missing", "Please select a diet type.", "OK");
             }
         }
     }
