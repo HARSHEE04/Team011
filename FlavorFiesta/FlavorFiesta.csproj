@@ -58,6 +58,7 @@
 	  <MauiXaml Remove="DataPersistence\**" />
 	  <None Remove="DataPersistence\**" />
 	  <None Remove="Resources\Images\background.png" />
+	  <None Remove="Resources\Images\signup.png" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -108,5 +109,6 @@
 	  <BundleResource Include="Resources\Images\chinese_food.svg" />
 	  <BundleResource Include="Resources\Images\italian_food.svg" />
 	  <BundleResource Include="Resources\Images\background.png" />
+	  <BundleResource Include="Resources\Images\signup.png" />
 	</ItemGroup>
 </Project>

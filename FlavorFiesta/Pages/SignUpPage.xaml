@@ -1,171 +1,109 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="FlavorFiesta.Pages.SignUpPage"
-             >
-    <VerticalStackLayout
-        BackgroundColor="LightSlateGray">
-        <Label 
-            Text="Sign Up With Flavour Fiesta"
-            TextDecorations="Underline"
-            FontFamily="Algerian"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" 
-            Margin="15"
-            FontAttributes="Bold"
-            FontSize="Title"
-            />
+             x:Class="FlavorFiesta.Pages.SignUpPage">
 
-        <Image
-            Source="logo21.png"
-            Grid.Column="0"
-            HorizontalOptions="Center"
-            MaximumHeightRequest="400"
-            MaximumWidthRequest="300"
-            Margin="10"/>
-        <Grid
-            ColumnDefinitions="*, 2*"
-            RowDefinitions="*,*,*,*,*,*,*">
-            <Label
-                Text="First Name"
-                FontSize="Medium"
-                FontAttributes="Bold"
-                FontFamily="Alger"
+    <Grid>
+        <Image Source="signup.png" Aspect="AspectFill" />
+        
+        <ScrollView>
+            <VerticalStackLayout
+                Spacing="25"
+                Padding="30"
                 VerticalOptions="Center"
-                HorizontalOptions="Center"
-                Grid.Column="0"
-                Grid.Row="0"/>
-            <Entry
-                x:Name="FirstNameEntry"
-                BackgroundColor="AliceBlue"
-                Grid.Column="1"
-                Margin="5"
-                Grid.Row="0"/>
-            <Label
-                Text="Last Name"
-                FontFamily="Alger"
-                FontAttributes="Bold"
-                VerticalOptions="Center"
-                FontSize="Medium"
-                HorizontalOptions="Center"
-                Grid.Column="0"
-                Grid.Row="1"/>
-            <Entry
-                x:Name="LastNameEntry"
-                BackgroundColor="AliceBlue"
-                Margin="5"
-                Grid.Column="1"
-                Grid.Row="1"/>
-            <Label
-                Text="Email Address"
-                FontFamily="Alger"
-                FontAttributes="Bold"
-                FontSize="Medium"
-                VerticalOptions="Center"
-                HorizontalOptions="Center"
-                Grid.Column="0"
-                Grid.Row="2"/>
-            <Entry
-                x:Name="EmailEntry"
-                BackgroundColor="AliceBlue"
-                Margin="5"
-                Grid.Column="1"
-                Grid.Row="2"/>
-            <Label
-                Text="Date of Birth"
-                FontFamily="Alger"
-                FontAttributes="Bold"
-                VerticalOptions="Center"
-                FontSize="Medium"
-                HorizontalOptions="Center"
-                Grid.Column="0"
-                Grid.Row="3"/>
-            <DatePicker
-                x:Name="DatePicker"
-                BackgroundColor="AliceBlue"
-                Margin="5"
-                Grid.Column="1"
-                Grid.Row="3"/>
-            <Label
-                Text="Password"
-                FontFamily="Alger"
-                FontAttributes="Bold"
-                HorizontalOptions="Center"
-                VerticalOptions="Center"
-                FontSize="Medium"
-                Grid.Column="0"
-                Grid.Row="4"/>
-            <Entry
-                x:Name="PasswordEntry"
-                BackgroundColor="AliceBlue"
-                Grid.Column="1"
-                Margin="5"
-                IsPassword="True"
-                Grid.Row="4"/>
+                HorizontalOptions="Center">
 
-            <CheckBox
-                x:Name="AcceptTermsCheckbox"
-                BackgroundColor="AliceBlue"
-                Grid.Column="0"
-                Grid.Row="6"
-                HorizontalOptions="End"/>
+                <Label 
+                    Text="Sign Up With Flavor Fiesta"
+                    FontSize="32"
+                    FontAttributes="Bold"
+                    TextColor="White"
+                    HorizontalOptions="Center"
+                    Margin="0,0,0,10"/>
 
-            <Label      
-                x:Name="CheckboxLabel"
-                Grid.Column="1"
-                VerticalOptions="Center"
-                Grid.Row="6">
-                <!---https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/label?view=net-maui-8.0#create-a-hyperlink-->
-                <Label.FormattedText>
-                    <FormattedString>
-                        <Span Text="I accept and agree to the " 
-                              FontAttributes="Bold"/>
-                        <Span Text="Terms of use"
-                              FontAttributes="Bold"
-                              TextColor="Blue"
-                              TextDecorations="Underline">
-                            <Span.GestureRecognizers>
-                                <TapGestureRecognizer Command="{Binding TapCommand}"
-                                          CommandParameter="https://learn.microsoft.com/dotnet/maui/" />
-                            </Span.GestureRecognizers>
-                        </Span>
-                        <Span Text="."
-                              FontAttributes="Bold"/>
-                    </FormattedString>
-                </Label.FormattedText>
-            </Label>
+                <Entry 
+                    x:Name="FirstNameEntry"
+                    Placeholder="First Name"
+                    FontSize="Medium"
+                    Margin="0,0,0,10"
+                    HorizontalOptions="Fill"
+                    VerticalOptions="Center"
+                    BackgroundColor="Transparent"
+                    TextColor="White"/>
+                    
+                <Entry 
+                    x:Name="LastNameEntry"
+                    Placeholder="Last Name"
+                    FontSize="Medium"
+                    Margin="0,0,0,10"
+                    HorizontalOptions="Fill"
+                    VerticalOptions="Center"
+                    BackgroundColor="Transparent"
+                    TextColor="White"/>
+                    
+                <Entry 
+                    x:Name="EmailEntry"
+                    Placeholder="Email Address"
+                    FontSize="Medium"
+                    Margin="0,0,0,10"
+                    HorizontalOptions="Fill"
+                    VerticalOptions="Center"
+                    Keyboard="Email"
+                    BackgroundColor="Transparent"
+                    TextColor="White"/>
+                    
+                <DatePicker 
+                    x:Name="BirthDatePicker"
+                    FontSize="Medium"
+                    Margin="0,0,0,10"
+                    HorizontalOptions="Fill"
+                    VerticalOptions="Center"
+                    BackgroundColor="Transparent"
+                    TextColor="White"/>
+                    
+                <Entry 
+                    x:Name="PasswordEntry"
+                    Placeholder="Password"
+                    IsPassword="True"
+                    FontSize="Medium"
+                    Margin="0,0,0,10"
+                    HorizontalOptions="Fill"
+                    VerticalOptions="Center"
+                    BackgroundColor="Transparent"
+                    TextColor="White"/>
 
-        </Grid>
-        <HorizontalStackLayout
-            HorizontalOptions="Center">
-            <Button
-            x:Name="SignUpButton"
-            Clicked="OnSignUpButton"
-            Text="Sign Up"
-            BindingContext="{x:Reference Name=AcceptTermsCheckbox}"
-            IsEnabled="{Binding Path=IsChecked, Mode=OneWay}"
-            VerticalOptions="Center" 
-            BackgroundColor="DarkBlue"
-            TextColor="White"
-            HorizontalOptions="Center"
-            Margin="50"/>
+                <HorizontalStackLayout HorizontalOptions="Center">
+                    <CheckBox
+                        x:Name="AcceptTermsCheckbox"
+                        Color="White"
+                        VerticalOptions="Center"/>
+                    <Label
+                        Text="I accept and agree to the Terms of use."
+                        FontSize="Small"
+                        TextColor="LightGray"
+                        VerticalOptions="Center" />
+                </HorizontalStackLayout>
 
-            <Button
-            x:Name="GobackToSignIn"
-            Text="Go Back To Sign In"
-            Clicked="OnSignInAgain"
-            VerticalOptions="Center"
-            BackgroundColor="DarkBlue"
-            TextColor="White"
-            HorizontalOptions="Center"
-            />
+                <Button
+                    Text="Sign Up"
+                    BackgroundColor="#FF69B4"
+                    TextColor="White"
+                    FontSize="Medium"
+                    Margin="0,0,0,10"
+                    HorizontalOptions="Fill"
+                    VerticalOptions="Center"
+                    CornerRadius="20"
+                    Clicked="OnSignUpButton"/> 
 
-        </HorizontalStackLayout>
-
-
-
-
-
-
-    </VerticalStackLayout>
+                <Button
+                    Text="Go Back To Sign In"
+                    BackgroundColor="Transparent"
+                    TextColor="#FF69B4"
+                    FontSize="Medium"
+                    HorizontalOptions="Fill"
+                    VerticalOptions="Center"
+                    Clicked="OnSignInAgain"/> 
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
 </ContentPage>
