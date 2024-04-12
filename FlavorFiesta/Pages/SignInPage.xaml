@@ -3,45 +3,54 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FlavorFiesta.Pages.SignInPage"
              >
-    <VerticalStackLayout>
+    <VerticalStackLayout
+        BackgroundColor="LightSlateGrey">
         <Label 
             Text="Sign In"
+            Margin="20"
             VerticalOptions="Center" 
             HorizontalOptions="Center"
             FontSize="Title"
+            FontFamily="Algerian"
             FontAttributes="Bold"/>
 
         <Image
             Source="logo21.png"
-            Aspect="AspectFit"
-            MaximumHeightRequest="400"
+            MaximumHeightRequest="350"
             MaximumWidthRequest="400"/>
 
         <Grid
             ColumnDefinitions="*, 2*"
             RowDefinitions="*,*,*">
-               
-                <Label
-                    Text="Email"
+
+            <Label
+                    Text="Email :"
                     Grid.Column="0"
                     Grid.Row="0"
-                    TextColor="brown"
+                    Margin="50"
+                    FontSize="Medium"
                     FontAttributes="Bold"
                     VerticalOptions="Center"/>
-                <Entry
+            <Entry
                     x:Name="EmailEntry"
+                    BackgroundColor="AliceBlue"
+                    TextColor="White"
                     Grid.Column="1"
+                    Margin="50"
                     Grid.Row="0"/>
-                <Label
-                    Text="Password"
+            <Label
+                    Text="Password :"
                     Grid.Column="0"
                     Grid.Row="1"
-                    TextColor="brown"
+                    Margin="50"
+                    FontSize="Medium"
                     FontAttributes="Bold"
                     VerticalOptions="Center"/>
             <Entry
                     x:Name="PasswordEntry"
                     IsPassword="True"
+                    BackgroundColor="AliceBlue"
+                    Margin="50"
                     Grid.Column="1"
                     Grid.Row="1"/>
         </Grid>
@@ -50,8 +59,9 @@
             Clicked="OnSignIn"
             VerticalOptions="End"
             HorizontalOptions="Center"
-            Margin="50"
-            HeightRequest="90"
+            Margin="40"
+            HeightRequest="50"
+            BackgroundColor="DarkBlue"
             WidthRequest="150"
             FontSize="Medium"
             />

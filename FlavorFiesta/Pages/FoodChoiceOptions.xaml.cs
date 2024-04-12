@@ -10,7 +10,7 @@ public partial class FoodChoiceOptions : ContentPage
     public FoodChoiceOptions(FlavorFiesta.BusinessLogic.Preferences prefs)
     {
         InitializeComponent();
-        _prefs = prefs ?? new BusinessLogic.Preferences();
+        //_prefs = prefs ?? new BusinessLogic.Preferences();
     }
 
     private void OnFoodChoiceChanged(object sender, CheckedChangedEventArgs e)
