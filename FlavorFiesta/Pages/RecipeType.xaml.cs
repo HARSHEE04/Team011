@@ -27,6 +27,7 @@ namespace FlavorFiesta.Pages
                 // Set the selected meal time to preferences
                 string selectedMealTime = radioButton.Content.ToString();
                 _recipeType = selectedMealTime;
+                DisplayAlert("Recipe Type", $"You have selected : {_recipeType}", "Ok");
             }
         }
 
