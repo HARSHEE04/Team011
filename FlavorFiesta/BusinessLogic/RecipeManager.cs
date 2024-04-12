@@ -14,8 +14,8 @@ namespace FlavorFiesta.BusinessLogic
     //Then, it will aid in displaying the chosen recipe by working with the code behind
     internal class RecipeManager
     {
-        
-        public List<Recipe> SearchRecipe(Preferences userPreferences,RecipeManagerDataPersistance csvAccess) //just used dependency relationship for loose coupling
+
+        public List<Recipe> SearchRecipe(Preferences userPreferences, RecipeManagerDataPersistance csvAccess) //just used dependency relationship for loose coupling
         {
             List<Recipe> recipes = csvAccess.ReadRecipesFromCSV(); //now we have the list of recipes from the CSV stored into this local list
 
@@ -31,7 +31,8 @@ namespace FlavorFiesta.BusinessLogic
                                           recipe.RecipePreferences.SugarRange == userPreferences.SugarRange &&
                                           recipe.RecipePreferences.ServingsRange == userPreferences.ServingsRange &&
                                           recipe.RecipePreferences.PrepTimeRange == userPreferences.PrepTimeRange &&
-                                          recipe.RecipePreferences.DietaryRestrictions.SequenceEqual(userPreferences.DietaryRestrictions) select recipe).Take(2).ToList();
+                                          recipe.RecipePreferences.DietaryRestrictions.SequenceEqual(userPreferences.DietaryRestrictions)
+                                          select recipe).Take(2).ToList();
 
             return matchingRecipeRequests;
             // EXPLAIN SEQUENCEEQUAL AND ToList, take 
@@ -45,8 +46,8 @@ namespace FlavorFiesta.BusinessLogic
             //figure out way to only get two recipes from all the matches, try TAKE() METHOD: https://www.tutorialspoint.com/chash-queryable-take-method
         }
     }
-   
-  
+
+
 
 
 }

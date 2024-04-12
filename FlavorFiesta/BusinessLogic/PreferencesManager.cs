@@ -3,8 +3,8 @@ using System.Text.Json;
 
 namespace FlavorFiesta.BusinessLogic
 {
-	public class PreferencesManager
-	{
+    public class PreferencesManager
+    {
         //define a list
         private List<Preferences> _preferencesList = new List<Preferences>();
         private readonly string _filePath;
@@ -36,12 +36,12 @@ namespace FlavorFiesta.BusinessLogic
                 _preferencesList = JsonSerializer.Deserialize<List<Preferences>>(jsonString) ?? new List<Preferences>();
             }
         }
-  //      private void RetriveUserInfo()
-		//{
-		//	//takes the user information, and takes them into a listview page where
-		//	//they can either do previous prefernces or new prefernces
-		//	return;
-		//}
-	}
+        //      private void RetriveUserInfo()
+        //{
+        //	//takes the user information, and takes them into a listview page where
+        //	//they can either do previous prefernces or new prefernces
+        //	return;
+        //}
+    }
 }
 

@@ -1,10 +1,16 @@
-﻿namespace FlavorFiesta.Pages;
+﻿using FlavorFiesta.BusinessLogic;
+using FlavorFiesta.DataPersistance;
+namespace FlavorFiesta.Pages;
 
 public partial class FoodChoiceOptions : ContentPage
 {
-    public FoodChoiceOptions()
+    private FlavorFiesta.BusinessLogic.Preferences _prefs;
+
+
+    public FoodChoiceOptions(FlavorFiesta.BusinessLogic.Preferences prefs)
     {
         InitializeComponent();
+        _prefs = prefs ?? new BusinessLogic.Preferences();
     }
 
     private void OnFoodChoiceChanged(object sender, CheckedChangedEventArgs e)
@@ -28,7 +34,7 @@ public partial class FoodChoiceOptions : ContentPage
 
     private async void OnSubmitClicked(object sender, EventArgs e)
     {
-        // Navigate to the RecipeType page
-        await Navigation.PushAsync(new RecipeType());
+        _prefs.DietType = "Vegetarian"; // Example
+        await Navigation.PushAsync(new RecipeType(_prefs));
     }
 }
