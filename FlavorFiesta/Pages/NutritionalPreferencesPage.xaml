@@ -112,8 +112,19 @@
                            VerticalOptions="Center"
                            Margin="90,0,0,0"/> 
                     <!-- Submit Button -->
-                    <Button Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="5" Text="SUBMIT" BackgroundColor="#FF69B4" TextColor="White" FontSize="Medium" CornerRadius="20" WidthRequest="200" HeightRequest="50" Margin="20" HorizontalOptions="Center"/>
-
+                    <Button Grid.Row="6"
+                        Grid.Column="0"
+                        Grid.ColumnSpan="5"
+                        Text="SUBMIT"
+                        BackgroundColor="#FF69B4"
+                        TextColor="White"
+                        FontSize="Medium"
+                        CornerRadius="20"
+                        WidthRequest="200"
+                        HeightRequest="50"
+                        Margin="20"
+                        HorizontalOptions="Center"
+                        Clicked="OnSubmit"/>
                 </Grid>
             </Frame>
         </VerticalStackLayout>

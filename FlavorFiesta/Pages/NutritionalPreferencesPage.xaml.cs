@@ -17,16 +17,19 @@ namespace FlavorFiesta.Pages
         }
 
         // Event handler for when the Submit button is clicked
-        public ICommand SubmitCommand => new Command(OnSubmit);
-
-        private void OnSubmit()
+        private void OnSubmit(object sender, EventArgs e)
         {
-            // Navigate to the DisplayRecipe page and pass the _prefs object
-            Navigation.PushAsync(new ChooseRecipe(_prefs));
+            try
+            {
+                // Navigate to the ChooseRecipe page and pass the _prefs object
+                Navigation.PushAsync(new ChooseRecipe(_prefs));
+            }
+            catch (Exception ex)
+            {
+                // Log any exceptions
+                Console.WriteLine($"Navigation error: {ex.Message}");
+            }
         }
-
-        // Event handlers for updating preferences when UI elements are interacted with
-
         // Sugar
         private void OnSugarSelectionChanged(object sender, CheckedChangedEventArgs e)
         {
