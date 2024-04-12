@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Windows.Input;
 using FlavorFiesta.BusinessLogic;
+using FlavorFiesta.DataPersistance;
 
 namespace FlavorFiesta.Pages
 {
@@ -33,8 +34,12 @@ namespace FlavorFiesta.Pages
         // Event handler for when the Submit button is clicked
         private async void OnSubmit(object sender, EventArgs e)
         {
-            Debug.WriteLine("Current navigation stack count: " + Navigation.NavigationStack.Count);
             MakeUserPreference();
+            var prefManager = new PrefManagerDataPersistence("preferences.json");
+            prefManager.AddPreferences(_preferences);
+
+            Debug.WriteLine("Current navigation stack count: " + Navigation.NavigationStack.Count);
+            
             await Navigation.PushAsync(new ChooseRecipe(_preferences));
         }
 
@@ -54,24 +59,6 @@ namespace FlavorFiesta.Pages
             _preferences = preference1;
             return preference1;
 
-        }
-
-        private void OnDietaryRestrictionChanged(object sender, CheckedChangedEventArgs e)
-        {
-            var checkBox = sender as CheckBox;
-            string restriction = checkBox.ClassId; // Assuming ClassId is used to identify the restriction type
-
-            if (e.Value)
-            {
-                if (!_dietaryRestrictions.Contains(restriction))
-                {
-                    _dietaryRestrictions.Add(restriction);
-                }
-            }
-            else
-            {
-                _dietaryRestrictions.Remove(restriction);
-            }
         }
 
         // Sugar
@@ -128,10 +115,28 @@ namespace FlavorFiesta.Pages
             }
         }
 
+        private void OnDietaryRestrictionChanged(object sender, CheckedChangedEventArgs e)
+        {
+            var checkBox = sender as CheckBox;
+            string restriction = checkBox.ClassId; // Assuming ClassId is used to identify the restriction type
+
+            if (e.Value)
+            {
+                if (!_dietaryRestrictions.Contains(restriction))
+                {
+                    _dietaryRestrictions.Add(restriction);
+                }
+            }
+            else
+            {
+                _dietaryRestrictions.Remove(restriction);
+            }
+        }
+
         void OnDietaryRestrictionsChanged(System.Object sender, Microsoft.Maui.Controls.CheckedChangedEventArgs e)
         {
                 var checkBox = sender as CheckBox;
-                string restriction = checkBox.ClassId; // Assuming ClassId is used to identify the restriction type
+                string restriction = checkBox.ClassId;
 
                 if (e.Value)
                 {

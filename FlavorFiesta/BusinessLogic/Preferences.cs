@@ -12,22 +12,22 @@ namespace FlavorFiesta.BusinessLogic
         private string _sugarRange;
         private string _servingsRange;
         private string _prepTimeRange;
-        private List<string> _dietaryRestrictions;
+        private List<string> _dietaryRestrictions = new List<string>();
         #endregion
 
         #region Constructor
         public Preferences(string dietType, string cusineType, string mealType, string caloriesRange, string protenRange,
             string sugarRange, string serveingsRange, string prepTimeRange, List<string> dietaryRestrictions)
         {
-            DietType = dietType;
-            CuisineType = cusineType;
-            MealType = mealType;
-            CaloriesRange = caloriesRange;
-            ProteinRange = protenRange;
-            SugarRange = sugarRange;
-            ServingsRange = serveingsRange;
-            PrepTimeRange = prepTimeRange;
-            DietaryRestrictions = dietaryRestrictions;
+            DietType = ValidateInput(dietType, nameof(DietType));
+            CuisineType = ValidateInput(cusineType, nameof(CuisineType));
+            MealType = ValidateInput(mealType, nameof(MealType));
+            CaloriesRange = ValidateInput(caloriesRange, nameof(CaloriesRange));
+            ProteinRange = ValidateInput(protenRange, nameof(ProteinRange));
+            SugarRange = ValidateInput(sugarRange, nameof(SugarRange));
+            ServingsRange = ValidateInput(serveingsRange, nameof(ServingsRange));
+            PrepTimeRange = ValidateInput(prepTimeRange, nameof(PrepTimeRange));
+            DietaryRestrictions = dietaryRestrictions ?? throw new ArgumentNullException(nameof(dietaryRestrictions));
         }
         #endregion
 
@@ -176,35 +176,6 @@ namespace FlavorFiesta.BusinessLogic
             }
             return value;
         }
-        //public bool IsPreferencesValid()
-        //{
-        //    bool isValidDietType = !string.IsNullOrWhiteSpace(DietType);
-        //    bool isValidCuisineType = !string.IsNullOrWhiteSpace(CuisineType);
-        //    bool isValidMealType = !string.IsNullOrWhiteSpace(MealType);
-
-        //    // Validate numeric ranges; adjust according to your application's logic
-        //    bool isValidCaloriesRange = CaloriesRange >= 1000 && CaloriesRange <= 3000;
-        //    bool isValidProteinRange = ProteinRange >= 10 && ProteinRange <= 150;
-        //    bool isValidSugarRange = SugarRange >= 0 && SugarRange <= 50;
-        //    bool isValidServingsRange = ServingsRange >= 1 && ServingsRange <= 10;
-
-        //    // Validate prep time; ensure it's within a reasonable limit
-        //    bool isValidPrepTime = PrepTimeRange.TotalMinutes >= 15 && PrepTimeRange.TotalMinutes <= 120;
-
-        //    // Check if there's at least one dietary restriction
-        //    bool hasDietaryRestrictions = DietaryRestrictions != null && DietaryRestrictions.Any();
-
-        //    // Combine all validations to determine if preferences are fully valid
-        //    return isValidDietType &&
-        //           isValidCuisineType &&
-        //           isValidMealType &&
-        //           isValidCaloriesRange &&
-        //           isValidProteinRange &&
-        //           isValidSugarRange &&
-        //           isValidServingsRange &&
-        //           isValidPrepTime &&
-        //           hasDietaryRestrictions;
-        //}
         #endregion
     }
 

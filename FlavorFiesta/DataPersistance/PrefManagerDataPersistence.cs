@@ -15,27 +15,47 @@ namespace FlavorFiesta.DataPersistance
             _filePath = filePath;
             LoadPreferences();
         }
-        public void AddPreferences(BusinessLogic.Preferences preferences)
+                public IEnumerable<BusinessLogic.Preferences> GetUserPreferences() => _preferencesList;
+
+        public void AddPreferences(FlavorFiesta.BusinessLogic.Preferences preferences)
         {
             _preferencesList.Add(preferences);
             SavePreferences();
         }
-        public IEnumerable<BusinessLogic.Preferences> GetUserPreferences() => _preferencesList;
 
         private void SavePreferences()
         {
             var options = new JsonSerializerOptions { WriteIndented = true };
-            string jsonString = JsonSerializer.Serialize(_preferencesList, options);
-            File.WriteAllText(_filePath, jsonString);
-        }
+            try
+            {
+                Console.WriteLine("Saving Preferences:");
+                foreach (var pref in _preferencesList)
+                {
+                    Console.WriteLine($"DietType: {pref.DietType}, CaloriesRange: {pref.CaloriesRange}");
+                }
 
+                string jsonString = JsonSerializer.Serialize(_preferencesList, options);
+                File.WriteAllText(_filePath, jsonString);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error saving preferences: {ex.Message}");
+            }
+        }
 
         private void LoadPreferences()
         {
-            if (File.Exists(_filePath))
+            try
             {
-                string jsonString = File.ReadAllText(_filePath);
-                _preferencesList = JsonSerializer.Deserialize<List<BusinessLogic.Preferences>>(jsonString) ?? new List<BusinessLogic.Preferences>();
+                if (File.Exists(_filePath))
+                {
+                    string jsonString = File.ReadAllText(_filePath);
+                    _preferencesList = JsonSerializer.Deserialize<List<FlavorFiesta.BusinessLogic.Preferences>>(jsonString) ?? new List<FlavorFiesta.BusinessLogic.Preferences>();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error loading preferences: {ex.Message}");
             }
         }
     }
