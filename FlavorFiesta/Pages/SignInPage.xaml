@@ -13,7 +13,7 @@
             HorizontalOptions="Center">
 
             <Label 
-                Text="Sign In"
+                Text="Sign-In to your account"
                 FontSize="32"
                 FontAttributes="Bold"
                 TextColor="White"
