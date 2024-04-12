@@ -3,70 +3,109 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FlavorFiesta.Pages.SignUpPage"
              >
-    <VerticalStackLayout>
+    <VerticalStackLayout
+        BackgroundColor="LightSlateGray">
         <Label 
             Text="Sign Up With Flavour Fiesta"
-        
+            TextDecorations="Underline"
+            FontFamily="Algerian"
             VerticalOptions="Center" 
             HorizontalOptions="Center" 
             Margin="15"
             FontAttributes="Bold"
-            FontSize="Title"/>
+            FontSize="Title"
+            />
 
         <Image
             Source="logo21.png"
             Grid.Column="0"
-            HorizontalOptions="Start"
-            MaximumHeightRequest="150"
-            MaximumWidthRequest="150"
-            Margin="8"/>
+            HorizontalOptions="Center"
+            MaximumHeightRequest="400"
+            MaximumWidthRequest="300"
+            Margin="10"/>
         <Grid
             ColumnDefinitions="*, 2*"
             RowDefinitions="*,*,*,*,*,*,*">
             <Label
                 Text="First Name"
+                FontSize="Medium"
+                FontAttributes="Bold"
+                FontFamily="Alger"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
                 Grid.Column="0"
                 Grid.Row="0"/>
             <Entry
                 x:Name="FirstNameEntry"
+                BackgroundColor="AliceBlue"
                 Grid.Column="1"
+                Margin="5"
                 Grid.Row="0"/>
             <Label
                 Text="Last Name"
+                FontFamily="Alger"
+                FontAttributes="Bold"
+                VerticalOptions="Center"
+                FontSize="Medium"
+                HorizontalOptions="Center"
                 Grid.Column="0"
                 Grid.Row="1"/>
             <Entry
                 x:Name="LastNameEntry"
+                BackgroundColor="AliceBlue"
+                Margin="5"
                 Grid.Column="1"
                 Grid.Row="1"/>
             <Label
                 Text="Email Address"
+                FontFamily="Alger"
+                FontAttributes="Bold"
+                FontSize="Medium"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
                 Grid.Column="0"
                 Grid.Row="2"/>
             <Entry
                 x:Name="EmailEntry"
+                BackgroundColor="AliceBlue"
+                Margin="5"
                 Grid.Column="1"
                 Grid.Row="2"/>
             <Label
                 Text="Date of Birth"
+                FontFamily="Alger"
+                FontAttributes="Bold"
+                VerticalOptions="Center"
+                FontSize="Medium"
+                HorizontalOptions="Center"
                 Grid.Column="0"
                 Grid.Row="3"/>
             <DatePicker
                 x:Name="DatePicker"
+                BackgroundColor="AliceBlue"
+                Margin="5"
                 Grid.Column="1"
                 Grid.Row="3"/>
             <Label
                 Text="Password"
+                FontFamily="Alger"
+                FontAttributes="Bold"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                FontSize="Medium"
                 Grid.Column="0"
                 Grid.Row="4"/>
             <Entry
                 x:Name="PasswordEntry"
+                BackgroundColor="AliceBlue"
                 Grid.Column="1"
+                Margin="5"
                 IsPassword="True"
                 Grid.Row="4"/>
-            
+
             <CheckBox
                 x:Name="AcceptTermsCheckbox"
+                BackgroundColor="AliceBlue"
                 Grid.Column="0"
                 Grid.Row="6"
                 HorizontalOptions="End"/>
@@ -79,8 +118,10 @@
                 <!---https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/label?view=net-maui-8.0#create-a-hyperlink-->
                 <Label.FormattedText>
                     <FormattedString>
-                        <Span Text="I accept and agree to the " />
+                        <Span Text="I accept and agree to the " 
+                              FontAttributes="Bold"/>
                         <Span Text="Terms of use"
+                              FontAttributes="Bold"
                               TextColor="Blue"
                               TextDecorations="Underline">
                             <Span.GestureRecognizers>
@@ -88,33 +129,40 @@
                                           CommandParameter="https://learn.microsoft.com/dotnet/maui/" />
                             </Span.GestureRecognizers>
                         </Span>
-                        <Span Text="." />
+                        <Span Text="."
+                              FontAttributes="Bold"/>
                     </FormattedString>
                 </Label.FormattedText>
             </Label>
- 
-        </Grid>
 
-        <Button
+        </Grid>
+        <HorizontalStackLayout
+            HorizontalOptions="Center">
+            <Button
             x:Name="SignUpButton"
             Clicked="OnSignUpButton"
             Text="Sign Up"
             BindingContext="{x:Reference Name=AcceptTermsCheckbox}"
             IsEnabled="{Binding Path=IsChecked, Mode=OneWay}"
             VerticalOptions="Center" 
-            BackgroundColor="Brown"
+            BackgroundColor="DarkBlue"
+            TextColor="White"
             HorizontalOptions="Center"
             Margin="50"/>
 
-        <Button
+            <Button
             x:Name="GobackToSignIn"
             Text="Go Back To Sign In"
             Clicked="OnSignInAgain"
             VerticalOptions="Center"
-            BackgroundColor="Beige"
-            TextColor="Brown"
+            BackgroundColor="DarkBlue"
+            TextColor="White"
             HorizontalOptions="Center"
-            Margin="50"/>
+            />
+
+        </HorizontalStackLayout>
+
+
 
 
 
