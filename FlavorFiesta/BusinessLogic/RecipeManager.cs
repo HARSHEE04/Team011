@@ -10,18 +10,28 @@ using FlavorFiesta.DataPersistance;
 
 namespace FlavorFiesta.BusinessLogic
 {
+    /// <summary>
+    /// The purpose of this recipe manager was manage the list of recipe which sill be recieved from the csv file. As per our project requirements, we needed to find two matching recipes from the list of recipes in the csv and present
+    /// them to the user to allow them to choose one that suits them and matches the preferences they had outlined in the previous pages.
+    /// </summary>
     //The recipe manager class will manage the list of recipes, it will have a method that searches the collection of recipes based on the info recieved from the preferences class
     //Then, it will aid in displaying the chosen recipe by working with the code behind
     internal class RecipeManager
     {
-
+        /// <summary>
+        /// The purpose of the SearchRecipe method is to allow the program to find two recipes that match the users preferences from the recipes we have in the CSV file. This method uses the ReadRecipesFromCSV method which is 
+        /// present in the RecipeManagerDataPersistance class to read from the CSV file with the recipes. The SearchRecipe method will then use 
+        /// </summary>
+        /// <param name="userPreferences">This is an object of the Preferneces class and is supposed to hold the usersPreferences when implemented in the code behind.</param>
+        /// <param name="csvAccess">This is an object of the RecipeManagerDataPersistance class and allows us to use the ReadRecipesFromCSV method which is present in that class.</param>
+        /// <returns></returns>
         public List<Recipe> SearchRecipe(Preferences userPreferences, RecipeManagerDataPersistance csvAccess) //just used dependency relationship for loose coupling
         {
             List<Recipe> recipes = csvAccess.ReadRecipesFromCSV(); //now we have the list of recipes from the CSV stored into this local list
 
             //now we use the LINQ Query Syntax to filter through the recipes
 
-            //see if you can do recipe.RecipePreferences==userPreferences?? not valid tho because you need to compare contents which is why we need properties
+            
             var matchingRecipeRequests = (from recipe in recipes
                                           where recipe.RecipePreferences.DietType == userPreferences.DietType &&
                                           recipe.RecipePreferences.CuisineType == userPreferences.CuisineType &&
@@ -46,10 +56,7 @@ namespace FlavorFiesta.BusinessLogic
             //figure out way to only get two recipes from all the matches, try TAKE() METHOD: https://www.tutorialspoint.com/chash-queryable-take-method
         }
 
-        internal void SearchRecipe(Preferences prefs)
-        {
-            throw new NotImplementedException();
-        }
+      
     }
 
 
