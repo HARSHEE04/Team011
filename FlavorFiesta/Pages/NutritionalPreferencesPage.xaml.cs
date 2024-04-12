@@ -29,7 +29,6 @@ namespace FlavorFiesta.Pages
             _dietaryRestrictions = new List<string>();
         }
 
-        //make an object of preferences and send it to the on submit
         // Event handler for when the Submit button is clicked
         private void OnSubmit(object sender, EventArgs e)
         {
@@ -38,11 +37,10 @@ namespace FlavorFiesta.Pages
         }
 
         //Make the user preferences object to send to next page
-
         public FlavorFiesta.BusinessLogic.Preferences MakeUserPreference()
         {
             List<string> dietaryRestrictions = new List<string>
-{
+            {
                 "No-Nuts",
                 "No-Eggs"
             };
@@ -73,6 +71,7 @@ namespace FlavorFiesta.Pages
                 _dietaryRestrictions.Remove(restriction);
             }
         }
+
         // Sugar
         private async void OnSugarRangeChanged(object sender, CheckedChangedEventArgs e)
         {
@@ -83,8 +82,6 @@ namespace FlavorFiesta.Pages
                 _sugarRange = selectedSugarRange;
 
             }
-
-
         }
 
         // Calories
@@ -93,13 +90,9 @@ namespace FlavorFiesta.Pages
             var radioButton = sender as RadioButton;
             if (e.Value == true)
             {
-
                 string selectedCaloriesRange = radioButton.Content.ToString();
                 _caloriesRange = selectedCaloriesRange;
-
             }
-
-
         }
         // Protein
         private async void OnProtienRangeChanged(object sender, CheckedChangedEventArgs e)
@@ -107,13 +100,9 @@ namespace FlavorFiesta.Pages
             var radioButton = sender as RadioButton;
             if (e.Value == true)
             {
-
                 string selectedProtienType = radioButton.Content.ToString();
                 _proteinRange = selectedProtienType;
-
             }
-
-
         }
 
         // Number of servings
@@ -122,12 +111,9 @@ namespace FlavorFiesta.Pages
             var radioButton = sender as RadioButton;
             if (e.Value == true)
             {
-
                 string selectedServings = radioButton.Content.ToString();
                 _servingsRange = selectedServings;
             }
-
-
         }
         // Prep time
         private async void OnPrepTimeRangeChanged(object sender, CheckedChangedEventArgs e)
@@ -135,18 +121,13 @@ namespace FlavorFiesta.Pages
             var radioButton = sender as RadioButton;
             if (e.Value == true)
             {
-
                 string selectedPrepTime = radioButton.Content.ToString();
                 _prepTimeRange = selectedPrepTime;
-
             }
-
-
         }
 
         void OnDietaryRestrictionsChanged(System.Object sender, Microsoft.Maui.Controls.CheckedChangedEventArgs e)
         {
-            
                 var checkBox = sender as CheckBox;
                 string restriction = checkBox.ClassId; // Assuming ClassId is used to identify the restriction type
 
@@ -161,7 +142,6 @@ namespace FlavorFiesta.Pages
                 {
                     _dietaryRestrictions.Remove(restriction);
                 }
-            
         }
     }
 }
