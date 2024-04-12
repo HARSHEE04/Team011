@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FlavorFiesta.Pages.ChooseRecipe"
+             Title="ChooseRecipe">
+
+    <Shell.TitleView>
+        <Grid>
+            <Label Text="Choose a Recipe " HorizontalOptions="Center"  VerticalOptions="Center"
+              FontSize="Title" TextColor="White"></Label>
+        </Grid>
+    </Shell.TitleView>
+
+
+    <Grid Padding="10"
+          RowDefinitions="Auto, Auto, Auto, Auto"
+          ColumnDefinitions="*, *, *"
+          BackgroundColor="Olive">
+        <Label 
+            Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3"
+            FontSize="Medium"
+            Text="Please select the image of the recipe you would like to explore"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Label
+            Grid.Row="1" Grid.Column="0"
+            x:Name="Recipe1Name"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            FontSize="Medium">
+        </Label>
+
+        <Label
+             Grid.Row="2" Grid.Column="0"
+             x:Name="Recipe2Name"
+             VerticalOptions="Center"
+             HorizontalOptions="Center"
+             FontSize="Medium">
+        </Label>
+
+        <ImageButton
+            Grid.Row="1" Grid.Column="1"
+             MaximumHeightRequest="200"
+             MaximumWidthRequest="200"
+            Clicked="OnRecipe1Chosen"
+            x:Name="Recipe1Image"
+            VerticalOptions="Center"
+            HorizontalOptions="Center">
+        </ImageButton>
+
+        <ImageButton
+         Grid.Row="2" Grid.Column="1"
+       MaximumHeightRequest="200"
+       MaximumWidthRequest="200"
+         Clicked="OnRecipe2Chosen"
+         x:Name="Recipe2Image"
+         VerticalOptions="Center"
+         HorizontalOptions="Center">
+        </ImageButton>
+
+        <Label
+     Grid.Row="1" Grid.Column="2"
+     x:Name="Recipe1PrepTme"
+     VerticalOptions="Center"
+     HorizontalOptions="Center"
+     FontSize="Medium">
+        </Label>
+
+        <Label
+      Grid.Row="2" Grid.Column="2"
+      x:Name="Recipe2PrepTme"
+      VerticalOptions="Center"
+      HorizontalOptions="Center"
+      FontSize="Medium">
+        </Label>
+
+      
+
+    </Grid>
+   
+</ContentPage>

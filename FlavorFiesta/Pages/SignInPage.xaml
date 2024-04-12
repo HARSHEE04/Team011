@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FlavorFiesta.Pages.SignInPage">
+
+    <Grid>
+        <Image Source="signup.png" Aspect="AspectFill" />
+
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30"
+            VerticalOptions="Center"
+            HorizontalOptions="Center">
+
+            <Label 
+                Text="Sign In"
+                FontSize="32"
+                FontAttributes="Bold"
+                TextColor="White"
+                HorizontalOptions="Center"/>
+
+            <Image
+                Source="logo.png"
+                Aspect="AspectFit"
+                HeightRequest="200"
+                HorizontalOptions="Center"
+                Margin="0,20,0,20"/>
+
+            <Frame
+                BackgroundColor="#444444CC"
+                Padding="15"
+                CornerRadius="10"
+                HorizontalOptions="Fill"
+                VerticalOptions="Start">
+
+                <Grid
+                    ColumnDefinitions="Auto, *"
+                    RowDefinitions="Auto, Auto">
+
+                    <Label
+                        Text="Email:"
+                        Grid.Column="0"
+                        Grid.Row="0"
+                        FontSize="Medium"
+                        FontAttributes="Bold"
+                        TextColor="White"
+                        VerticalOptions="Center"
+                        HorizontalOptions="End"/>
+
+                    <Entry
+                        x:Name="EmailEntry"
+                        Placeholder="Enter email"
+                        Keyboard="Email"
+                        Grid.Column="1"
+                        Grid.Row="0"
+                        Margin="10"
+                        FontSize="Medium"
+                        BackgroundColor="Transparent"
+                        TextColor="White"/>
+                    
+                    <Label
+                        Text="Password:"
+                        Grid.Column="0"
+                        Grid.Row="1"
+                        FontSize="Medium"
+                        FontAttributes="Bold"
+                        TextColor="White"
+                        VerticalOptions="Center"
+                        HorizontalOptions="End"/>
+
+                    <Entry
+                        x:Name="PasswordEntry"
+                        Placeholder="Enter password"
+                        IsPassword="True"
+                        Grid.Column="1"
+                        Grid.Row="1"
+                        Margin="10"
+                        FontSize="Medium"
+                        BackgroundColor="Transparent"
+                        TextColor="White"/>
+                </Grid>
+            </Frame>
+
+            <Button
+                Text="Sign In"
+                BackgroundColor="#FF69B4"
+                TextColor="White"
+                FontSize="Medium"
+                CornerRadius="20"
+                WidthRequest="200"
+                HeightRequest="50"
+                Margin="10"
+                Clicked="OnSignIn"/>
+        </VerticalStackLayout>
+    </Grid>
+</ContentPage>

@@ -1,87 +1,132 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FlavorFiesta.Pages.NutritionalPreferencesPage"
              Title="Nutritional Preferences"
              BackgroundColor="#3c1361">
-    <ScrollView>
-        <VerticalStackLayout Spacing="15" Padding="30">
 
-            <!-- Define styles for the page elements -->
-            <VerticalStackLayout.Resources>
-                <Style TargetType="Label">
-                    <Setter Property="TextColor" Value="White"/>
-                    <Setter Property="FontSize" Value="Medium"/>
-                    <Setter Property="FontAttributes" Value="Bold"/>
-                </Style>
-                <Style TargetType="RadioButton">
-                    <Setter Property="TextColor" Value="White"/>
-                    <!-- Add other style setters for RadioButton if needed -->
-                </Style>
-                <Style TargetType="Button">
-                    <Setter Property="BackgroundColor" Value="#6200EE"/>
-                    <Setter Property="TextColor" Value="White"/>
-                    <Setter Property="Margin" Value="5"/>
-                </Style>
-            </VerticalStackLayout.Resources>
+    <Grid>
+        <Image Source="backgroundprefs.png" Aspect="AspectFill" />
 
-            <!-- Calories Section -->
-            <Label Text="Calories:" TextColor="White"/>
-            <StackLayout Orientation="Horizontal">
-                <RadioButton Content="100-300" GroupName="CaloriesGroup" TextColor="White"/>
-                <Label Text="100-300" TextColor="White"/>
-            </StackLayout>
-            <StackLayout Orientation="Horizontal">
-                <RadioButton Content="300-600" GroupName="CaloriesGroup" TextColor="White"/>
-                <Label Text="300-600" TextColor="White"/>
-            </StackLayout>
-            <StackLayout Orientation="Horizontal">
-                <RadioButton Content="600+" GroupName="CaloriesGroup" TextColor="White"/>
-                <Label Text="600+" TextColor="White"/>
-            </StackLayout>
+        <VerticalStackLayout
+            Spacing="20"
+            Padding="30"
+            VerticalOptions="Center"
+            HorizontalOptions="Center">
 
-            <!-- Protein Section -->
-            <Label Text="Protein (grams):" TextColor="White"/>
-            <StackLayout Orientation="Horizontal">
-                <RadioButton Content="5-15" GroupName="ProteinGroup" TextColor="White"/>
-                <Label Text="5-15" TextColor="White"/>
-            </StackLayout>
-            <StackLayout Orientation="Horizontal">
-                <RadioButton Content="15-30" GroupName="ProteinGroup" TextColor="White"/>
-                <Label Text="15-30" TextColor="White"/>
-            </StackLayout>
-            <StackLayout Orientation="Horizontal">
-                <RadioButton Content="30+" GroupName="ProteinGroup" TextColor="White"/>
-                <Label Text="30+" TextColor="White"/>
-            </StackLayout>
+            <Frame 
+                BackgroundColor="#444444CC"
+                Padding="20"
+                CornerRadius="10"
+                HorizontalOptions="Fill"
+                VerticalOptions="Start">
 
-            <!-- Sugar Section -->
-            <Label Text="Sugar (grams):" TextColor="White"/>
-            <StackLayout Orientation="Horizontal">
-                <RadioButton Content="0-5" GroupName="SugarGroup" TextColor="White"/>
-                <Label Text="0-5" TextColor="White"/>
-            </StackLayout>
-            <StackLayout Orientation="Horizontal">
-                <RadioButton Content="5-20" GroupName="SugarGroup" TextColor="White"/>
-                <Label Text="5-20" TextColor="White"/>
-            </StackLayout>
-            <StackLayout Orientation="Horizontal">
-                <RadioButton Content="20+" GroupName="SugarGroup" TextColor="White"/>
-                <Label Text="20+" TextColor="White"/>
-            </StackLayout>
+                <Grid Padding="20"
+                      HorizontalOptions="FillAndExpand"
+                      VerticalOptions="FillAndExpand"
+                      RowSpacing="10"
+                      ColumnSpacing="20"
+                      RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto, Auto"
+                      ColumnDefinitions="*, *, *, *, *">
 
-            <!-- Other Restrictions Section -->
-            <!-- This remains as CheckBoxes since multiple selections are allowed -->
-            <Label Text="Other Restrictions:" TextColor="White"/>
-            <StackLayout Orientation="Horizontal">
-                <CheckBox Color="White"/>
-                <Label Text="No-Nuts" TextColor="White"/>
-            </StackLayout>
-            <!-- Repeat for other checkboxes -->
+                    <!-- Calories Section -->
+                    <Label Grid.Row="0" Grid.Column="0" Text="Calories:" TextColor="White"/>
+                    <RadioButton Grid.Row="0" Grid.Column="1" GroupName="CaloriesGroup" Content="100-300" TextColor="White"/>
+                    <RadioButton Grid.Row="0" Grid.Column="2" GroupName="CaloriesGroup" Content="300-600" TextColor="White"/>
+                    <RadioButton Grid.Row="0" Grid.Column="3" GroupName="CaloriesGroup" Content="600+" TextColor="White"/>
 
-            <!-- Submit Button -->
-            <Button Text="SUBMIT" BackgroundColor="#6200EE" TextColor="White" Margin="5"/>
+                    <!-- Protein Section -->
+                    <Label Grid.Row="1" Grid.Column="0" Text="Protein (grams):" TextColor="White"/>
+                    <RadioButton Grid.Row="1" Grid.Column="1" GroupName="ProteinGroup" Content="5-15" TextColor="White"/>
+                    <RadioButton Grid.Row="1" Grid.Column="2" GroupName="ProteinGroup" Content="15-30" TextColor="White"/>
+                    <RadioButton Grid.Row="1" Grid.Column="3" GroupName="ProteinGroup" Content="30+" TextColor="White"/>
 
+                    <!-- Sugar Section -->
+                    <Label Grid.Row="2" Grid.Column="0" Text="Sugar (grams):" TextColor="White"/>
+                    <RadioButton Grid.Row="2" Grid.Column="1" GroupName="SugarGroup" Content="0-5" TextColor="White"/>
+                    <RadioButton Grid.Row="2" Grid.Column="2" GroupName="SugarGroup" Content="5-20" TextColor="White"/>
+                    <RadioButton Grid.Row="2" Grid.Column="3" GroupName="SugarGroup" Content="20+" TextColor="White"/>
+
+                    <!-- Number of Servings Section -->
+                    <Label Grid.Row="3" Grid.Column="0" Text="Number of Servings:" TextColor="White"/>
+                    <RadioButton Grid.Row="3" Grid.Column="1" GroupName="ServingsGroup" Content="0-2" TextColor="White"/>
+                    <RadioButton Grid.Row="3" Grid.Column="2" GroupName="ServingsGroup" Content="2-10" TextColor="White"/>
+                    <RadioButton Grid.Row="3" Grid.Column="3" GroupName="ServingsGroup" Content="12+" TextColor="White"/>
+
+                    <!-- Preparation Time Section -->
+                    <Label Grid.Row="4" Grid.Column="0" Text="Preparation Time (minutes):" TextColor="White"/>
+                    <RadioButton Grid.Row="4" Grid.Column="1" GroupName="PrepTimeGroup" Content="15-30" TextColor="White"/>
+                    <RadioButton Grid.Row="4" Grid.Column="2" GroupName="PrepTimeGroup" Content="30-60" TextColor="White"/>
+                    <RadioButton Grid.Row="4" Grid.Column="3" GroupName="PrepTimeGroup" Content="60+" TextColor="White"/>
+
+                    <!-- Other Restrictions Section -->
+                    <Label Grid.Row="5"
+                           Grid.Column="0"
+                           Text="Other Restrictions:"
+                           TextColor="White"/>
+
+                    <!-- No-Nuts Checkbox and Label -->
+                    <CheckBox Grid.Row="5"
+                              Grid.Column="1"
+                              Color="White"/>
+                    <Label Grid.Row="5"
+                           Grid.Column="1"
+                           Text="No-Nuts"
+                           TextColor="White"
+                           HorizontalOptions="Start"
+                           VerticalOptions="Center"
+                           Margin="90,0,0,0"/> 
+
+                    <!-- No-Eggs Checkbox and Label -->
+                    <CheckBox Grid.Row="5"
+                              Grid.Column="2"
+                              Color="White"/>
+                    <Label Grid.Row="5"
+                           Grid.Column="2"
+                           Text="No-Eggs"
+                           TextColor="White"
+                           HorizontalOptions="Start"
+                           VerticalOptions="Center"
+                           Margin="90,0,0,0"/> 
+
+                    <!-- Gluten-Free Checkbox and Label -->
+                    <CheckBox Grid.Row="5"
+                              Grid.Column="3"
+                              Color="White"/>
+                    <Label Grid.Row="5"
+                           Grid.Column="3"
+                           Text="Gluten-Free"
+                           TextColor="White"
+                           HorizontalOptions="Start"
+                           VerticalOptions="Center"
+                           Margin="90,0,0,0"/> 
+
+                    <!-- No-Seafood Checkbox and Label -->
+                    <CheckBox Grid.Row="5"
+                              Grid.Column="4"
+                              Color="White"/>
+                    <Label Grid.Row="5"
+                           Grid.Column="4"
+                           Text="No-Seafood"
+                           TextColor="White"
+                           HorizontalOptions="Start"
+                           VerticalOptions="Center"
+                           Margin="90,0,0,0"/> 
+                    <!-- Submit Button -->
+                    <Button Grid.Row="6"
+                        Grid.Column="0"
+                        Grid.ColumnSpan="5"
+                        Text="SUBMIT"
+                        BackgroundColor="#FF69B4"
+                        TextColor="White"
+                        FontSize="Medium"
+                        CornerRadius="20"
+                        WidthRequest="200"
+                        HeightRequest="50"
+                        Margin="20"
+                        HorizontalOptions="Center"
+                        Clicked="OnSubmit"/>
+                </Grid>
+            </Frame>
         </VerticalStackLayout>
-    </ScrollView>
+    </Grid>
 </ContentPage>

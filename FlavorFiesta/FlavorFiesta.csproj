@@ -50,6 +50,19 @@
 		<!-- Raw Assets (also remove the "Resources\Raw" prefix) -->
 		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
 	</ItemGroup>
+	<ItemGroup>
+	  <AndroidResource Remove="DataPersistence\**" />
+	  <Compile Remove="DataPersistence\**" />
+	  <EmbeddedResource Remove="DataPersistence\**" />
+	  <MauiCss Remove="DataPersistence\**" />
+	  <MauiXaml Remove="DataPersistence\**" />
+	  <None Remove="DataPersistence\**" />
+	  <None Remove="Resources\Images\background.png" />
+	  <None Remove="Resources\Images\signup.png" />
+	  <None Remove="Resources\Images\logo.png" />
+	  <None Remove="Resources\Images\image1.png" />
+	  <None Remove="Resources\Images\backgroundprefs.png" />
+	</ItemGroup>
 
 	<ItemGroup>
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
@@ -59,9 +72,49 @@
 	  <None Remove="BusinessLogic\" />
 	  <None Remove="Pages\" />
 	  <None Remove="DataPersistence\" />
+	  <None Remove="Resources\Images\halal_icon.png" />
+	  <None Remove="Resources\Images\logo21.png" />
+	  <None Remove="Resources\Images\non_vegetarian_icon.png" />
+	  <None Remove="Resources\Images\vegan_icon.png" />
+	  <None Remove="Resources\Images\vegetarian_icon.png" />
+	  <None Remove="Resources\Images\breakfast_icon.svg" />
+	  <None Remove="Resources\Images\dessert_icon.svg" />
+	  <None Remove="Resources\Images\dinner_icon.svg" />
+	  <None Remove="Resources\Images\lunch_icon.svg" />
+	  <None Remove="Resources\Images\american_food.svg" />
+	  <None Remove="Resources\Images\chinese_food.svg" />
+	  <None Remove="Resources\Images\italian_food.svg" />
 	</ItemGroup>
 	<ItemGroup>
-	  <Folder Include="Pages\" />
-	  <Folder Include="DataPersistence\" />
+	  <MauiXaml Update="Pages\ChooseRecipe.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\DisplayRecipe.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\SignInPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\SignUpPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	</ItemGroup>
+	<ItemGroup>
+	  <BundleResource Include="Resources\Images\halal_icon.png" />
+	  <BundleResource Include="Resources\Images\non_vegetarian_icon.png" />
+	  <BundleResource Include="Resources\Images\vegan_icon.png" />
+	  <BundleResource Include="Resources\Images\vegetarian_icon.png" />
+	  <BundleResource Include="Resources\Images\breakfast_icon.svg" />
+	  <BundleResource Include="Resources\Images\dessert_icon.svg" />
+	  <BundleResource Include="Resources\Images\dinner_icon.svg" />
+	  <BundleResource Include="Resources\Images\lunch_icon.svg" />
+	  <BundleResource Include="Resources\Images\american_food.svg" />
+	  <BundleResource Include="Resources\Images\chinese_food.svg" />
+	  <BundleResource Include="Resources\Images\italian_food.svg" />
+	  <BundleResource Include="Resources\Images\background.png" />
+	  <BundleResource Include="Resources\Images\signup.png" />
+	  <BundleResource Include="Resources\Images\logo.png" />
+	  <BundleResource Include="Resources\Images\image1.png" />
+	  <BundleResource Include="Resources\Images\backgroundprefs.png" />
 	</ItemGroup>
 </Project>

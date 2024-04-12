@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FlavorFiesta.Pages.SignUpPage">
+
+    <Grid>
+        <Image Source="signup.png" Aspect="AspectFill" />
+        
+        <ScrollView>
+            <VerticalStackLayout
+                Spacing="25"
+                Padding="30"
+                VerticalOptions="Center"
+                HorizontalOptions="Center">
+
+                <Label 
+                    Text="Sign Up With Flavor Fiesta"
+                    FontSize="32"
+                    FontAttributes="Bold"
+                    TextColor="White"
+                    HorizontalOptions="Center"
+                    Margin="0,0,0,10"/>
+
+                <Frame
+                    Padding="10"
+                    CornerRadius="10"
+                    BorderColor="White"
+                    HorizontalOptions="Fill"
+                    VerticalOptions="Start"
+                    BackgroundColor="#FF69B4">
+                <StackLayout>
+                    <Entry 
+                        x:Name="FirstNameEntry"
+                        Placeholder="First Name"
+                        FontSize="Medium"
+                        Margin="0,0,0,10"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Center"
+                        BackgroundColor="Transparent"
+                        TextColor="White"/>
+                    
+                    <Entry 
+                        x:Name="LastNameEntry"
+                        Placeholder="Last Name"
+                        FontSize="Medium"
+                        Margin="0,0,0,10"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Center"
+                        BackgroundColor="Transparent"
+                        TextColor="White"/>
+                    
+                    <Entry 
+                        x:Name="EmailEntry"
+                        Placeholder="Email Address"
+                        FontSize="Medium"
+                        Margin="0,0,0,10"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Center"
+                        Keyboard="Email"
+                        BackgroundColor="Transparent"
+                        TextColor="White"/>
+                    
+                    <DatePicker 
+                        x:Name="BirthDatePicker"
+                        FontSize="Medium"
+                        Margin="0,0,0,10"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Center"
+                        BackgroundColor="Transparent"
+                        TextColor="White"/>
+                    
+                    <Entry 
+                        x:Name="PasswordEntry"
+                        Placeholder="Password"
+                        IsPassword="True"
+                        FontSize="Medium"
+                        Margin="0,0,0,10"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Center"
+                        BackgroundColor="Transparent"
+                        TextColor="White"/>
+                    </StackLayout>
+                </Frame>
+                <HorizontalStackLayout HorizontalOptions="Center">
+                    <CheckBox
+                        x:Name="AcceptTermsCheckbox"
+                        Color="White"
+                        VerticalOptions="Center"/>
+                    <Label
+                        Text="I accept and agree to the Terms of use."
+                        FontSize="Small"
+                        TextColor="LightGray"
+                        VerticalOptions="Center" />
+                </HorizontalStackLayout>
+
+                <Button
+                    Text="Sign Up"
+                    BackgroundColor="#FF69B4"
+                    TextColor="White"
+                    FontSize="Medium"
+                    Margin="0,0,0,10"
+                    HorizontalOptions="Fill"
+                    VerticalOptions="Center"
+                    CornerRadius="20"
+                    Clicked="OnSignUpButton"/> 
+
+                <Button
+                    Text="Go Back To Sign In"
+                    BackgroundColor="Transparent"
+                    TextColor="#FF69B4"
+                    FontSize="Medium"
+                    HorizontalOptions="Fill"
+                    VerticalOptions="Center"
+                    Clicked="OnSignInAgain"/> 
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>
