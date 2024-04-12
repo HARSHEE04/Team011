@@ -16,13 +16,10 @@ namespace FlavorFiesta.DataPersistance
             LoadPreferences();
         }
 
-        public IEnumerable<BusinessLogic.Preferences> GetUserPreferences() => _preferencesList;
-
         public void AddPreferences(BusinessLogic.Preferences preferences)
         {
             _preferencesList.Add(preferences);
             SavePreferences(); // Save in JSON format by default
-            SavePreferencesToCSV(); // Also save in CSV format
         }
 
         private void SavePreferences()
@@ -42,27 +39,6 @@ namespace FlavorFiesta.DataPersistance
             catch (Exception ex)
             {
                 Console.WriteLine($"Error saving preferences: {ex.Message}");
-            }
-        }
-
-        private void SavePreferencesToCSV()
-        {
-            StringBuilder csvContent = new StringBuilder();
-            csvContent.AppendLine("DietType,CuisineType,MealType,CaloriesRange,ProteinRange,SugarRange,ServingsRange,PrepTimeRange,DietaryRestrictions");
-
-            foreach (var pref in _preferencesList)
-            {
-                string restrictions = string.Join(";", pref.DietaryRestrictions);
-                csvContent.AppendLine($"{pref.DietType},{pref.CuisineType},{pref.MealType},{pref.CaloriesRange},{pref.ProteinRange},{pref.SugarRange},{pref.ServingsRange},{pref.PrepTimeRange},\"{restrictions}\"");
-            }
-
-            try
-            {
-                File.WriteAllText(_filePath.Replace(".json", ".csv"), csvContent.ToString());
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Error saving preferences to CSV: {ex.Message}");
             }
         }
 
