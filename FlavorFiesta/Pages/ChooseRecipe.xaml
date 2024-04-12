@@ -75,16 +75,7 @@
       FontSize="Medium">
         </Label>
 
-        <Button
-            Grid.Row="3" Grid.Column="1"
-            BackgroundColor="DarkOliveGreen"
-            TextColor="White"
-            FontSize="Large"
-            Text="Open Recipe Info"
-            Clicked="OnOpenRecipeInfo"
-            VerticalOptions="Center"
-            HorizontalOptions="Center">
-        </Button>
+      
 
     </Grid>
    

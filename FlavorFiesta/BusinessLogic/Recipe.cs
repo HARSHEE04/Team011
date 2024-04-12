@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace FlavorFiesta.BusinessLogic
 {
     //this is the recipe class
-    internal class Recipe
+    public class Recipe
     {
         //Field Variables for Recipe Class
         private static int lastId = 0;

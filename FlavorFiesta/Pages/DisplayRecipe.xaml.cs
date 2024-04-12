@@ -1,13 +1,21 @@
+using FlavorFiesta.BusinessLogic;
 namespace FlavorFiesta.Pages;
+
 
 public partial class DisplayRecipe : ContentPage
 {
-	public DisplayRecipe()
+    private Recipe chosenRecipe;
+	public DisplayRecipe(Recipe selectedRecipe)
 	{
+        
 		InitializeComponent();
+        chosenRecipe = selectedRecipe;
+        this.BindingContext = chosenRecipe;
+
+
         //use this to show the different infomation about the recipes
 
-	}
+    }
 
     private void OnExit(object sender, EventArgs e)
     {
