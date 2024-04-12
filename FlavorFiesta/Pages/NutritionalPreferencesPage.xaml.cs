@@ -14,7 +14,7 @@ namespace FlavorFiesta.Pages
         private string _proteinRange;
         private string _sugarRange;
         private string _servingsRange;
-        private TimeSpan _prepTimeRange;
+        private string _prepTimeRange;
         private List<string> _dietaryRestrictions;
 
 
@@ -33,21 +33,27 @@ namespace FlavorFiesta.Pages
         // Event handler for when the Submit button is clicked
         private void OnSubmit(object sender, EventArgs e)
         {
+            
             Navigation.PushAsync(new ChooseRecipe());
         }
 
+        //Make the user preferences object to send to next page
 
+        public FlavorFiesta.BusinessLogic.Preferences MakeUserPreference()
+        {
+            //make a new instance of preferences class
+            FlavorFiesta.BusinessLogic.Preferences preference1 = new FlavorFiesta.BusinessLogic.Preferences(
+                _dietType, _cuisineType, _recipeType, _caloriesRange, _proteinRange,_sugarRange, _servingsRange, _prepTimeRange,
+
+        }
 
         // Sugar
         private async void OnSugarRangeChanged(object sender, CheckedChangedEventArgs e)
         {
             var radioButton = sender as RadioButton;
             if (e.Value == true)
-            {
-                // Set the selected cuisine type to preferences
+            { 
                 string selectedSugarRange = radioButton.Content.ToString();
-
-                //_prefs.CuisineType = selectedCuisineType;
                 _sugarRange = selectedSugarRange;
                 
             }
@@ -61,10 +67,8 @@ namespace FlavorFiesta.Pages
             var radioButton = sender as RadioButton;
             if (e.Value == true)
             {
-                // Set the selected cuisine type to preferences
+                
                 string selectedCaloriesRange = radioButton.Content.ToString();
-
-                //_prefs.CuisineType = selectedCuisineType;
                 _caloriesRange = selectedCaloriesRange; 
                
             }
@@ -77,10 +81,8 @@ namespace FlavorFiesta.Pages
             var radioButton = sender as RadioButton;
             if (e.Value == true)
             {
-                // Set the selected cuisine type to preferences
+              
                 string selectedProtienType = radioButton.Content.ToString();
-
-                //_prefs.CuisineType = selectedCuisineType;
                 _proteinRange = selectedProtienType;
                 
             }
@@ -94,12 +96,9 @@ namespace FlavorFiesta.Pages
             var radioButton = sender as RadioButton;
             if (e.Value == true)
             {
-                // Set the selected cuisine type to preferences
-                string selectedCuisineType = radioButton.Content.ToString();
-
-                //_prefs.CuisineType = selectedCuisineType;
-                _cuisineType = selectedCuisineType;
-                DisplayAlert("Cuisine Type Selected", $"You have selected: {_cuisineType} ", "OK");
+ 
+                string selectedServings = radioButton.Content.ToString();
+                _servingsRange = selectedServings;
             }
 
 
@@ -110,12 +109,10 @@ namespace FlavorFiesta.Pages
             var radioButton = sender as RadioButton;
             if (e.Value == true)
             {
-                // Set the selected cuisine type to preferences
-                string selectedCuisineType = radioButton.Content.ToString();
 
-                //_prefs.CuisineType = selectedCuisineType;
-                _cuisineType = selectedCuisineType;
-                DisplayAlert("Cuisine Type Selected", $"You have selected: {_cuisineType} ", "OK");
+                string selectedPrepTime = radioButton.Content.ToString();
+                _prepTimeRange = selectedPrepTime;
+               
             }
 
 
@@ -123,17 +120,17 @@ namespace FlavorFiesta.Pages
 
 
         // Other Restrictions (example: No-Nuts)
-        private void OnNoNutsCheckedChanged(object sender, CheckedChangedEventArgs e)
-        {
-            if (e.Value)
-            {
-                _prefs.AddDietaryRestriction("No-Nuts");
-            }
-            else
-            {
-                _prefs.RemoveDietaryRestriction("No-Nuts");
-            }
-        }
+        //private void OnNoNutsCheckedChanged(object sender, CheckedChangedEventArgs e)
+        //{
+        //    if (e.Value)
+        //    {
+        //        _prefs.AddDietaryRestriction("No-Nuts");
+        //    }
+        //    else
+        //    {
+        //        _prefs.RemoveDietaryRestriction("No-Nuts");
+        //    }
+        //}
 
         //    // Helper methods to get ranges from radio buttons
         //    private int GetSugarRangeFromRadioButton(RadioButton radioButton)
