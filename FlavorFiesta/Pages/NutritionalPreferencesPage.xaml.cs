@@ -17,17 +17,11 @@ namespace FlavorFiesta.Pages
         }
 
         // Event handler for when the Submit button is clicked
-        private async void OnSubmit(object sender, EventArgs e)
+        private void OnSubmit(object sender, EventArgs e)
         {
-            if (_prefs.IsPreferencesValid())
-            {
-                await Navigation.PushAsync(new ChooseRecipe(_prefs));
-            }
-            else
-            {
-                await DisplayAlert("Invalid Preferences", "Please ensure all preferences are correctly set before proceeding.", "OK");
-            }
-        }        // Sugar
+            Navigation.PushAsync(new ChooseRecipe(_prefs));
+        }
+        // Sugar
         private void OnSugarSelectionChanged(object sender, CheckedChangedEventArgs e)
         {
             if (e.Value)

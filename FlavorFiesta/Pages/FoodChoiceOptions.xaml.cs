@@ -51,7 +51,7 @@ namespace FlavorFiesta.Pages
         {
             if (!string.IsNullOrEmpty(_dietType))
             {
-                await Navigation.PushAsync(new CuisinePage());
+                await Navigation.PushAsync(new CusinePage(_dietType));
             }
             else
             {

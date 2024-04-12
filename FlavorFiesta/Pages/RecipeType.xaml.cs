@@ -18,20 +18,16 @@ namespace FlavorFiesta.Pages
             var radioButton = sender as RadioButton;
             if (e.Value)
             {
-                _prefs.MealType = radioButton.Content.ToString();
+                // Set the selected meal time to preferences
+                string selectedMealTime = radioButton.Content.ToString();
+                _prefs.MealType = selectedMealTime;
             }
         }
 
         private async void OnSubmitClicked(object sender, EventArgs e)
         {
-            if (_prefs.MealType != null)
-            {
-                await Navigation.PushAsync(new NutritionalPreferencesPage(_prefs));
-            }
-            else
-            {
-                await DisplayAlert("Selection Missing", "Please select a meal type.", "OK");
-            }
+            // Navigate to the next page with the preferences
+            await Navigation.PushAsync(new NutritionalPreferencesPage(_prefs));
         }
     }
 }
