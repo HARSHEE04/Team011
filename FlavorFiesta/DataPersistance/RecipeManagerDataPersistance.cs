@@ -10,12 +10,12 @@ namespace FlavorFiesta.DataPersistance
 {
     internal class RecipeManagerDataPersistance
     {
-        private readonly string _filePath;
+        private  string _filePath;
 
         ///read recipes from csv file and make it into a list
         public List<Recipe> ReadRecipesFromCSV() //could have put this into a method
         {
-            //_filePath = ""
+            _filePath = @"C:\Users\Harsh\OneDrive\Desktop\recipes.txt";
             List<Recipe> list = new List<Recipe>();
 
             try
