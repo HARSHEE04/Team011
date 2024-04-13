@@ -11,10 +11,6 @@ public partial class DisplayRecipe : ContentPage
 		InitializeComponent();
         chosenRecipe = selectedRecipe;
         this.BindingContext = chosenRecipe;
-
-
-        //use this to show the different infomation about the recipes
-
     }
 
     private void OnExit(object sender, EventArgs e)
