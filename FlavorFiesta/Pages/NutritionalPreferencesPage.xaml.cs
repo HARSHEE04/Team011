@@ -22,7 +22,12 @@ namespace FlavorFiesta.Pages
         private BusinessLogic.Preferences _preferences;
         private PrefManagerDataPersistence _prefManager;
 
-
+        /// <summary>
+        /// Initializes a new instance of the <see cref="NutritionalPreferencesPage"/> class.
+        /// </summary>
+        /// <param name="dietType">The type of diet.</param>
+        /// <param name="cuisineType">The type of cuisine.</param>
+        /// <param name="recipeType">The type of recipe.</param>
         public NutritionalPreferencesPage(string dietType, string cuisineType, string recipeType)
         {
             InitializeComponent();
@@ -33,7 +38,9 @@ namespace FlavorFiesta.Pages
             _prefManager = new PrefManagerDataPersistence($"{Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData)}/preferences.json");
         }
 
-        // Event handler for when the Submit button is clicked
+        /// <summary>
+        /// Event handler for when the Submit button is clicked.
+        /// </summary>
         private async void OnSubmit(object sender, EventArgs e)
         {
             try
@@ -56,6 +63,10 @@ namespace FlavorFiesta.Pages
             
         }
 
+        /// <summary>
+        /// Checks if all preferences are selected.
+        /// </summary>
+        /// <returns>True if all preferences are selected; otherwise, false.</returns>
         private bool AreAllPreferencesSelected()
         {
             // Check that all required selections have been made
@@ -66,7 +77,12 @@ namespace FlavorFiesta.Pages
                    !string.IsNullOrEmpty(_prepTimeRange) &&
                    _dietaryRestrictions.Count > 0;
         }
-        //Make the user preferences object to send to next page
+
+
+        /// <summary>
+        /// Creates the user preferences object.
+        /// </summary>
+        /// <returns>The created user preferences object.</returns>
         public FlavorFiesta.BusinessLogic.Preferences MakeUserPreference()
         {
             //make a new instance of preferences class
@@ -136,6 +152,9 @@ namespace FlavorFiesta.Pages
             await Task.CompletedTask;
         }
 
+        /// <summary>
+        /// Event handler for when the dietary restriction is changed.
+        /// </summary>
         private void OnDietaryRestrictionChanged(object sender, CheckedChangedEventArgs e)
         {
             var checkBox = sender as CheckBox;
