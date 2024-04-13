@@ -7,18 +7,13 @@ namespace FlavorFiesta.Pages
     {
         private string _cuisineType;
         private string _dietType;
-        //private BusinessLogic.Preferences _prefs; // Declare _prefs as an instance variable of type Preferences
 
         public CusinePage(string DietType) // Accept Preferences as an instance parameter
         {
             InitializeComponent();
             _dietType = DietType;
-            
-            //_prefs = prefs; // Assign the parameter to the instance variable
         }
 
-
-     
         private async void OnCuisineTypeChanged(object sender, CheckedChangedEventArgs e)
         {
             var radioButton = sender as RadioButton;
@@ -26,8 +21,6 @@ namespace FlavorFiesta.Pages
             {
                 // Set the selected cuisine type to preferences
                 string selectedCuisineType = radioButton.Content.ToString();
-
-                //_prefs.CuisineType = selectedCuisineType;
                 _cuisineType = selectedCuisineType;
                 await DisplayAlert("Cuisine Type Selected", $"You have selected: {_cuisineType} ", "OK");
             }
