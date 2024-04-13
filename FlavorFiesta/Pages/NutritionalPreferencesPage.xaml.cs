@@ -26,7 +26,6 @@ namespace FlavorFiesta.Pages
         public NutritionalPreferencesPage(string dietType, string cuisineType, string recipeType)
         {
             InitializeComponent();
-            //BindingContext = this;
             _dietType = dietType;
             _cuisineType = cuisineType;
             _recipeType = recipeType;

@@ -12,7 +12,7 @@ public partial class ChooseRecipe : ContentPage
     public ChooseRecipe(BusinessLogic.Preferences prefs)
     {
         InitializeComponent();
-        Debug.WriteLine($"Using preferences to search recipes: DietType={prefs.DietType}");
+        Debug.WriteLine($"Using preferences to search recipes: DietType={prefs.DietType}"); //explained in report - Maryam
 
         _recipeManager = new RecipeManager();
         _csvRecipes = new RecipeManagerDataPersistance();

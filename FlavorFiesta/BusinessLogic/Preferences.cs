@@ -19,7 +19,8 @@ namespace FlavorFiesta.BusinessLogic
         public Preferences(string dietType, string cusineType, string mealType, string caloriesRange, string protenRange,
             string sugarRange, string serveingsRange, string prepTimeRange, List<string> dietaryRestrictions)
         {
-            DietType = ValidateInput(dietType, nameof(DietType));
+            //explained why i used a method here in report - Maryam
+            DietType = ValidateInput(dietType, nameof(DietType)); 
             CuisineType = ValidateInput(cusineType, nameof(CuisineType));
             MealType = ValidateInput(mealType, nameof(MealType));
             CaloriesRange = ValidateInput(caloriesRange, nameof(CaloriesRange));

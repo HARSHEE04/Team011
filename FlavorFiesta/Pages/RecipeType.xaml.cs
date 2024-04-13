@@ -4,7 +4,6 @@ namespace FlavorFiesta.Pages
 {
     public partial class RecipeType : ContentPage
     {
-        //private BusinessLogic.Preferences _prefs; // Fully qualified the Preferences class with its namespace
         private string _recipeType;
         private string _dietType;
         private string _cuisineType;
@@ -12,12 +11,9 @@ namespace FlavorFiesta.Pages
         public RecipeType(string dietType, string cuisineType) //recieves the cuisine type
         {
             InitializeComponent();
-            //_prefs = prefs;
-
             _dietType = dietType;
             _cuisineType = cuisineType;
         }
-        //example
 
         private void OnMealTimeChanged(object sender, CheckedChangedEventArgs e)
         {
