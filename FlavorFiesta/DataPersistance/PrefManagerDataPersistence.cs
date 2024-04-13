@@ -5,17 +5,27 @@ using FlavorFiesta.BusinessLogic;
 
 namespace FlavorFiesta.DataPersistance
 {
+    /// <summary>
+    /// Manages the persistence of user preferences.
+    /// </summary>
     public class PrefManagerDataPersistence
     {
         private List<BusinessLogic.Preferences> _preferencesList = new List<BusinessLogic.Preferences>();
         private readonly string _filePath;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PrefManagerDataPersistence"/> class.
+        /// </summary>
+        /// <param name="filePath">The file path where preferences will be stored.</param>
         public PrefManagerDataPersistence(string filePath)
         {
             _filePath = filePath;
             LoadPreferences();
         }
-
+        /// <summary>
+        /// Adds preferences to the list and saves them.
+        /// </summary>
+        /// <param name="preferences">The preferences to add.</param>
         public void AddPreferences(BusinessLogic.Preferences preferences)
         {
             _preferencesList.Add(preferences);
