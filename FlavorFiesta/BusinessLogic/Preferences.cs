@@ -1,6 +1,9 @@
 ﻿using System;
 namespace FlavorFiesta.BusinessLogic
 {
+    /// <summary>
+    /// Represents user preferences for dietary and culinary choices.
+    /// </summary>
     public class Preferences
     {
         #region Fields
@@ -16,6 +19,18 @@ namespace FlavorFiesta.BusinessLogic
         #endregion
 
         #region Constructor
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Preferences"/> class.
+        /// </summary>
+        /// <param name="dietType">The type of diet.</param>
+        /// <param name="cusineType">The type of cuisine.</param>
+        /// <param name="mealType">The type of meal.</param>
+        /// <param name="caloriesRange">The range of calories.</param>
+        /// <param name="protenRange">The range of protein.</param>
+        /// <param name="sugarRange">The range of sugar.</param>
+        /// <param name="serveingsRange">The range of servings.</param>
+        /// <param name="prepTimeRange">The range of preparation time.</param>
+        /// <param name="dietaryRestrictions">The dietary restrictions.</param>
         public Preferences(string dietType, string cusineType, string mealType, string caloriesRange, string protenRange,
             string sugarRange, string serveingsRange, string prepTimeRange, List<string> dietaryRestrictions)
         {
@@ -153,8 +168,11 @@ namespace FlavorFiesta.BusinessLogic
         #endregion
 
         #region Methods
-        // Method to add a dietary restriction
-        public void AddDietaryRestriction(string restriction)
+        /// <summary>
+        /// Adds a dietary restriction.
+        /// </summary>
+        /// <param name="restriction">The dietary restriction to add.</param>
+        public void AddDietaryRestriction(string restriction) // Method to add a dietary restriction
         {
             if (string.IsNullOrWhiteSpace(restriction))
             {
