@@ -10,11 +10,6 @@ namespace FlavorFiesta.Pages
     {
         private string _dietType;
 
-        public FoodChoiceOptions()
-        {
-            InitializeComponent();
-        }
-
         public FoodChoiceOptions(string dietType, string cusineType, string mealType, int caloriesRange, int proteinRange, int sugarRange, int servingsRange, TimeSpan prepTimeRange, List<string> dietaryRestrictions)
         {
             InitializeComponent();
