@@ -33,8 +33,14 @@ namespace FlavorFiesta.Pages
 
         private async void OnSubmitClicked(object sender, EventArgs e)
         {
-            // Navigate to the next page with the preferences
-            await Navigation.PushAsync(new NutritionalPreferencesPage(_dietType,_cuisineType,_recipeType));
+            if (!string.IsNullOrEmpty(_recipeType))
+            {
+                await Navigation.PushAsync(new NutritionalPreferencesPage(_dietType, _cuisineType, _recipeType));
+            }
+            else
+            {
+                await DisplayAlert("Selection Missing", "Please select a recipe type.", "OK");
+            }
         }
     }
 }

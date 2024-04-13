@@ -37,13 +37,36 @@ namespace FlavorFiesta.Pages
         // Event handler for when the Submit button is clicked
         private async void OnSubmit(object sender, EventArgs e)
         {
-            MakeUserPreference();
-            _prefManager.AddPreferences(_preferences);
-
-            Debug.WriteLine("Current navigation stack count: " + Navigation.NavigationStack.Count);
-            await Navigation.PushAsync(new ChooseRecipe(_preferences));
+            try
+            {
+                if (AreAllPreferencesSelected())
+                            {
+                                MakeUserPreference();
+                                _prefManager.AddPreferences(_preferences);
+                                await Navigation.PushAsync(new ChooseRecipe(_preferences));
+                            }
+                            else
+                            {
+                                await DisplayAlert("Selection Missing", "Please complete all selections before proceeding.", "OK");
+                            }
+            }
+            catch(Exception ex)
+            {
+                await DisplayAlert("Error", ex.Message, "Ok");
+            }
+            
         }
 
+        private bool AreAllPreferencesSelected()
+        {
+            // Check that all required selections have been made
+            return !string.IsNullOrEmpty(_caloriesRange) &&
+                   !string.IsNullOrEmpty(_proteinRange) &&
+                   !string.IsNullOrEmpty(_sugarRange) &&
+                   !string.IsNullOrEmpty(_servingsRange) &&
+                   !string.IsNullOrEmpty(_prepTimeRange) &&
+                   _dietaryRestrictions.Count > 0;
+        }
         //Make the user preferences object to send to next page
         public FlavorFiesta.BusinessLogic.Preferences MakeUserPreference()
         {
