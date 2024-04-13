@@ -4,6 +4,7 @@ namespace FlavorFiesta.BusinessLogic
     /// <summary>
     /// Represents user preferences for dietary and culinary choices.
     /// </summary>
+    /// Making A commit git reset to git rid of errors
     public class Preferences
     {
         #region Fields
