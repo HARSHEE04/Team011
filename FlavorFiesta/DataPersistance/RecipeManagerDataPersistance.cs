@@ -43,8 +43,8 @@ namespace FlavorFiesta.DataPersistance
                         parts[7], // proteinRange
                         parts[8], // sugarRange
                         parts[9], // servingsRange
-                        parts[10], // prepTimeRange
-                        new List<string>(parts[11].Split(';')) // dietaryRestrictions
+                        parts[10] // prepTimeRange
+                       
                     );
 
                     //new recipe object made

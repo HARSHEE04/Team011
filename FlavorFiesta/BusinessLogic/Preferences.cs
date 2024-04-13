@@ -16,7 +16,7 @@ namespace FlavorFiesta.BusinessLogic
         private string _sugarRange;
         private string _servingsRange;
         private string _prepTimeRange;
-        private List<string> _dietaryRestrictions = new List<string>();
+        //private List<string> _dietaryRestrictions = new List<string>();
         #endregion
 
         #region Constructor
@@ -31,9 +31,9 @@ namespace FlavorFiesta.BusinessLogic
         /// <param name="sugarRange">The range of sugar.</param>
         /// <param name="serveingsRange">The range of servings.</param>
         /// <param name="prepTimeRange">The range of preparation time.</param>
-        /// <param name="dietaryRestrictions">The dietary restrictions.</param>
+        ///// <param name="dietaryRestrictions">The dietary restrictions.</param>
         public Preferences(string dietType, string cusineType, string mealType, string caloriesRange, string protenRange,
-            string sugarRange, string serveingsRange, string prepTimeRange, List<string> dietaryRestrictions)
+            string sugarRange, string serveingsRange, string prepTimeRange)                                              //(List<string> dietaryRestrictions)
         {
             //explained why i used a method here in report - Maryam
             DietType = ValidateInput(dietType, nameof(DietType)); 
@@ -44,7 +44,7 @@ namespace FlavorFiesta.BusinessLogic
             SugarRange = ValidateInput(sugarRange, nameof(SugarRange));
             ServingsRange = ValidateInput(serveingsRange, nameof(ServingsRange));
             PrepTimeRange = ValidateInput(prepTimeRange, nameof(PrepTimeRange));
-            DietaryRestrictions = dietaryRestrictions ?? throw new ArgumentNullException(nameof(dietaryRestrictions));
+            //DietaryRestrictions = dietaryRestrictions ?? throw new ArgumentNullException(nameof(dietaryRestrictions));
         }
         #endregion
 
@@ -154,38 +154,38 @@ namespace FlavorFiesta.BusinessLogic
             }
         }
 
-        public List<string> DietaryRestrictions
-        {
-            get { return _dietaryRestrictions; }
-            init
-            {
-                if (value == null)
-                {
-                    throw new ArgumentNullException(nameof(DietaryRestrictions), "Dietary restrictions list cannot be null.");
-                }
-                _dietaryRestrictions = value;
-            }
-        }
+        //public List<string> DietaryRestrictions
+        //{
+        //    get { return _dietaryRestrictions; }
+        //    init
+        //    {
+        //        if (value == null)
+        //        {
+        //            throw new ArgumentNullException(nameof(DietaryRestrictions), "Dietary restrictions list cannot be null.");
+        //        }
+        //        _dietaryRestrictions = value;
+        //    }
+        //}
         #endregion
 
         #region Methods
         /// <summary>
-        /// Adds a dietary restriction.
-        /// </summary>
-        /// <param name="restriction">The dietary restriction to add.</param>
-        public void AddDietaryRestriction(string restriction) // Method to add a dietary restriction
-        {
-            if (string.IsNullOrWhiteSpace(restriction))
-            {
-                throw new ArgumentException("Restriction cannot be null or whitespace.", nameof(restriction));
-            }
-            _dietaryRestrictions.Add(restriction);
-        }
+        ///// Adds a dietary restriction.
+        ///// </summary>
+        ///// <param name="restriction">The dietary restriction to add.</param>
+        //public void AddDietaryRestriction(string restriction) // Method to add a dietary restriction
+        //{
+        //    if (string.IsNullOrWhiteSpace(restriction))
+        //    {
+        //        throw new ArgumentException("Restriction cannot be null or whitespace.", nameof(restriction));
+        //    }
+        //    _dietaryRestrictions.Add(restriction);
+        //}
 
-        public void RemoveDietaryRestriction(string restriction)
-        {
-            _dietaryRestrictions.Remove(restriction);
-        }
+        //public void RemoveDietaryRestriction(string restriction)
+        //{
+        //    _dietaryRestrictions.Remove(restriction);
+        //}
 
         // Helper method for validation
         private static string ValidateInput(string value, string propertyName)

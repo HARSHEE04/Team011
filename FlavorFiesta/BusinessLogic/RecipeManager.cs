@@ -28,14 +28,14 @@ namespace FlavorFiesta.BusinessLogic
         /// <param name="userPreferences">This is an object of the Preferneces class and is supposed to hold the usersPreferences when implemented in the code behind.</param>
         /// <param name="csvAccess">This is an object of the RecipeManagerDataPersistance class and allows us to use the ReadRecipesFromCSV method which is present in that class.</param>
         /// <returns></returns>
-        public List<Recipe> SearchRecipe(Preferences userPreferences, RecipeManagerDataPersistance csvAccess) //just used dependency relationship for loose coupling
+        public Recipe SearchRecipe(Preferences userPreferences, RecipeManagerDataPersistance csvAccess) //just used dependency relationship for loose coupling
         {
             List<Recipe> recipes = csvAccess.ReadRecipesFromCSV(); //now we have the list of recipes from the CSV stored into this local list
 
            
             ///The methods used here are referenced below and explained in the project report in the learnings section
             
-            var matchingRecipeRequests = (from recipe in recipes
+            Recipe matchingRecipeRequests = (from recipe in recipes
                                           where recipe.RecipePreferences.DietType == userPreferences.DietType &&
                                           recipe.RecipePreferences.CuisineType == userPreferences.CuisineType &&
                                           recipe.RecipePreferences.MealType == userPreferences.MealType &&
@@ -43,9 +43,9 @@ namespace FlavorFiesta.BusinessLogic
                                           recipe.RecipePreferences.ProteinRange == userPreferences.ProteinRange &&
                                           recipe.RecipePreferences.SugarRange == userPreferences.SugarRange &&
                                           recipe.RecipePreferences.ServingsRange == userPreferences.ServingsRange &&
-                                          recipe.RecipePreferences.PrepTimeRange == userPreferences.PrepTimeRange &&
-                                          recipe.RecipePreferences.DietaryRestrictions.SequenceEqual(userPreferences.DietaryRestrictions)
-                                          select recipe).Take(2).ToList();
+                                          recipe.RecipePreferences.PrepTimeRange == userPreferences.PrepTimeRange 
+                                          //recipe.RecipePreferences.DietaryRestrictions.SequenceEqual(userPreferences.DietaryRestrictions)
+                                          select recipe).FirstOrDefault(); //returns first recipe that matches or null if none are found
 
             return matchingRecipeRequests;
             // EXPLAIN SEQUENCEEQUAL AND ToList, take 

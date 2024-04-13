@@ -27,7 +27,7 @@ namespace FlavorFiesta.BusinessLogic
         public Preferences  RecipePreferences
         { get { return _recipePreferences; }
           set { _recipePreferences = value; }
-            }
+        }
      
 
         public string Name

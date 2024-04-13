@@ -87,7 +87,7 @@ namespace FlavorFiesta.Pages
         {
             //make a new instance of preferences class
             FlavorFiesta.BusinessLogic.Preferences preference1 = new FlavorFiesta.BusinessLogic.Preferences(
-                _dietType, _cuisineType, _recipeType, _caloriesRange, _proteinRange, _sugarRange, _servingsRange, _prepTimeRange, _dietaryRestrictions);
+                _dietType, _cuisineType, _recipeType, _caloriesRange, _proteinRange, _sugarRange, _servingsRange, _prepTimeRange); //_dietaryRestrictions
 
             _preferences = preference1;
             return _preferences;
