@@ -32,40 +32,44 @@ namespace FlavorFiesta.BusinessLogic
         {
             List<Recipe> recipes = csvAccess.ReadRecipesFromCSV(); //now we have the list of recipes from the CSV stored into this local list
 
-           
+
             ///The methods used here are referenced below and explained in the project report in the learnings section
-            
-            Recipe matchingRecipeRequests = (from recipe in recipes
-                                          where recipe.RecipePreferences.DietType == userPreferences.DietType &&
-                                          recipe.RecipePreferences.CuisineType == userPreferences.CuisineType &&
-                                          recipe.RecipePreferences.MealType == userPreferences.MealType &&
-                                          recipe.RecipePreferences.CaloriesRange == userPreferences.CaloriesRange &&
-                                          recipe.RecipePreferences.ProteinRange == userPreferences.ProteinRange &&
-                                          recipe.RecipePreferences.SugarRange == userPreferences.SugarRange &&
-                                          recipe.RecipePreferences.ServingsRange == userPreferences.ServingsRange &&
-                                          recipe.RecipePreferences.PrepTimeRange == userPreferences.PrepTimeRange 
-                                          //recipe.RecipePreferences.DietaryRestrictions.SequenceEqual(userPreferences.DietaryRestrictions)
-                                          select recipe).FirstOrDefault(); //returns first recipe that matches or null if none are found
 
-            return matchingRecipeRequests;
-            // EXPLAIN SEQUENCEEQUAL AND ToList, take 
+            // Iterate over each recipe and check if it matches the user preferences
+            foreach (Recipe recipe in recipes)
+            {
+                if (recipe.RecipePreferences.DietType == userPreferences.DietType &&
+                    recipe.RecipePreferences.CuisineType == userPreferences.CuisineType &&
+                    recipe.RecipePreferences.MealType == userPreferences.MealType &&
+                    recipe.RecipePreferences.CaloriesRange == userPreferences.CaloriesRange &&
+                    recipe.RecipePreferences.ProteinRange == userPreferences.ProteinRange &&
+                    recipe.RecipePreferences.SugarRange == userPreferences.SugarRange &&
+                    recipe.RecipePreferences.ServingsRange == userPreferences.ServingsRange &&
+                    recipe.RecipePreferences.PrepTimeRange == userPreferences.PrepTimeRange)
+                {
+                    // Return the first matching recipe
+                    return recipe;
+                }
+            }
 
-            //sequence equal https://www.codingame.com/playgrounds/213/using-c-linq---a-practical-overview/sequenceequal
-            //ToList: https://learn.microsoft.com/en-us/dotnet/api/system.linq.enumerable.tolist?view=net-8.0&redirectedfrom=MSDN#System_Linq_Enumerable_ToList__1_System_Collections_Generic_IEnumerable___0__
-            //TO LIST USAGE GUIDE: https://www.codingame.com/playgrounds/213/using-c-linq---a-practical-overview/tolist-and-toarray,
-            //TRY FROM WHERE SELECT SYNTAX https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/select-clause
-            //HAVE TO USE LINQ QUERY SYNATX : https://learn.microsoft.com/en-us/dotnet/csharp/linq/get-started/write-linq-queries
-
-            //figure out way to only get two recipes from all the matches, try TAKE() METHOD: https://www.tutorialspoint.com/chash-queryable-take-method
+            // If no matching recipe is found, return null
+            return null;
         }
+        // EXPLAIN SEQUENCEEQUAL AND ToList, take 
+
+        //sequence equal https://www.codingame.com/playgrounds/213/using-c-linq---a-practical-overview/sequenceequal
+        //ToList: https://learn.microsoft.com/en-us/dotnet/api/system.linq.enumerable.tolist?view=net-8.0&redirectedfrom=MSDN#System_Linq_Enumerable_ToList__1_System_Collections_Generic_IEnumerable___0__
+        //TO LIST USAGE GUIDE: https://www.codingame.com/playgrounds/213/using-c-linq---a-practical-overview/tolist-and-toarray,
+        //TRY FROM WHERE SELECT SYNTAX https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/select-clause
+        //HAVE TO USE LINQ QUERY SYNATX : https://learn.microsoft.com/en-us/dotnet/csharp/linq/get-started/write-linq-queries
+
+        //figure out way to only get two recipes from all the matches, try TAKE() METHOD: https://www.tutorialspoint.com/chash-queryable-take-method
+    }
 
       
     }
 
 
-
-
-}
 
 
 

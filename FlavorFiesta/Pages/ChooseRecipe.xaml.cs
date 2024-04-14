@@ -8,7 +8,7 @@ public partial class ChooseRecipe : ContentPage
     private RecipeManager _recipeManager;
     private RecipeManagerDataPersistance _csvRecipes;
 
-    private List<Recipe> allMatchingRecipes;
+    private Recipe allMatchingRecipes;
     public ChooseRecipe(BusinessLogic.Preferences prefs)
     {
         InitializeComponent();
@@ -22,25 +22,28 @@ public partial class ChooseRecipe : ContentPage
         try
         {
             allMatchingRecipes = _recipeManager.SearchRecipe(prefs, _csvRecipes);
-            Debug.WriteLine($"Found {allMatchingRecipes.Count} matching recipes.");
+            //Debug.WriteLine($"Found {allMatchingRecipes.Count} matching recipes.");
+            Recipe1Name.Text = allMatchingRecipes.Name;
+            Recipe1Image.Source = allMatchingRecipes.RecipeImage;
+            Recipe1PrepTme.Text = allMatchingRecipes.RecipePreferences.PrepTimeRange.ToString();
 
-            if (allMatchingRecipes.Count >= 2)
-            {
-                // Assuming there are at least two recipes to display
-                Recipe1Name.Text = allMatchingRecipes[0].Name;
-                Recipe1Image.Source = allMatchingRecipes[0].RecipeImage;
-                Recipe1PrepTme.Text = allMatchingRecipes[0].RecipePreferences.PrepTimeRange.ToString();
+            //if (allMatchingRecipes.Count >= 2)
+            //{
+            //    // Assuming there are at least two recipes to display
+            //    Recipe1Name.Text = allMatchingRecipes[0].Name;
+            //    Recipe1Image.Source = allMatchingRecipes[0].RecipeImage;
+            //    Recipe1PrepTme.Text = allMatchingRecipes[0].RecipePreferences.PrepTimeRange.ToString();
 
-                Recipe2Name.Text = allMatchingRecipes[1].Name;
-                Recipe2Image.Source = allMatchingRecipes[1].RecipeImage;
-                Recipe2PrepTme.Text = allMatchingRecipes[1].RecipePreferences.PrepTimeRange.ToString();
-            }
-            else
-            {
-                // Handle the scenario where fewer than two recipes are found
-                Debug.WriteLine("Not enough recipes found to display.");
-                DisplayAlert("Notice", "Not enough recipes found based on your preferences.", "OK");
-            }
+            //    Recipe2Name.Text = allMatchingRecipes[1].Name;
+            //    Recipe2Image.Source = allMatchingRecipes[1].RecipeImage;
+            //    Recipe2PrepTme.Text = allMatchingRecipes[1].RecipePreferences.PrepTimeRange.ToString();
+            //}
+            //else
+            //{
+            //    // Handle the scenario where fewer than two recipes are found
+            //    Debug.WriteLine("Not enough recipes found to display.");
+            //    DisplayAlert("Notice", "Not enough recipes found based on your preferences.", "OK");
+            //}
         }
         catch (Exception ex)
         {
@@ -49,21 +52,21 @@ public partial class ChooseRecipe : ContentPage
         }
     }
 
-    private async void OnRecipe1Chosen(object sender, EventArgs e)
-    {
-        if (allMatchingRecipes.Count > 0)
-        {
-            Recipe selectedRecipe = allMatchingRecipes[0];
-            await Navigation.PushAsync(new DisplayRecipe(selectedRecipe));
-        }
-    }
+    //private async void OnRecipe1Chosen(object sender, EventArgs e)
+    //{
+    //    if (allMatchingRecipes.Count > 0)
+    //    {
+    //        Recipe selectedRecipe = allMatchingRecipes[0];
+    //        await Navigation.PushAsync(new DisplayRecipe(selectedRecipe));
+    //    }
+    //}
 
-    private async void OnRecipe2Chosen(object sender, EventArgs e)
-    {
-        if (allMatchingRecipes.Count > 1)
-        {
-            Recipe selectedRecipe = allMatchingRecipes[1];
-            await Navigation.PushAsync(new DisplayRecipe(selectedRecipe));
-        }
-    }
+    //private async void OnRecipe2Chosen(object sender, EventArgs e)
+    //{
+    //    if (allMatchingRecipes.Count > 1)
+    //    {
+    //        Recipe selectedRecipe = allMatchingRecipes[1];
+    //        await Navigation.PushAsync(new DisplayRecipe(selectedRecipe));
+    //    }
+    //}
 }
