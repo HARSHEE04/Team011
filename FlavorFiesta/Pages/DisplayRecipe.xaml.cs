@@ -10,7 +10,7 @@ public partial class DisplayRecipe : ContentPage
         
 		InitializeComponent();
         chosenRecipe = selectedRecipe;
-        this.BindingContext = chosenRecipe;
+        //finish showing the information about the recipe here.
     }
 
     private void OnExit(object sender, EventArgs e)

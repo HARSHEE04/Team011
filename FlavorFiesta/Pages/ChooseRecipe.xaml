@@ -11,68 +11,37 @@
         </Grid>
     </Shell.TitleView>
 
+    <VerticalStackLayout>
 
-    <Grid Padding="10"
-          RowDefinitions="Auto, Auto, Auto, Auto"
-          ColumnDefinitions="*, *, *"
-          BackgroundColor="Olive">
         <Label 
-            Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3"
-            FontSize="Medium"
-            Text="Please select the image of the recipe you would like to explore"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+     FontSize="Medium"
+     Text="RECIPE FOUND!"
+     VerticalOptions="Center" 
+     HorizontalOptions="Center" />
 
         <Label
-            Grid.Row="1" Grid.Column="0"
-            x:Name="Recipe1Name"
-            VerticalOptions="Center"
-            HorizontalOptions="Center"
-            FontSize="Medium">
+       x:Name="Recipe1Name"
+       VerticalOptions="Center"
+       HorizontalOptions="Center"
+       FontSize="Medium">
         </Label>
 
-        <Label
-             Grid.Row="2" Grid.Column="0"
-             x:Name="Recipe2Name"
-             VerticalOptions="Center"
-             HorizontalOptions="Center"
-             FontSize="Medium">
-        </Label>
-
-        <ImageButton
-            Grid.Row="1" Grid.Column="1"
-             MaximumHeightRequest="200"
+        <Image
+            x:Name="RecipeImage"
+            MaximumHeightRequest="200"
              MaximumWidthRequest="200"
-            x:Name="Recipe1Image"
             VerticalOptions="Center"
             HorizontalOptions="Center">
-        </ImageButton>
-
-        <ImageButton
-         Grid.Row="2" Grid.Column="1"
-       MaximumHeightRequest="200"
-       MaximumWidthRequest="200"
-         x:Name="Recipe2Image"
-         VerticalOptions="Center"
-         HorizontalOptions="Center">
-        </ImageButton>
-
-        <Label
-     Grid.Row="1" Grid.Column="2"
+        </Image>
+        
+       <Label
+    
      x:Name="Recipe1PrepTme"
      VerticalOptions="Center"
      HorizontalOptions="Center"
      FontSize="Medium">
-        </Label>
+       </Label>
 
-        <Label
-      Grid.Row="2" Grid.Column="2"
-      x:Name="Recipe2PrepTme"
-      VerticalOptions="Center"
-      HorizontalOptions="Center"
-      FontSize="Medium">
-        </Label>
+    </VerticalStackLayout>
 
-    </Grid>
-   
 </ContentPage>

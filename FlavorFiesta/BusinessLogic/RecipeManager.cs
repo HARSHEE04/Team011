@@ -28,24 +28,20 @@ namespace FlavorFiesta.BusinessLogic
         /// <param name="userPreferences">This is an object of the Preferneces class and is supposed to hold the usersPreferences when implemented in the code behind.</param>
         /// <param name="csvAccess">This is an object of the RecipeManagerDataPersistance class and allows us to use the ReadRecipesFromCSV method which is present in that class.</param>
         /// <returns></returns>
-        public Recipe SearchRecipe(Preferences userPreferences, RecipeManagerDataPersistance csvAccess) //just used dependency relationship for loose coupling
+        public Recipe SearchRecipe(Preferences userPreferences, RecipeManagerDataPersistance csvAccess)
         {
-            List<Recipe> recipes = csvAccess.ReadRecipesFromCSV(); //now we have the list of recipes from the CSV stored into this local list
+            List<Recipe> recipes = csvAccess.ReadRecipesFromCSV();
 
+            // Normalize user preferences for consistent comparison
+            Preferences normalizedPreferences = NormalizePreferences(userPreferences);
 
-            ///The methods used here are referenced below and explained in the project report in the learnings section
-
-            // Iterate over each recipe and check if it matches the user preferences
+            // Iterate over each recipe and check if it matches the normalized user preferences
             foreach (Recipe recipe in recipes)
             {
-                if (recipe.RecipePreferences.DietType == userPreferences.DietType &&
-                    recipe.RecipePreferences.CuisineType == userPreferences.CuisineType &&
-                    recipe.RecipePreferences.MealType == userPreferences.MealType &&
-                    recipe.RecipePreferences.CaloriesRange == userPreferences.CaloriesRange &&
-                    recipe.RecipePreferences.ProteinRange == userPreferences.ProteinRange &&
-                    recipe.RecipePreferences.SugarRange == userPreferences.SugarRange &&
-                    recipe.RecipePreferences.ServingsRange == userPreferences.ServingsRange &&
-                    recipe.RecipePreferences.PrepTimeRange == userPreferences.PrepTimeRange)
+                // Normalize recipe preferences for consistent comparison
+                Preferences normalizedRecipePreferences = NormalizePreferences(recipe.RecipePreferences);
+
+                if (ArePreferencesEqual(normalizedRecipePreferences, normalizedPreferences))
                 {
                     // Return the first matching recipe
                     return recipe;
@@ -55,19 +51,38 @@ namespace FlavorFiesta.BusinessLogic
             // If no matching recipe is found, return null
             return null;
         }
-        // EXPLAIN SEQUENCEEQUAL AND ToList, take 
 
-        //sequence equal https://www.codingame.com/playgrounds/213/using-c-linq---a-practical-overview/sequenceequal
-        //ToList: https://learn.microsoft.com/en-us/dotnet/api/system.linq.enumerable.tolist?view=net-8.0&redirectedfrom=MSDN#System_Linq_Enumerable_ToList__1_System_Collections_Generic_IEnumerable___0__
-        //TO LIST USAGE GUIDE: https://www.codingame.com/playgrounds/213/using-c-linq---a-practical-overview/tolist-and-toarray,
-        //TRY FROM WHERE SELECT SYNTAX https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/select-clause
-        //HAVE TO USE LINQ QUERY SYNATX : https://learn.microsoft.com/en-us/dotnet/csharp/linq/get-started/write-linq-queries
+        // Normalize preferences by trimming whitespace and converting to lowercase
+        private Preferences NormalizePreferences(Preferences preferences)
+        {
+            return new Preferences(
+                preferences.DietType?.Trim()?.ToLower(),
+                preferences.CuisineType?.Trim()?.ToLower(),
+                preferences.MealType?.Trim()?.ToLower(),
+                preferences.CaloriesRange?.Trim()?.ToLower(),
+                preferences.ProteinRange?.Trim()?.ToLower(),
+                preferences.SugarRange?.Trim()?.ToLower(),
+                preferences.ServingsRange?.Trim()?.ToLower(),
+                preferences.PrepTimeRange?.Trim()?.ToLower()
+            // preferences.DietaryRestrictions?.Select(dr => dr.Trim()?.ToLower())?.ToList()
+            );
+        }
 
-        //figure out way to only get two recipes from all the matches, try TAKE() METHOD: https://www.tutorialspoint.com/chash-queryable-take-method
+        // Compare two preferences objects for equality
+        private bool ArePreferencesEqual(Preferences preferences1, Preferences preferences2)
+        {
+            return preferences1.DietType == preferences2.DietType &&
+                   preferences1.CuisineType == preferences2.CuisineType &&
+                   preferences1.MealType == preferences2.MealType &&
+                   preferences1.CaloriesRange == preferences2.CaloriesRange &&
+                   preferences1.ProteinRange == preferences2.ProteinRange &&
+                   preferences1.SugarRange == preferences2.SugarRange &&
+                   preferences1.ServingsRange == preferences2.ServingsRange &&
+                   preferences1.PrepTimeRange == preferences2.PrepTimeRange;
+            // preferences1.DietaryRestrictions.SequenceEqual(preferences2.DietaryRestrictions);
+        }
     }
-
-      
-    }
+}
 
 
 
