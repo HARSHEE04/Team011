@@ -11,16 +11,19 @@
         </Grid>
     </Shell.TitleView>
 
-    <VerticalStackLayout>
+    <VerticalStackLayout
+        BackgroundColor="BurlyWood">
 
         <Label 
      FontSize="Medium"
      Text="RECIPE FOUND!"
+            Margin="5"
      VerticalOptions="Center" 
      HorizontalOptions="Center" />
 
         <Label
        x:Name="Recipe1Name"
+             Margin="5"
        VerticalOptions="Center"
        HorizontalOptions="Center"
        FontSize="Medium">
@@ -28,6 +31,7 @@
 
         <Image
             x:Name="RecipeImage"
+             Margin="5"
             MaximumHeightRequest="400"
              MaximumWidthRequest="400"
             VerticalOptions="Center"
@@ -36,12 +40,14 @@
         
        <Label
      x:Name="Recipe1PrepTme"
+            Margin="5"
      VerticalOptions="Center"
      HorizontalOptions="Center"
      FontSize="Medium">
        </Label>
         <Button
             Text="More Information"
+             Margin="5"
             Clicked="OnMoreInfo"
             VerticalOptions="Center"
             HorizontalOptions="Center">

@@ -8,6 +8,7 @@ using FlavorFiesta.BusinessLogic;
 
 namespace FlavorFiesta.DataPersistance
 {
+    //THIS FILE WAS MADE AND EDITED BY HARSHETA SHARMA
     internal class RecipeManagerDataPersistance
     {
         private  string _filePath;
@@ -15,7 +16,7 @@ namespace FlavorFiesta.DataPersistance
         ///read recipes from csv file and make it into a list
         public List<Recipe> ReadRecipesFromCSV() //could have put this into a method
         {
-            _filePath = @"C:\Users\Harsh\OneDrive\Desktop\recipes.txt";
+            _filePath = @"C:\Users\Harsh\OneDrive\Desktop\recipes.txt";  //PLEASE USE YOUR FILE PATH FOR THE ATTACHED TEXT FILE
             List<Recipe> list = new List<Recipe>();
 
             try
@@ -49,7 +50,7 @@ namespace FlavorFiesta.DataPersistance
 
                     //new recipe object made
                     Recipe recipe = new Recipe(name, recipeImage, recipeURL, preferences);
-                    //add this recipe to the list of recipes
+                    //added this recipe to the list of recipes
                     list.Add(recipe);
                 }
 

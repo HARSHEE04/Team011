@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FlavorFiesta")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+5daf2de90b88bff3f4a787e718b516ff54f8592d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+1b55849b531a26213898e4cc2b12eac3477cfd21")]
 [assembly: System.Reflection.AssemblyProductAttribute("FlavorFiesta")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FlavorFiesta")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

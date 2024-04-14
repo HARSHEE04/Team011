@@ -1,0 +1,37 @@
+Vegetarian Chili,vegetarianchili.png,https://cookieandkate.com/Vegetarian-chili-recipe/,Vegan ,American,Lunch,400-600,15-30,0-5,   2-10,30-60 
+Split Pea Soup with Ham,splitpeasoupwithham.png,https://stripedspatula.com/split-pea-soup-with-ham/#wprm-recipe-container-10188,Halal,American,Dinner,400-600,15-30,0-5,       2-10,60+
+Minestrone Soup,minestronesoup.png,https://www.loVegandlemons.com/minestrone-soup/,Vegetarian,Italian,Lunch,100-400,15-30,0-5,      2-10,30-60
+Kun Pao Chicken,kunpaochicken.png,https://www.onceuponachef.com/recipes/kun-pao-chicken.html,Non-Vegetarian,Chinese,Dinner,400-600,30+,0-5,   2-10,15-30 
+Dan Dan Noodles,candannoodles.png,https://thewoksoflife.com/dan-dan-noodles/,Non-Vegetarian,Chinese,Dinner,400-600,15-30,0-5,     2-10,60+ 
+Vegetarian Mapo Tofu,vegetarianmapotofu.png,https://omnivorescookbook.com/Vegetarian-mapo-tofu/,Vegan,Chinese,Dinner,400-600,15-30,0-5,     2-10,15-30 
+Chicken Alfredo,chickenalfredo.png,https://www.budetbytes.com/chicken-alfredo/,Non-Vegetarian,Italian-American,Dinner,400-600,30+,0-5,      2-10,30-60 
+Shrimp Scampi,shrimpscampi.png,https://www.themediterraneandish.com/shrimp-scampi/,Non-Vegetarian,Italian-American,Lunch,100-400,15-30,0-5,      2-10,15-30
+Vegetarian Lasana,vegetarianlasana.png,https://www.loVegandlemons.com/Vegetarian-lasana/#wprm-recipe-container-44365,Vegetarian,Italian,Lunch,400-600,15-30,  5-15,      2-10,30-60 
+Classic Caesar Salad,classiccaesarsalad.png,https://www.bonappetit.com/recipe/classic-caesar-salad,Vegetarian,American,Lunch,400-600,15-30,0-5,      2-10,15-30 
+BBQ Pulled Chicken Sandwiches,bbqpulledchickensandwiches.png,https://www.howsweeteats.com/2023/05/easy-pulled-chicken-sandwiches/,Non-Vegetarian,American,Dinner,400-600,30+,0-5,       2-10,30-60
+Penne Arrabbiata,pennearrabbiata.png,https://tastesbetterfromscratch.com/penne-arrabbiata/,Vegetarian,Italian,Lunch,400-600,15-30,5-15,2-10,15-30
+Eggplant Parmesan,eggplantparmesan.png,https://www.loVegandlemons.com/eplant-parmesan/#wprm-recipe-container-43028,Vegetarian,Italian-American,Dinner,400-600,15-30,0-5,2-10,30-60
+Chicken Marsala,chickenmarsala.png,https://www.onceuponachef.com/recipes/chicken-marsala.html#tabrecipe,Non-Vegetarian,American,Dinner,400-600,30+,0-5,2-10,30-60
+Shrimp and grits,shrimpandgrits.png,https://www.onceuponachef.com/recipes/shrimp-and-rits.html#tabrecipe,Non-Vegetarian,American ,Dinner,400-600,30+,0-5,2-10,30-60 
+Cobb Salad,cobbsalad.png,https://www.allrecipes.com/recipe/14415/cobb-salad/,Non-Vegetarian,American,Lunch,400-600,30+,0-5,     2-10,15-30 
+Creamy Tomato Pasta with Tortellini,creamytomatopastawithtortellini.png,https://www.saltandlavender.com/creamy-tomato-tortellini/,Vegetarian,Italian,Lunch,400-600,15-30,15-25,      2-10,15-30 
+Chicken Stir-Fry with Vegetables,chickenstirfrywithvegetables.png,https://www.momontimeout.com/easy-chicken-stir-fry-recipe/#recipe,Non-Vegetarian,Chinese,Dinner,100-400,30+,0-5,      2-10,15-30 
+Vegetarian Fried Rice,vegetarianfriedrice.png,https://www.simplyrecipes.com/recipes/easy_veetable_stir_fried_rice/,Vegetarian,Chinese,Dinner,400-600,15-30,0-5,   2-10,15-30 
+Pasta Primavera,pastaprimavera.png,https://www.loVegandlemons.com/pasta-primavera/#wprm-recipe-container-63997,Vegetarian,Italian,Lunch,400-600,15-30,  5-15,   2-10,15-30 
+Baked Ziti,bakedziti.png,https://www.onceuponachef.com/recipes/baked-ziti-with-sausae.html#tabrecipe,Non-Vegetarian,Italian,Lunch,400-600,15-30,0-5,  2-10,30-60 
+Chicken Pot Pie,chickenpotpie.png,https://sallysbakinaddiction.com/double-crust-chicken-pot-pie/#tasty-recipes-74828,Non-Vegetarian,American,Dinner,400-600,30+,0-5,   2-10,60+ 
+Mac and Cheese,macandcheese.png,https://www.thechunkychef.com/family-favorite-baked-mac-and-cheese/#wprm-recipe-container-9151,Vegetarian,American,Lunch,600+,15-30,0-5,   2-10,30-60 
+Philly Cheesesteak Sandwich,phillycheesesteaksandwich.png,https://natashaskitchen.com/philly-cheesesteak/,Non-Vegetarian,American,Lunch,400-600,30+,0-5,  2-10,30-60 
+Chicken Caesar Salad Wrap,chickencaesarsaladwrap.png,https://www.tasteandtellblo.com/chicken-caesar-wraps/#wprm-recipe-container-27074,Non-Vegetarian,American,Lunch,400-600,30+,0-5,      2-10,15-30
+Stir-Fried Beef with Broccoli,stirfriedbeefwithbroccoli.png,https://www.dinneratthezoo.com/beef-and-broccoli-stir-fry/,Non-Vegetarian,Chinese,Lunch,400-600,30+,0-5,2-10,15-30 
+Vegan Mapo Tofu with Vegetables,veganmapotofuwithvegetables.png,https://cookin.nytimes.com/recipes/1017358-Vegan-mapo-tofu,Vegan,Chinese,Lunch,400-600,15-30,0-5,2-10,15-30 
+Beef Lasgana,beeflasagne.png,https://www.foodandwine.com/recipes/round-beef-lasana,Non-Vegetarian,Italian,Dinner,400-600,15-30,15-25,2-10,60+ 
+Tofu Scramble with Vegetables,tofuscramblewithvegetables.png,https://zardyplants.com/recipes/easy-tofu-scramble-with-veies/#tasty-recipes-4165-jump-taret,Vegan,American,Breakfast,100-400,15-30,0-5, 2-10,15-30
+Black Bean Burgers on Buns,blackbeanburgersonbuns.png,https://www.loVegandlemons.com/black-bean-burer-recipe/#wprm-recipe-container-49475,Non-Vegetarian,American,Lunch,400-600,15-30,0-5,      2-10,15-30 
+Thai Peanut Noodles,thaipeanutnoodles.png,https://www.noracooks.com/peanut-noodles/,Vegetarian ,Chinese,Lunch,400-600,15-30,15-25,2-10,15-30
+Roasted Chicken with Vegetables,roastedchickenwithvegetables.png,https://www.budetbytes.com/roasted-chicken-and-veetables/,Non-Vegetarian,American ,Dinner,400-600,30+,0-5,2-10,60+ 
+Creamy Tomato Pasta with Cavatappi,creamytomatopastawithcavatappi.png,https://www.onnawantseconds.com/cavatappi-creamy-tomato-sauce/#wprm-recipe-container-15976,Vegetarian ,Italian,Lunch,400-600,15-30,15-25,2-10,30-60 
+Caprese Salad,capresesalad.png,https://www.loVegandlemons.com/caprese-salad/#wprm-recipe-container-43080,Vegetarian,Italian, Lunch,100-400,  5-14,0-5,2-10,15-30 
+Blueberry Muffins,blueberrymuffins.png,https://www.inspiredtaste.net/18982/our-favorite-easy-blueberry-muffin-recipe/,Vegetarian,American, Dessert,100-400,5-14,15-25,2-10,15-30 
+Flourless Chocolate Cake,flourlesschocolatecake.png,https://sallysbakinaddiction.com/flourless-chocolate-cake-recipe/#tasty-recipes-80626,Vegetarian,American,Dessert,100-400,5-14,15-25,        2-10,30-60 
+Baked Pears with Honey and Nuts ,bakedpearswithhoneyandnuts.png,https://marisamoore.com/honey-roasted-pears/#wprm-recipe-container-7161,Vegan ,American,Dessert,100-400,5-14,15-25,      2-10,15-30

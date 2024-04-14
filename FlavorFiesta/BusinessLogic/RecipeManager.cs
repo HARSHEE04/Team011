@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using FlavorFiesta.DataPersistance;
 
-
+//THIS FILE WAS MADE AND EDITED BY HARSHETA SHARMA
 namespace FlavorFiesta.BusinessLogic
 {
     /// <summary>
@@ -48,7 +48,14 @@ namespace FlavorFiesta.BusinessLogic
             return null;
         }
 
-           //explain use
+        /// <summary>
+        /// This method is used to ensure that te string properities which are present in the Preferences class are processed in a way that is consistent so they can be used for comparision. It uses the Trim()? and the ToLower() method
+        /// which are explained in my report- HARSHETA SHARMA
+        /// Source for TRIM()? : https://learn.microsoft.com/en-us/dotnet/api/system.string.trim?view=net-8.0
+        /// SOURCE FOR TOLOWER() : https://learn.microsoft.com/en-us/dotnet/api/system.string.tolower?view=net-8.0
+        /// </summary>
+        /// <param name="preferences"> This takes in a Preferences class object to normalize it which means put it in a format that is consistent so we can use it for comparision</param>
+        /// <returns></returns>
         private Preferences NormalizePreferences(Preferences preferences)
         {
             return new Preferences(
@@ -64,7 +71,12 @@ namespace FlavorFiesta.BusinessLogic
             );
         }
 
-        
+        /// <summary>
+        /// This method compares two instances of the preferences class to see if they are equal which is why it takes in two preferences objects for comparison
+        /// </summary>
+        /// <param name="preferences1">This is our case is the recipe preferences from the text file, object of preferences class</param>
+        /// <param name="preferences2"> this is in our case is the user preferences, object of preferences class</param>
+        /// <returns></returns>
         private bool ArePreferencesEqual(Preferences preferences1, Preferences preferences2)
         {
             return preferences1.DietType == preferences2.DietType &&
