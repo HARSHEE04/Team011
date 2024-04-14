@@ -10,7 +10,9 @@ public partial class DisplayRecipe : ContentPage
         
 		InitializeComponent();
         chosenRecipe = selectedRecipe;
-        //finish showing the information about the recipe here.
+        RecipeName.Text = selectedRecipe.Name;
+        RecipeURL.Text = selectedRecipe.RecipeURL;
+        ChosenRecipeImage.Source=chosenRecipe.RecipeImage;
     }
 
     private void OnExit(object sender, EventArgs e)

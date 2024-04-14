@@ -32,27 +32,23 @@ namespace FlavorFiesta.BusinessLogic
         {
             List<Recipe> recipes = csvAccess.ReadRecipesFromCSV();
 
-            // Normalize user preferences for consistent comparison
+            
             Preferences normalizedPreferences = NormalizePreferences(userPreferences);
-
-            // Iterate over each recipe and check if it matches the normalized user preferences
             foreach (Recipe recipe in recipes)
             {
-                // Normalize recipe preferences for consistent comparison
+                
                 Preferences normalizedRecipePreferences = NormalizePreferences(recipe.RecipePreferences);
 
                 if (ArePreferencesEqual(normalizedRecipePreferences, normalizedPreferences))
                 {
-                    // Return the first matching recipe
+                    
                     return recipe;
                 }
             }
-
-            // If no matching recipe is found, return null
             return null;
         }
 
-        // Normalize preferences by trimming whitespace and converting to lowercase
+           //explain use
         private Preferences NormalizePreferences(Preferences preferences)
         {
             return new Preferences(
@@ -64,11 +60,11 @@ namespace FlavorFiesta.BusinessLogic
                 preferences.SugarRange?.Trim()?.ToLower(),
                 preferences.ServingsRange?.Trim()?.ToLower(),
                 preferences.PrepTimeRange?.Trim()?.ToLower()
-            // preferences.DietaryRestrictions?.Select(dr => dr.Trim()?.ToLower())?.ToList()
+           
             );
         }
 
-        // Compare two preferences objects for equality
+        
         private bool ArePreferencesEqual(Preferences preferences1, Preferences preferences2)
         {
             return preferences1.DietType == preferences2.DietType &&
@@ -79,7 +75,7 @@ namespace FlavorFiesta.BusinessLogic
                    preferences1.SugarRange == preferences2.SugarRange &&
                    preferences1.ServingsRange == preferences2.ServingsRange &&
                    preferences1.PrepTimeRange == preferences2.PrepTimeRange;
-            // preferences1.DietaryRestrictions.SequenceEqual(preferences2.DietaryRestrictions);
+            
         }
     }
 }

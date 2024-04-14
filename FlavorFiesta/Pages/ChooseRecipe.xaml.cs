@@ -37,6 +37,8 @@ public partial class ChooseRecipe : ContentPage
         }
     }
 
-    
-   
+    private void OnMoreInfo(object sender, EventArgs e)
+    {
+        Navigation.PushAsync(new DisplayRecipe(allMatchingRecipes));
+    }
 }

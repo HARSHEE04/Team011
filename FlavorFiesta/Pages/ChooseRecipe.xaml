@@ -28,19 +28,24 @@
 
         <Image
             x:Name="RecipeImage"
-            MaximumHeightRequest="200"
-             MaximumWidthRequest="200"
+            MaximumHeightRequest="400"
+             MaximumWidthRequest="400"
             VerticalOptions="Center"
             HorizontalOptions="Center">
         </Image>
         
        <Label
-    
      x:Name="Recipe1PrepTme"
      VerticalOptions="Center"
      HorizontalOptions="Center"
      FontSize="Medium">
        </Label>
+        <Button
+            Text="More Information"
+            Clicked="OnMoreInfo"
+            VerticalOptions="Center"
+            HorizontalOptions="Center">
+        </Button>
 
     </VerticalStackLayout>
 
