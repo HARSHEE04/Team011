@@ -2,67 +2,87 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FlavorFiesta.Pages.DisplayRecipe"
-             Title="DisplayRecipe"
-             >
+             Title="DisplayRecipe">
 
 
-    <Shell.TitleView>
-        <Grid>
+    <Grid>
+        <!-- Background Image -->
+        <Image Source="background.png" Aspect="AspectFill"/>
+
+        <!-- Content -->
+        <StackLayout Padding="30" VerticalOptions="Center">
+            <!-- Title -->
             <Label Text="Recipe Information"
-             HorizontalOptions="Center"  VerticalOptions="Center"
-            FontSize="Title" TextColor="White"></Label>
-        </Grid>
-    </Shell.TitleView>
+                   FontSize="36"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   TextColor="White"
+                   Margin="0,0,0,20"/>
 
+            <!-- Frame for Recipe Details -->
+            <Frame BackgroundColor="#FF69B4"
+                   Padding="20"
+                   CornerRadius="10"
+                   HorizontalOptions="Fill"
+                   VerticalOptions="Start">
+                <Grid ColumnDefinitions="*,3*,2*"
+                      RowDefinitions="*,*">
 
-    <Grid
-        BackgroundColor="LightCoral"
-        ColumnDefinitions="*,3*,2*"
-        RowDefinitions="*,*">
-        <Label 
-            Grid.Row="0"  Grid.Column="0"
-            FontSize="Medium"
-            Text="Recipe Name:"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+                    <!-- Recipe Name Label -->
+                    <Label Grid.Row="0"
+                           Grid.Column="0"
+                           FontSize="Medium"
+                           Text="Recipe Name:"
+                           VerticalOptions="Center"
+                           HorizontalOptions="Center"
+                           TextColor="White"/>
 
-        <Label
-            Grid.Row="0"  Grid.Column="1"
-          FontSize="Medium"
-            x:Name="RecipeName"
-            VerticalOptions="Center">
-        </Label>
+                    <!-- Recipe Name -->
+                    <Label Grid.Row="0"
+                           Grid.Column="1"
+                           FontSize="Medium"
+                           x:Name="RecipeName"
+                           VerticalOptions="Center"
+                           TextColor="White"/>
 
-        <Label 
-           Grid.Row="1"  Grid.Column="0"
-               FontSize="Medium"
-           Text="Recipe URL:"
-           VerticalOptions="Center" 
-           HorizontalOptions="Center" />
+                    <!-- Recipe URL Label -->
+                    <Label Grid.Row="1"
+                           Grid.Column="0"
+                           FontSize="Medium"
+                           Text="Recipe URL:"
+                           VerticalOptions="Center"
+                           HorizontalOptions="Center"
+                           TextColor="White"/>
 
-        <Label
-           Grid.Row="1"  Grid.Column="1"
-             FontSize="Medium"
-           x:Name="RecipeURL"
-           VerticalOptions="Center">
-        </Label>
+                    <!-- Recipe URL -->
+                    <Label Grid.Row="1"
+                           Grid.Column="1"
+                           FontSize="Medium"
+                           x:Name="RecipeURL"
+                           VerticalOptions="Center"
+                           TextColor="White"/>
 
-        <Image
-            Grid.Row="0" Grid.Column="2" Grid.RowSpan="2"
-            x:Name="ChosenRecipeImage"
-            VerticalOptions="Center"
-            HorizontalOptions="Center">
-        </Image>
-
-        <Button
-            Grid.Row="3"  Grid.Column="2"
-            Clicked="OnExit"
-            Text="EXIT"
-            FontSize="Large"
-            TextColor="AntiqueWhite"
-            VerticalOptions="End"
-            BackgroundColor="DarkOliveGreen">
-        </Button>
-
+                    <!-- Recipe Image -->
+                    <Image Grid.Row="0"
+                           Grid.Column="2"
+                           Grid.RowSpan="2"
+                           x:Name="ChosenRecipeImage"
+                           VerticalOptions="Center"
+                           HorizontalOptions="Center"
+                           WidthRequest="200"
+                           HeightRequest="200"/>
+                </Grid>
+            </Frame>
+                                <!-- Exit Button -->
+                    <Button Grid.Row="6"
+                            Grid.Column="2"
+                            HorizontalOptions="Center"
+                            Clicked="OnExit"
+                            Text="EXIT"
+                            FontSize="Large"
+                            TextColor="AntiqueWhite"
+                            VerticalOptions="Center"
+                            BackgroundColor="#444444CC"/>
+        </StackLayout>
     </Grid>
 </ContentPage>

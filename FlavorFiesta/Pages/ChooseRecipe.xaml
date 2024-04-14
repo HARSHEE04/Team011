@@ -4,55 +4,71 @@
              x:Class="FlavorFiesta.Pages.ChooseRecipe"
              Title="ChooseRecipe">
 
-    <Shell.TitleView>
-        <Grid>
-            <Label Text="Choose a Recipe " HorizontalOptions="Center"  VerticalOptions="Center"
-              FontSize="Title" TextColor="White"></Label>
-        </Grid>
-    </Shell.TitleView>
+    <Grid>
+        <!-- Background Image -->
+        <Image Source="background.png" Aspect="AspectFill" Opacity="1"/>
 
-    <VerticalStackLayout
-        BackgroundColor="BurlyWood">
+        <!-- Content -->
+        <StackLayout Padding="30" VerticalOptions="Center">
+            <!-- Title -->
+            <Label Text="Choose a Recipe"
+                   FontSize="36"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   TextColor="White"
+                   Margin="0,0,0,20"/>
 
-        <Label 
-     FontSize="Medium"
-     Text="RECIPE FOUND!"
-            Margin="5"
-     VerticalOptions="Center" 
-     HorizontalOptions="Center" />
+            <!-- Frame for Recipe Information -->
+            <Frame BackgroundColor="#444444CC"
+                   Padding="20"
+                   CornerRadius="10"
+                   HorizontalOptions="Fill"
+                   VerticalOptions="Start">
+                <StackLayout>
+                    <!-- Recipe Found -->
+                    <Label Text="RECIPE FOUND!"
+                           FontSize="Medium"
+                           HorizontalOptions="Center"
+                           TextColor="White"
+                           Margin="0,0,0,10"/>
 
-        <Label
-       x:Name="Recipe1Name"
-             Margin="5"
-       VerticalOptions="Center"
-       HorizontalOptions="Center"
-       FontSize="Medium">
-        </Label>
+                    <!-- Recipe Name -->
+                    <Label x:Name="Recipe1Name"
+                           FontSize="Medium"
+                           HorizontalOptions="Center"
+                           TextColor="White"
+                           Margin="0,0,0,10"
+                           Text="Recipe Name"/>
 
-        <Image
-            x:Name="RecipeImage"
-             Margin="5"
-            MaximumHeightRequest="400"
-             MaximumWidthRequest="400"
-            VerticalOptions="Center"
-            HorizontalOptions="Center">
-        </Image>
-        
-       <Label
-     x:Name="Recipe1PrepTme"
-            Margin="5"
-     VerticalOptions="Center"
-     HorizontalOptions="Center"
-     FontSize="Medium">
-       </Label>
-        <Button
-            Text="More Information"
-             Margin="5"
-            Clicked="OnMoreInfo"
-            VerticalOptions="Center"
-            HorizontalOptions="Center">
-        </Button>
+                    <!-- Recipe Image -->
+                    <Image x:Name="RecipeImage"
+                           Margin="0,0,0,10"
+                           MaximumHeightRequest="400"
+                           MaximumWidthRequest="400"
+                           VerticalOptions="Center"
+                           HorizontalOptions="Center"
+                           Source="recipe_image_placeholder.png"/>
 
-    </VerticalStackLayout>
+                    <!-- Recipe Preparation Time -->
+                    <Label x:Name="Recipe1PrepTme"
+                           FontSize="Medium"
+                           HorizontalOptions="Center"
+                           TextColor="White"
+                           Margin="0,0,0,10"
+                           Text="Preparation Time"/>
+
+                    <!-- More Information Button -->
+                    <Button Text="More Information"
+                            Clicked="OnMoreInfo"
+                            BackgroundColor="#FF69B4"
+                            TextColor="White"
+                            WidthRequest="200"
+                            HeightRequest="50"
+                            CornerRadius="10"
+                            HorizontalOptions="Center"/>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </Grid>
 
 </ContentPage>

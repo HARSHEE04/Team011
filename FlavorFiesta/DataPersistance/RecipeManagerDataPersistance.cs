@@ -16,7 +16,7 @@ namespace FlavorFiesta.DataPersistance
         ///read recipes from csv file and make it into a list
         public List<Recipe> ReadRecipesFromCSV() //could have put this into a method
         {
-            _filePath = @"C:\Users\Harsh\OneDrive\Desktop\recipes.txt";  //PLEASE USE YOUR FILE PATH FOR THE ATTACHED TEXT FILE
+            _filePath = "/Users/Yammy/Desktop/recipes.txt";  //PLEASE USE YOUR FILE PATH FOR THE ATTACHED TEXT FILE
             List<Recipe> list = new List<Recipe>();
 
             try
