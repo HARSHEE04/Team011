@@ -87,10 +87,29 @@
                         Color="White"
                         VerticalOptions="Center"/>
                     <Label
-                        Text="I accept and agree to the Terms of use."
-                        FontSize="Small"
-                        TextColor="LightGray"
-                        VerticalOptions="Center" />
+                        VerticalOptions="Center"
+                        >
+
+                                    <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="I accept and agree to the " />
+                        <Span Text="I accept and agree to the " 
+                              FontAttributes="Bold"/>
+                        <Span Text="Terms of use"
+                              FontAttributes="Bold"
+                              TextColor="Blue"
+                              TextDecorations="Underline">
+                            <Span.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding TapCommand}"
+                                          CommandParameter="https://learn.microsoft.com/dotnet/maui/" />
+                            </Span.GestureRecognizers>
+                        </Span>
+                        <Span Text="." />
+                        <Span Text="."
+                              FontAttributes="Bold"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
                 </HorizontalStackLayout>
 
                 <Button
